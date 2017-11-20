@@ -1,45 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <fullName>Partner__c</fullName>
+        <fullName>DealRegistration__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Partner Account</label>
-        <referenceTo>Account</referenceTo>
-        <relationshipLabel>End User Opportunities</relationshipLabel>
-        <relationshipName>Opportunities1</relationshipName>
+        <label>Deal Registration</label>
+        <referenceTo>DealRegistration__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>StcZone_Territory__c</fullName>
-        <externalId>false</externalId>
-        <inlineHelpText>Territory for the Opportunity</inlineHelpText>
-        <label>Stc Territory</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>Territory</valueSetName>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>leadSourceCampaign__c</fullName>
-        <description>JIRA SSF-34: copied from Lead upon conversion to Opportunity</description>
-        <externalId>false</externalId>
-        <label>Source Campaign</label>
-        <length>100</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
 </CustomObject>
