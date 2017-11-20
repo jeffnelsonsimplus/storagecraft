@@ -1,0 +1,2171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <businessProcesses>
+        <fullName>Support</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Customer Replied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive %3A No response from customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive %3A Waiting on Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive %3A Waiting on Patch Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Information Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Patch Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Closure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proactive %3A Customer Contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proactive %3A No response from customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reassigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reopened</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Activation Problem Solved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Customer Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Customer Solved Own Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Deactivation Problem Solved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A HIR Code</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Manual Deactivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A No Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Other Problem Solved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Referred to OEM for Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Sales Problem Solved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved %3A Technical Support Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved%3A Return Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on Escalations</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <fields>
+        <fullName>Action_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Action Plan</label>
+        <length>2000</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Assistance_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Assistance Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Select_User_Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Licensing Assistance</fullName>
+                    <default>false</default>
+                    <label>Licensing Assistance</label>
+                </value>
+                <value>
+                    <fullName>Technical Assistance</fullName>
+                    <default>false</default>
+                    <label>Technical Assistance</label>
+                </value>
+                <value>
+                    <fullName>Sales Assistance</fullName>
+                    <default>false</default>
+                    <label>Sales Assistance</label>
+                </value>
+                <value>
+                    <fullName>Product_Return</fullName>
+                    <default>false</default>
+                    <label>Product Return / RMA</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Strategic</controllingFieldValue>
+                <controllingFieldValue>Other</controllingFieldValue>
+                <controllingFieldValue>Distributors Partner Reseller</controllingFieldValue>
+                <controllingFieldValue>Distribution Partner</controllingFieldValue>
+                <controllingFieldValue>Trial User</controllingFieldValue>
+                <controllingFieldValue>Home User</controllingFieldValue>
+                <controllingFieldValue>Business User</controllingFieldValue>
+                <controllingFieldValue>Managed Service Provider (MSP)</controllingFieldValue>
+                <controllingFieldValue>Value Added Reseller (VAR)</controllingFieldValue>
+                <controllingFieldValue>Both MSP and VAR</controllingFieldValue>
+                <controllingFieldValue>Alliance Partner</controllingFieldValue>
+                <controllingFieldValue>Original Equipment Manufacturer (OEM)</controllingFieldValue>
+                <controllingFieldValue>Direct Market Reseller (DMR)</controllingFieldValue>
+                <controllingFieldValue>Press / Media Evaluator</controllingFieldValue>
+                <valueName>Licensing Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Strategic</controllingFieldValue>
+                <controllingFieldValue>Other</controllingFieldValue>
+                <controllingFieldValue>Distributors Partner Reseller</controllingFieldValue>
+                <controllingFieldValue>CP</controllingFieldValue>
+                <controllingFieldValue>Distribution Partner</controllingFieldValue>
+                <controllingFieldValue>Trial User</controllingFieldValue>
+                <controllingFieldValue>Home User</controllingFieldValue>
+                <controllingFieldValue>Business User</controllingFieldValue>
+                <controllingFieldValue>Managed Service Provider (MSP)</controllingFieldValue>
+                <controllingFieldValue>Value Added Reseller (VAR)</controllingFieldValue>
+                <controllingFieldValue>Both MSP and VAR</controllingFieldValue>
+                <controllingFieldValue>Alliance Partner</controllingFieldValue>
+                <controllingFieldValue>Original Equipment Manufacturer (OEM)</controllingFieldValue>
+                <controllingFieldValue>Direct Market Reseller (DMR)</controllingFieldValue>
+                <controllingFieldValue>Press / Media Evaluator</controllingFieldValue>
+                <valueName>Technical Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Strategic</controllingFieldValue>
+                <controllingFieldValue>Other</controllingFieldValue>
+                <controllingFieldValue>Distributors Partner Reseller</controllingFieldValue>
+                <controllingFieldValue>Distribution Partner</controllingFieldValue>
+                <controllingFieldValue>Trial User</controllingFieldValue>
+                <controllingFieldValue>Home User</controllingFieldValue>
+                <controllingFieldValue>Business User</controllingFieldValue>
+                <controllingFieldValue>Managed Service Provider (MSP)</controllingFieldValue>
+                <controllingFieldValue>Value Added Reseller (VAR)</controllingFieldValue>
+                <controllingFieldValue>Both MSP and VAR</controllingFieldValue>
+                <controllingFieldValue>Alliance Partner</controllingFieldValue>
+                <controllingFieldValue>Original Equipment Manufacturer (OEM)</controllingFieldValue>
+                <controllingFieldValue>Direct Market Reseller (DMR)</controllingFieldValue>
+                <controllingFieldValue>Press / Media Evaluator</controllingFieldValue>
+                <valueName>Sales Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Strategic</controllingFieldValue>
+                <controllingFieldValue>Other</controllingFieldValue>
+                <controllingFieldValue>Distributors Partner Reseller</controllingFieldValue>
+                <controllingFieldValue>Distribution Partner</controllingFieldValue>
+                <controllingFieldValue>Trial User</controllingFieldValue>
+                <controllingFieldValue>Home User</controllingFieldValue>
+                <controllingFieldValue>Business User</controllingFieldValue>
+                <controllingFieldValue>Managed Service Provider (MSP)</controllingFieldValue>
+                <controllingFieldValue>Value Added Reseller (VAR)</controllingFieldValue>
+                <controllingFieldValue>Both MSP and VAR</controllingFieldValue>
+                <controllingFieldValue>Alliance Partner</controllingFieldValue>
+                <controllingFieldValue>Original Equipment Manufacturer (OEM)</controllingFieldValue>
+                <controllingFieldValue>Direct Market Reseller (DMR)</controllingFieldValue>
+                <controllingFieldValue>Press / Media Evaluator</controllingFieldValue>
+                <valueName>Product_Return</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Assistance_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>LA - I am requesting a license deactivation.</fullName>
+                    <default>false</default>
+                    <label>LA - I am requesting a license deactivation.</label>
+                </value>
+                <value>
+                    <fullName>LA - I have a licensing question.</fullName>
+                    <default>false</default>
+                    <label>LA - I have a licensing question.</label>
+                </value>
+                <value>
+                    <fullName>LA - My license has expired.</fullName>
+                    <default>false</default>
+                    <label>LA - My license has expired.</label>
+                </value>
+                <value>
+                    <fullName>LA - My license will expire in less than 3 days.</fullName>
+                    <default>false</default>
+                    <label>LA - My license will expire in less than 3 days.</label>
+                </value>
+                <value>
+                    <fullName>LA - I am getting an error when trying to activate or deactivate my license.</fullName>
+                    <default>false</default>
+                    <label>LA - I am getting an error when trying to activate or deactivate my license.</label>
+                </value>
+                <value>
+                    <fullName>LA - Requesting an IT Edition Replacement USB Key.</fullName>
+                    <default>false</default>
+                    <label>LA - Requesting an IT Edition Replacement USB Key.</label>
+                </value>
+                <value>
+                    <fullName>TA - Test environment issues(Low)</fullName>
+                    <default>false</default>
+                    <label>TA - Test environment issues(Low)</label>
+                </value>
+                <value>
+                    <fullName>TA - Questions, best practices, configuration, setup or general product information(Low)</fullName>
+                    <default>false</default>
+                    <label>TA - Questions, best practices, configuration, setup or general product information(Low)</label>
+                </value>
+                <value>
+                    <fullName>TA - Website issues(Low)</fullName>
+                    <default>false</default>
+                    <label>TA - Website issues(Low)</label>
+                </value>
+                <value>
+                    <fullName>TA - Installation and Upgrade issues(Med)</fullName>
+                    <default>false</default>
+                    <label>TA - Installation and Upgrade issues(Med)</label>
+                </value>
+                <value>
+                    <fullName>TA - Intermittent applications errors, backups succeed(Med)</fullName>
+                    <default>false</default>
+                    <label>TA - Intermittent applications errors, backups succeed(Med)</label>
+                </value>
+                <value>
+                    <fullName>TA - Application crashes or has errors or the backups fail(High)</fullName>
+                    <default>false</default>
+                    <label>TA - Application crashes or has errors or the backups fail(High)</label>
+                </value>
+                <value>
+                    <fullName>TA - Backup Images fail to verify(High)</fullName>
+                    <default>false</default>
+                    <label>TA - Backup Images fail to verify(High)</label>
+                </value>
+                <value>
+                    <fullName>TA - Restore of the machine fails(High)</fullName>
+                    <default>false</default>
+                    <label>TA - Restore of the machine fails(High)</label>
+                </value>
+                <value>
+                    <fullName>TA - Partner Physically at Client Site(Emergency)</fullName>
+                    <default>false</default>
+                    <label>TA - Partner Physically at Client Site(Emergency)</label>
+                </value>
+                <value>
+                    <fullName>TA - Production Server Down(Emergency)</fullName>
+                    <default>false</default>
+                    <label>TA - Production Server Down(Emergency)</label>
+                </value>
+                <value>
+                    <fullName>SA - I would like a product demo, and or more information on product training.</fullName>
+                    <default>false</default>
+                    <label>SA - I would like a product demo, and or more information on product training.</label>
+                </value>
+                <value>
+                    <fullName>SA - I have a presales question regarding ShadowProtect or ShadowControl products.</fullName>
+                    <default>false</default>
+                    <label>SA - I have a presales question regarding ShadowProtect or ShadowControl products.</label>
+                </value>
+                <value>
+                    <fullName>SA - I want a quote for ShadowProtect or ShadowControl products.</fullName>
+                    <default>false</default>
+                    <label>SA - I want a quote for ShadowProtect or ShadowControl products.</label>
+                </value>
+                <value>
+                    <fullName>SA - I have an issue or question with licensing upgrades.</fullName>
+                    <default>false</default>
+                    <label>SA - I have an issue or question with licensing upgrades.</label>
+                </value>
+                <value>
+                    <fullName>SA - I have an issue or question with maintenance.</fullName>
+                    <default>false</default>
+                    <label>SA - I have an issue or question with maintenance.</label>
+                </value>
+                <value>
+                    <fullName>SA - I have an issue or question with the partner portal.</fullName>
+                    <default>false</default>
+                    <label>SA - I have an issue or question with the partner portal.</label>
+                </value>
+                <value>
+                    <fullName>SA - I have an issue or question with the webstore.</fullName>
+                    <default>false</default>
+                    <label>SA - I have an issue or question with the webstore.</label>
+                </value>
+                <value>
+                    <fullName>SA - I have an issue or question with NFR (not for resale) licenses.</fullName>
+                    <default>false</default>
+                    <label>SA - I have an issue or question with NFR (not for resale) licenses.</label>
+                </value>
+                <value>
+                    <fullName>SA - Other question or issue not listed here.</fullName>
+                    <default>false</default>
+                    <label>SA - Other question or issue not listed here.</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <valueName>LA - I am requesting a license deactivation.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <valueName>LA - I have a licensing question.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <valueName>LA - My license has expired.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <valueName>LA - My license will expire in less than 3 days.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <valueName>LA - I am getting an error when trying to activate or deactivate my license.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <valueName>LA - Requesting an IT Edition Replacement USB Key.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>TA - Test environment issues(Low)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>TA - Questions, best practices, configuration, setup or general product information(Low)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>TA - Website issues(Low)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>TA - Installation and Upgrade issues(Med)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>TA - Intermittent applications errors, backups succeed(Med)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>TA - Application crashes or has errors or the backups fail(High)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>TA - Backup Images fail to verify(High)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>TA - Partner Physically at Client Site(Emergency)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>TA - Production Server Down(Emergency)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales Assistance</controllingFieldValue>
+                <valueName>SA - I would like a product demo, and or more information on product training.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales Assistance</controllingFieldValue>
+                <valueName>SA - I have a presales question regarding ShadowProtect or ShadowControl products.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales Assistance</controllingFieldValue>
+                <valueName>SA - I want a quote for ShadowProtect or ShadowControl products.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales Assistance</controllingFieldValue>
+                <valueName>SA - I have an issue or question with licensing upgrades.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales Assistance</controllingFieldValue>
+                <valueName>SA - I have an issue or question with maintenance.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales Assistance</controllingFieldValue>
+                <valueName>SA - I have an issue or question with the partner portal.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales Assistance</controllingFieldValue>
+                <valueName>SA - I have an issue or question with the webstore.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales Assistance</controllingFieldValue>
+                <valueName>SA - I have an issue or question with NFR (not for resale) licenses.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales Assistance</controllingFieldValue>
+                <valueName>SA - Other question or issue not listed here.</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cause__c</fullName>
+        <externalId>false</externalId>
+        <label>Cause</label>
+        <length>4000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Escalated_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Escalated Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Escalated Customer Support</fullName>
+                    <default>false</default>
+                    <label>Escalated Customer Support</label>
+                </value>
+                <value>
+                    <fullName>Escalated Engineering</fullName>
+                    <default>false</default>
+                    <label>Escalated Engineering</label>
+                </value>
+                <value>
+                    <fullName>Escalated Sales Engineer</fullName>
+                    <default>false</default>
+                    <label>Escalated Sales Engineer</label>
+                </value>
+                <value>
+                    <fullName>Escalated Support Tier 3</fullName>
+                    <default>false</default>
+                    <label>Escalated Support Tier 3</label>
+                </value>
+                <value>
+                    <fullName>Need More Information</fullName>
+                    <default>false</default>
+                    <label>Need More Information</label>
+                </value>
+                <value>
+                    <fullName>Waiting on Case Owner</fullName>
+                    <default>false</default>
+                    <label>Waiting on Case Owner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Escalation_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Escalation Details</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Escalation_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Escalation Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>EscalationOwner</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Escalation_Source__c</fullName>
+        <description>Technical is Support assistance, internal is escalation by staff outside of support, External is customer escalating.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical is for support staff requesting help, Internal is for STC employees outside of support requesting escalation on a case, External is when escalating on behalf of a customer contact.</inlineHelpText>
+        <label>Escalation Source</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Technical - From Support to Support</fullName>
+                    <default>false</default>
+                    <label>Technical - From Support to Support</label>
+                </value>
+                <value>
+                    <fullName>Internal - Internal to Storagecraft</fullName>
+                    <default>true</default>
+                    <label>Internal - Internal to Storagecraft</label>
+                </value>
+                <value>
+                    <fullName>External - External to Storagecraft</fullName>
+                    <default>false</default>
+                    <label>External - External to Storagecraft</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Component__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Component</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Product__c</controllingField>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Account</fullName>
+                    <default>false</default>
+                    <label>Account</label>
+                </value>
+                <value>
+                    <fullName>Activation</fullName>
+                    <default>false</default>
+                    <label>Activation</label>
+                </value>
+                <value>
+                    <fullName>Activation / Licensing</fullName>
+                    <default>false</default>
+                    <label>Activation / Licensing</label>
+                </value>
+                <value>
+                    <fullName>Admin Console</fullName>
+                    <default>false</default>
+                    <label>Admin Console</label>
+                </value>
+                <value>
+                    <fullName>Advanced Verification</fullName>
+                    <default>false</default>
+                    <label>Advanced Verification</label>
+                </value>
+                <value>
+                    <fullName>Appliance</fullName>
+                    <default>false</default>
+                    <label>Appliance</label>
+                </value>
+                <value>
+                    <fullName>Appliance Install</fullName>
+                    <default>false</default>
+                    <label>Appliance Install</label>
+                </value>
+                <value>
+                    <fullName>Backup</fullName>
+                    <default>false</default>
+                    <label>Backup</label>
+                </value>
+                <value>
+                    <fullName>BMR</fullName>
+                    <default>false</default>
+                    <label>BMR</label>
+                </value>
+                <value>
+                    <fullName>Box</fullName>
+                    <default>false</default>
+                    <label>Box</label>
+                </value>
+                <value>
+                    <fullName>Builder / Windows RE</fullName>
+                    <default>false</default>
+                    <label>Builder / Windows RE</label>
+                </value>
+                <value>
+                    <fullName>Capacity / Sizing</fullName>
+                    <default>false</default>
+                    <label>Capacity / Sizing</label>
+                </value>
+                <value>
+                    <fullName>Certificate Request</fullName>
+                    <default>false</default>
+                    <label>Certificate Request</label>
+                </value>
+                <value>
+                    <fullName>Cloud Portal</fullName>
+                    <default>false</default>
+                    <label>Cloud Portal</label>
+                </value>
+                <value>
+                    <fullName>Configuration</fullName>
+                    <default>false</default>
+                    <label>Configuration</label>
+                </value>
+                <value>
+                    <fullName>Consolidation</fullName>
+                    <default>false</default>
+                    <label>Consolidation</label>
+                </value>
+                <value>
+                    <fullName>CrossPlatform RE</fullName>
+                    <default>false</default>
+                    <label>CrossPlatform RE</label>
+                </value>
+                <value>
+                    <fullName>Datacenter</fullName>
+                    <default>false</default>
+                    <label>Datacenter</label>
+                </value>
+                <value>
+                    <fullName>Deployment</fullName>
+                    <default>false</default>
+                    <label>Deployment</label>
+                </value>
+                <value>
+                    <fullName>Disk Copy</fullName>
+                    <default>false</default>
+                    <label>Disk Copy</label>
+                </value>
+                <value>
+                    <fullName>EDB Load</fullName>
+                    <default>false</default>
+                    <label>EDB Load</label>
+                </value>
+                <value>
+                    <fullName>Endpoint</fullName>
+                    <default>false</default>
+                    <label>Endpoint</label>
+                </value>
+                <value>
+                    <fullName>Endpoint Installation</fullName>
+                    <default>false</default>
+                    <label>Endpoint Installation</label>
+                </value>
+                <value>
+                    <fullName>Explore Backup</fullName>
+                    <default>false</default>
+                    <label>Explore Backup</label>
+                </value>
+                <value>
+                    <fullName>Forum</fullName>
+                    <default>false</default>
+                    <label>Forum</label>
+                </value>
+                <value>
+                    <fullName>General</fullName>
+                    <default>false</default>
+                    <label>General</label>
+                </value>
+                <value>
+                    <fullName>Google Apps</fullName>
+                    <default>false</default>
+                    <label>Google Apps</label>
+                </value>
+                <value>
+                    <fullName>GRE Console</fullName>
+                    <default>false</default>
+                    <label>GRE Console</label>
+                </value>
+                <value>
+                    <fullName>G Suite</fullName>
+                    <default>false</default>
+                    <label>G Suite</label>
+                </value>
+                <value>
+                    <fullName>Hardware</fullName>
+                    <default>false</default>
+                    <label>Hardware</label>
+                </value>
+                <value>
+                    <fullName>HeadStart Restore</fullName>
+                    <default>false</default>
+                    <label>HeadStart Restore</label>
+                </value>
+                <value>
+                    <fullName>HIR</fullName>
+                    <default>false</default>
+                    <label>HIR</label>
+                </value>
+                <value>
+                    <fullName>iFTP</fullName>
+                    <default>false</default>
+                    <label>iFTP</label>
+                </value>
+                <value>
+                    <fullName>Image Conversion Tool</fullName>
+                    <default>false</default>
+                    <label>Image Conversion Tool</label>
+                </value>
+                <value>
+                    <fullName>Image Ready</fullName>
+                    <default>false</default>
+                    <label>Image Ready</label>
+                </value>
+                <value>
+                    <fullName>Inaccessible Data</fullName>
+                    <default>false</default>
+                    <label>Inaccessible Data</label>
+                </value>
+                <value>
+                    <fullName>Installation</fullName>
+                    <default>false</default>
+                    <label>Installation</label>
+                </value>
+                <value>
+                    <fullName>Item</fullName>
+                    <default>false</default>
+                    <label>Item</label>
+                </value>
+                <value>
+                    <fullName>Live Restore</fullName>
+                    <default>false</default>
+                    <label>Live Restore</label>
+                </value>
+                <value>
+                    <fullName>Local Replication</fullName>
+                    <default>false</default>
+                    <label>Local Replication</label>
+                </value>
+                <value>
+                    <fullName>Main Site / Downloads</fullName>
+                    <default>false</default>
+                    <label>Main Site / Downloads</label>
+                </value>
+                <value>
+                    <fullName>Management Console</fullName>
+                    <default>false</default>
+                    <label>Management Console</label>
+                </value>
+                <value>
+                    <fullName>Mount Tools</fullName>
+                    <default>false</default>
+                    <label>Mount Tools</label>
+                </value>
+                <value>
+                    <fullName>MSP Portal</fullName>
+                    <default>false</default>
+                    <label>MSP Portal</label>
+                </value>
+                <value>
+                    <fullName>Netgear ReadyNAS</fullName>
+                    <default>false</default>
+                    <label>Netgear ReadyNAS</label>
+                </value>
+                <value>
+                    <fullName>Network Replication</fullName>
+                    <default>false</default>
+                    <label>Network Replication</label>
+                </value>
+                <value>
+                    <fullName>Office 365</fullName>
+                    <default>false</default>
+                    <label>Office 365</label>
+                </value>
+                <value>
+                    <fullName>OneSystem Issues</fullName>
+                    <default>false</default>
+                    <label>OneSystem Issues</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Partner Portal</fullName>
+                    <default>false</default>
+                    <label>Partner Portal</label>
+                </value>
+                <value>
+                    <fullName>PE Builder</fullName>
+                    <default>false</default>
+                    <label>PE Builder</label>
+                </value>
+                <value>
+                    <fullName>Performance</fullName>
+                    <default>false</default>
+                    <label>Performance</label>
+                </value>
+                <value>
+                    <fullName>Plug-in</fullName>
+                    <default>false</default>
+                    <label>Plug-in</label>
+                </value>
+                <value>
+                    <fullName>Portal</fullName>
+                    <default>false</default>
+                    <label>Portal</label>
+                </value>
+                <value>
+                    <fullName>Product Downloads</fullName>
+                    <default>false</default>
+                    <label>Product Downloads</label>
+                </value>
+                <value>
+                    <fullName>Product Preview</fullName>
+                    <default>false</default>
+                    <label>Product Preview</label>
+                </value>
+                <value>
+                    <fullName>PSA Integration</fullName>
+                    <default>false</default>
+                    <label>PSA Integration</label>
+                </value>
+                <value>
+                    <fullName>ReadyNAS Restore</fullName>
+                    <default>false</default>
+                    <label>ReadyNAS Restore</label>
+                </value>
+                <value>
+                    <fullName>Replication</fullName>
+                    <default>false</default>
+                    <label>Replication</label>
+                </value>
+                <value>
+                    <fullName>Replication Job</fullName>
+                    <default>false</default>
+                    <label>Replication Job</label>
+                </value>
+                <value>
+                    <fullName>Restore</fullName>
+                    <default>false</default>
+                    <label>Restore</label>
+                </value>
+                <value>
+                    <fullName>Retention</fullName>
+                    <default>false</default>
+                    <label>Retention</label>
+                </value>
+                <value>
+                    <fullName>Return Request</fullName>
+                    <default>false</default>
+                    <label>Return Request</label>
+                </value>
+                <value>
+                    <fullName>Sales Assistance Request</fullName>
+                    <default>false</default>
+                    <label>Sales Assistance Request</label>
+                </value>
+                <value>
+                    <fullName>Salesforce</fullName>
+                    <default>false</default>
+                    <label>Salesforce</label>
+                </value>
+                <value>
+                    <fullName>Seed Drive</fullName>
+                    <default>false</default>
+                    <label>Seed Drive</label>
+                </value>
+                <value>
+                    <fullName>Setup / Configuration</fullName>
+                    <default>false</default>
+                    <label>Setup / Configuration</label>
+                </value>
+                <value>
+                    <fullName>ShadowProtect 5</fullName>
+                    <default>false</default>
+                    <label>ShadowProtect 5</label>
+                </value>
+                <value>
+                    <fullName>ShadowProtect IT Edition</fullName>
+                    <default>false</default>
+                    <label>ShadowProtect IT Edition</label>
+                </value>
+                <value>
+                    <fullName>ShadowStream</fullName>
+                    <default>false</default>
+                    <label>ShadowStream</label>
+                </value>
+                <value>
+                    <fullName>ShadowStream Service</fullName>
+                    <default>false</default>
+                    <label>ShadowStream Service</label>
+                </value>
+                <value>
+                    <fullName>Socket Licensing Service</fullName>
+                    <default>false</default>
+                    <label>Socket Licensing Service</label>
+                </value>
+                <value>
+                    <fullName>StorageCraft Portal</fullName>
+                    <default>false</default>
+                    <label>StorageCraft Portal</label>
+                </value>
+                <value>
+                    <fullName>Support Community</fullName>
+                    <default>false</default>
+                    <label>Support Community</label>
+                </value>
+                <value>
+                    <fullName>Verification</fullName>
+                    <default>false</default>
+                    <label>Verification</label>
+                </value>
+                <value>
+                    <fullName>Verify Image</fullName>
+                    <default>false</default>
+                    <label>Verify Image</label>
+                </value>
+                <value>
+                    <fullName>VirtualBoot</fullName>
+                    <default>false</default>
+                    <label>VirtualBoot</label>
+                </value>
+                <value>
+                    <fullName>Web Portal</fullName>
+                    <default>false</default>
+                    <label>Web Portal</label>
+                </value>
+                <value>
+                    <fullName>Webstore</fullName>
+                    <default>false</default>
+                    <label>Webstore</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Granular_Recovery_for_Exchange</controllingFieldValue>
+                <valueName>EDB Load</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Granular_Recovery_for_Exchange</controllingFieldValue>
+                <valueName>GRE Console</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Granular_Recovery_for_Exchange</controllingFieldValue>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <controllingFieldValue>File_Backup_and_Recovery</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Linux</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Windows</controllingFieldValue>
+                <valueName>Installation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Granular_Recovery_for_Exchange</controllingFieldValue>
+                <controllingFieldValue>File_Backup_and_Recovery</controllingFieldValue>
+                <controllingFieldValue>Recovery_Environments</controllingFieldValue>
+                <valueName>Restore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cloud_Services</controllingFieldValue>
+                <valueName>BMR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cloud_Services</controllingFieldValue>
+                <valueName>Cloud Portal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cloud_Services</controllingFieldValue>
+                <valueName>Datacenter</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cloud_Services</controllingFieldValue>
+                <valueName>Replication Job</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cloud_Services</controllingFieldValue>
+                <valueName>Seed Drive</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cloud_Services</controllingFieldValue>
+                <valueName>StorageCraft Portal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>StorageCraft_Websites</controllingFieldValue>
+                <valueName>Forum</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>StorageCraft_Websites</controllingFieldValue>
+                <valueName>Main Site / Downloads</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>StorageCraft_Websites</controllingFieldValue>
+                <valueName>MSP Portal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>StorageCraft_Websites</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>StorageCraft_Websites</controllingFieldValue>
+                <valueName>Partner Portal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>StorageCraft_Websites</controllingFieldValue>
+                <valueName>Product Downloads</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>StorageCraft_Websites</controllingFieldValue>
+                <valueName>PSA Integration</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>StorageCraft_Websites</controllingFieldValue>
+                <valueName>Support Community</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>StorageCraft_Websites</controllingFieldValue>
+                <valueName>Webstore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ShadowControl</controllingFieldValue>
+                <valueName>Appliance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ShadowControl</controllingFieldValue>
+                <valueName>Endpoint</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ShadowControl</controllingFieldValue>
+                <valueName>Web Portal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <valueName>Advanced Verification</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <valueName>Consolidation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <valueName>HeadStart Restore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <valueName>iFTP</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <valueName>Local Replication</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Linux</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Windows</controllingFieldValue>
+                <valueName>Management Console</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <valueName>Network Replication</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <valueName>Retention</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <valueName>ShadowStream</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ImageManager</controllingFieldValue>
+                <valueName>Verification</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>File_Backup_and_Recovery</controllingFieldValue>
+                <valueName>Account</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>File_Backup_and_Recovery</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Linux</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Windows</controllingFieldValue>
+                <valueName>Backup</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>File_Backup_and_Recovery</controllingFieldValue>
+                <valueName>Certificate Request</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>File_Backup_and_Recovery</controllingFieldValue>
+                <valueName>Portal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cloud_Backup</controllingFieldValue>
+                <valueName>G Suite</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cloud_Backup</controllingFieldValue>
+                <valueName>Office 365</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OneBlox</controllingFieldValue>
+                <valueName>Capacity / Sizing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OneBlox</controllingFieldValue>
+                <valueName>Inaccessible Data</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OneBlox</controllingFieldValue>
+                <valueName>OneSystem Issues</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OneBlox</controllingFieldValue>
+                <valueName>Performance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OneBlox</controllingFieldValue>
+                <valueName>Replication</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OneBlox</controllingFieldValue>
+                <valueName>Setup / Configuration</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ShadowProtect_Linux</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Windows</controllingFieldValue>
+                <valueName>Live Restore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ShadowProtect_Linux</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Windows</controllingFieldValue>
+                <valueName>Mount Tools</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ShadowProtect_Linux</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Windows</controllingFieldValue>
+                <valueName>Socket Licensing Service</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ShadowProtect_Linux</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Windows</controllingFieldValue>
+                <valueName>Verify Image</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ShadowProtect_Linux</controllingFieldValue>
+                <controllingFieldValue>ShadowProtect_Windows</controllingFieldValue>
+                <valueName>VirtualBoot</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ShadowProtect_Windows</controllingFieldValue>
+                <valueName>ShadowProtect 5</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Recovery_Environments</controllingFieldValue>
+                <valueName>Builder / Windows RE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Recovery_Environments</controllingFieldValue>
+                <valueName>CrossPlatform RE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Recovery_Environments</controllingFieldValue>
+                <valueName>ShadowProtect IT Edition</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Assistance_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Cloud_Backup</fullName>
+                    <default>false</default>
+                    <label>Cloud Backup</label>
+                </value>
+                <value>
+                    <fullName>Cloud_Services</fullName>
+                    <default>false</default>
+                    <label>Cloud Services</label>
+                </value>
+                <value>
+                    <fullName>File_Backup_and_Recovery</fullName>
+                    <default>false</default>
+                    <label>File Backup and Recovery</label>
+                </value>
+                <value>
+                    <fullName>Granular_Recovery_for_Exchange</fullName>
+                    <default>false</default>
+                    <label>Granular Recovery for Exchange</label>
+                </value>
+                <value>
+                    <fullName>ImageManager</fullName>
+                    <default>false</default>
+                    <label>ImageManager</label>
+                </value>
+                <value>
+                    <fullName>OneBlox</fullName>
+                    <default>false</default>
+                    <label>OneBlox</label>
+                </value>
+                <value>
+                    <fullName>Recovery_Environments</fullName>
+                    <default>false</default>
+                    <label>Recovery Environments</label>
+                </value>
+                <value>
+                    <fullName>ShadowControl</fullName>
+                    <default>false</default>
+                    <label>ShadowControl</label>
+                </value>
+                <value>
+                    <fullName>ShadowProtect_Linux</fullName>
+                    <default>false</default>
+                    <label>ShadowProtect (Linux)</label>
+                </value>
+                <value>
+                    <fullName>ShadowProtect_Windows</fullName>
+                    <default>false</default>
+                    <label>ShadowProtect (Windows)</label>
+                </value>
+                <value>
+                    <fullName>StorageCraft_Websites</fullName>
+                    <default>false</default>
+                    <label>StorageCraft Websites</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <controllingFieldValue>Product_Return</controllingFieldValue>
+                <valueName>Cloud_Backup</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <controllingFieldValue>Product_Return</controllingFieldValue>
+                <valueName>Cloud_Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <controllingFieldValue>Product_Return</controllingFieldValue>
+                <valueName>File_Backup_and_Recovery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <controllingFieldValue>Product_Return</controllingFieldValue>
+                <valueName>Granular_Recovery_for_Exchange</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <controllingFieldValue>Product_Return</controllingFieldValue>
+                <valueName>ImageManager</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <controllingFieldValue>Product_Return</controllingFieldValue>
+                <valueName>OneBlox</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <controllingFieldValue>Product_Return</controllingFieldValue>
+                <valueName>Recovery_Environments</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>ShadowControl</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <controllingFieldValue>Product_Return</controllingFieldValue>
+                <valueName>ShadowProtect_Linux</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <controllingFieldValue>Product_Return</controllingFieldValue>
+                <valueName>ShadowProtect_Windows</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Licensing Assistance</controllingFieldValue>
+                <controllingFieldValue>Technical Assistance</controllingFieldValue>
+                <valueName>StorageCraft_Websites</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution</label>
+        <length>4000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Select_User_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>User Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Trial User</fullName>
+                    <default>false</default>
+                    <label>Trial User</label>
+                </value>
+                <value>
+                    <fullName>Home User</fullName>
+                    <default>false</default>
+                    <label>Home User</label>
+                </value>
+                <value>
+                    <fullName>Business User</fullName>
+                    <default>false</default>
+                    <label>Business User</label>
+                </value>
+                <value>
+                    <fullName>Managed Service Provider (MSP)</fullName>
+                    <default>false</default>
+                    <label>Managed Service Provider (MSP)</label>
+                </value>
+                <value>
+                    <fullName>Value Added Reseller (VAR)</fullName>
+                    <default>false</default>
+                    <label>Value Added Reseller (VAR)</label>
+                </value>
+                <value>
+                    <fullName>Both MSP and VAR</fullName>
+                    <default>false</default>
+                    <label>Both MSP and VAR</label>
+                </value>
+                <value>
+                    <fullName>Alliance Partner</fullName>
+                    <default>false</default>
+                    <label>Alliance Partner</label>
+                </value>
+                <value>
+                    <fullName>Original Equipment Manufacturer (OEM)</fullName>
+                    <default>false</default>
+                    <label>Original Equipment Manufacturer (OEM)</label>
+                </value>
+                <value>
+                    <fullName>Direct Market Reseller (DMR)</fullName>
+                    <default>false</default>
+                    <label>Direct Market Reseller (DMR)</label>
+                </value>
+                <value>
+                    <fullName>Press / Media Evaluator</fullName>
+                    <default>false</default>
+                    <label>Press / Media Evaluator</label>
+                </value>
+                <value>
+                    <fullName>Strategic</fullName>
+                    <default>false</default>
+                    <label>Strategic</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Distributors Partner Reseller</fullName>
+                    <default>false</default>
+                    <label>Distributors Partner Reseller</label>
+                </value>
+                <value>
+                    <fullName>Channel Partner</fullName>
+                    <default>false</default>
+                    <label>Channel Partner</label>
+                </value>
+                <value>
+                    <fullName>CP</fullName>
+                    <default>false</default>
+                    <label>Country Partner</label>
+                </value>
+                <value>
+                    <fullName>Distribution Partner</fullName>
+                    <default>false</default>
+                    <label>Distribution Partner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Serial_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Serial Number or Account/Machine</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TZ_UTC_Offset__c</fullName>
+        <description>Number of hours case submitter is offset from UTC.</description>
+        <externalId>false</externalId>
+        <label>TZ UTC Offset</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <recordTypes>
+        <fullName>WebForm</fullName>
+        <active>true</active>
+        <businessProcess>Support</businessProcess>
+        <label>WebForm</label>
+        <picklistValues>
+            <picklist>Assistance_Type__c</picklist>
+            <values>
+                <fullName>Licensing Assistance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product_Return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Assistance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Assistance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>LA - I am getting an error when trying to activate or deactivate my license%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA - I am requesting a license deactivation%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA - I have a licensing question%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA - My license has expired%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA - My license will expire in less than 3 days%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LA - Requesting an IT Edition Replacement USB Key%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA - I have a presales question regarding ShadowProtect or ShadowControl products%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA - I have an issue or question with NFR %28not for resale%29 licenses%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA - I have an issue or question with licensing upgrades%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA - I have an issue or question with maintenance%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA - I have an issue or question with the partner portal%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA - I have an issue or question with the webstore%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA - I want a quote for ShadowProtect or ShadowControl products%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA - I would like a product demo%2C and or more information on product training%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA - Other question or issue not listed here%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Application crashes or has errors or the backups fail%28High%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Backup Images fail to verify%28High%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Installation and Upgrade issues%28Med%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Intermittent applications errors%2C backups succeed%28Med%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Partner Physically at Client Site%28Emergency%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Production Server Down%28Emergency%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Questions%2C best practices%2C configuration%2C setup or general product information%28Low%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Restore of the machine fails%28High%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Test environment issues%28Low%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TA - Website issues%28Low%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Escalated_Status__c</picklist>
+            <values>
+                <fullName>Escalated Customer Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalated Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalated Sales Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalated Support Tier 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Need More Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on Case Owner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Escalation_Source__c</picklist>
+            <values>
+                <fullName>External - External to Storagecraft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal - Internal to Storagecraft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical - From Support to Support</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>Emergency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Component__c</picklist>
+            <values>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Activation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Activation %2F Licensing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admin Console</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advanced Verification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appliance Install</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BMR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Backup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Box</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder %2F Windows RE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capacity %2F Sizing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cloud Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Configuration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consolidation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CrossPlatform RE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Datacenter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disk Copy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EDB Load</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Endpoint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Endpoint Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Explore Backup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G Suite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE Console</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google Apps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HeadStart Restore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Image Conversion Tool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Image Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inaccessible Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Live Restore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local Replication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSP Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Main Site %2F Downloads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management Console</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mount Tools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Netgear ReadyNAS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network Replication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office 365</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OneSystem Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PE Builder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSA Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plug-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Downloads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Preview</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ReadyNAS Restore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replication Job</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Assistance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seed Drive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Setup %2F Configuration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowProtect 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowProtect IT Edition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowStream</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowStream Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Socket Licensing Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>StorageCraft Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verify Image</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VirtualBoot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webstore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>iFTP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Cloud_Backup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cloud_Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>File_Backup_and_Recovery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Granular_Recovery_for_Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ImageManager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OneBlox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recovery_Environments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowControl</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowProtect_Linux</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowProtect_Windows</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>StorageCraft_Websites</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Select_User_Type__c</picklist>
+            <values>
+                <fullName>Both MSP and VAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Market Reseller %28DMR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Service Provider %28MSP%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Original Equipment Manufacturer %28OEM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trial User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value Added Reseller %28VAR%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Activation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal CRM Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proactive Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Engineer Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Support Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>
