@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AU_Connection_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AU Connection Name</shortDescription>
+        <value>StorageCraft Indo-Pacific</value>
+    </labels>
+    <labels>
+        <fullName>Case_Cancel</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Case_Click_Here</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Click Here</shortDescription>
+        <value>Click Here</value>
+    </labels>
+    <labels>
+        <fullName>Case_Deactivate_Too_Many</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Deactivate Too Many</shortDescription>
+        <value>Ideally Deactivation should be performed from within the software.  This method is provided for those situations where the original software can no longer be accessed; such as after a system failure and Restore.  According to our records this license has already been deactivated too many times for us to process this request automatically.  When you click OK a case will be created with the contact info already provided and a Customer Service representative will contact you</value>
+    </labels>
+    <labels>
+        <fullName>Case_Deactivate_Too_Many_2</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Deactivate Too Many 2</shortDescription>
+        <value>Per the ShadowProtect EULA, you understand and agree that Perpetual Software that is not properly Deactivated, either through the Software or manually by StorageCraft, will not reactivate. You further understand and agree that StorageCraft, in its sole discretion, may refuse to manually Deactivate and/or reactivate Perpetual Software. To see the End User License Agreement,</value>
+    </labels>
+    <labels>
+        <fullName>Case_Details</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Details</shortDescription>
+        <value>Request Help Details</value>
+    </labels>
+    <labels>
+        <fullName>Case_File</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case File</shortDescription>
+        <value>Upload Diagnostic Files</value>
+    </labels>
+    <labels>
+        <fullName>Case_Form_Country</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Form Country</shortDescription>
+        <value>To request help, please first select your country</value>
+    </labels>
+    <labels>
+        <fullName>Case_Form_Language</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Form Language</shortDescription>
+        <value>Language</value>
+    </labels>
+    <labels>
+        <fullName>Case_MSP_Deactivate</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case MSP Deactivate</shortDescription>
+        <value>We have detected that this key is an MSP serial number and it must be deactivated, by the MSP in the MSP Portal. If you are not the MSP, please contact them to deactivate your license.  If you have another activation question about this license, please click Submit, to send a Help Request to StorageCraft Support.</value>
+    </labels>
+    <labels>
+        <fullName>Case_Max_Deactivate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Max Deactivate</shortDescription>
+        <value>Max deactivation attempts reached for serial number.</value>
+    </labels>
+    <labels>
+        <fullName>Case_None_To_Deactivate</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case None To Deactivate</shortDescription>
+        <value>No activations found.</value>
+    </labels>
+    <labels>
+        <fullName>Case_OK</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case OK</shortDescription>
+        <value>OK</value>
+    </labels>
+    <labels>
+        <fullName>Case_Success_Deactivate</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Success Deactivate</shortDescription>
+        <value>Machine Deactivated.</value>
+    </labels>
+    <labels>
+        <fullName>Case_Understand_Terms</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Understand Terms</shortDescription>
+        <value>I Understand These Terms</value>
+    </labels>
+    <labels>
+        <fullName>Case_Want_Deactivate</fullName>
+        <categories>Case</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Want Deactivate</shortDescription>
+        <value>Instead of waiting for a response, I want to immediately and manually deactivate my license.</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Details</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Details</shortDescription>
+        <value>Contact Details</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Status_Orphan</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Status Orphan</shortDescription>
+        <value>Orphaned</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_CONFLICTING_TRANSACTION_TYPES</fullName>
+        <categories>account</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR: conflicting Transaction Types</shortDescription>
+        <value>Transaction Types must only be Enterprise types (Business User, Trial User) or SMB types (all others)</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_INVALID_COUNTRY</fullName>
+        <categories>address</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR: invalid Country</shortDescription>
+        <value>invalid Country specified - enter the full country name or the valid ISO alpha-2/alpha-3 code</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_INVALID_COUNTRY_ISO</fullName>
+        <categories>address</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR: invalid Country ISO code</shortDescription>
+        <value>invalid ISO {0} code specified - enter the full country name or the valid ISO alpha-2/alpha-3 code</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_INVALID_POSTAL_CODE</fullName>
+        <categories>address</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR: invalid ZIP/Postal code format</shortDescription>
+        <value>format of the ZIP/Postal Code is invalid - a valid example is {0}</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_INVALID_STATE_PROVINCE</fullName>
+        <categories>address</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR: invalid State/Province</shortDescription>
+        <value>invalid State/Province specified - enter one of {0}, {1},...</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_INVALID_TELEPHONE_NUMBER</fullName>
+        <categories>address</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR: invalid telephone number format</shortDescription>
+        <value>format of the Phone number is invalid - a valid example is {0}</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_NO_COUNTRY</fullName>
+        <categories>address</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR: no country specified</shortDescription>
+        <value>please specify a Country - enter the full country name or the valid ISO alpha-2/alpha-3 code</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_NO_POSTAL_CODE</fullName>
+        <categories>address</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR: no ZIP/Postal code specified</shortDescription>
+        <value>please specify a ZIP/Postal Code</value>
+    </labels>
+    <labels>
+        <fullName>Enterprise_Url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enterprise Url</shortDescription>
+        <value>https://storagecraft.my.salesforce.com/services/Soap/c/39.0/00D36000000JVmG</value>
+    </labels>
+    <labels>
+        <fullName>Exablox_Connection_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exablox Connection Name</shortDescription>
+        <value>Exablox</value>
+    </labels>
+    <labels>
+        <fullName>Failed_to_Merge</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Failed to Merge</shortDescription>
+        <value>Failed to Merge</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Product_Interested_Value</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Product Interested Value</shortDescription>
+        <value>Exablox</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Region_Value</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Region Value</shortDescription>
+        <value>APAC</value>
+    </labels>
+    <labels>
+        <fullName>Merged</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Merged</shortDescription>
+        <value>Merged</value>
+    </labels>
+    <labels>
+        <fullName>Not_Delete_Orphan_Account</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Not Delete Orphan Account</shortDescription>
+        <value>DO NOT DELETE: ORPHAN ACCOUNT</value>
+    </labels>
+    <labels>
+        <fullName>Partner_Url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Partner Url</shortDescription>
+        <value>https://storagecraft.my.salesforce.com/services/Soap/u/39.0/00D36000000JVmG</value>
+    </labels>
+    <labels>
+        <fullName>Scribe_EndPoint_Url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Scribe EndPoint Url</shortDescription>
+        <value>https://endpoint.scribesoft.com/v1/orgs/16321/messages/2914?accesstoken=df0c2ed3-f678-4a7d-9fa4-5c8bfd0e23b0</value>
+    </labels>
+    <labels>
+        <fullName>Scribe_Notification_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Scribe Notification ID</shortDescription>
+        <value>04l3600000G86RSAAZ</value>
+    </labels>
+    <labels>
+        <fullName>Scribe_OrganizationID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Scribe OrganizationID</shortDescription>
+        <value>00D36000000JVmG</value>
+    </labels>
+    <labels>
+        <fullName>Scribe_Outbound_Message_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Scribe Outbound Message ID</shortDescription>
+        <value>04k36000000TP6z</value>
+    </labels>
+    <labels>
+        <fullName>US</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>US</shortDescription>
+        <value>US</value>
+    </labels>
+    <labels>
+        <fullName>WF_Attachment</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-Attachment</shortDescription>
+        <value>Please upload file with size less than 10 MB for Attachment.</value>
+    </labels>
+    <labels>
+        <fullName>WF_CaseSuccess</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF_CaseSuccess</shortDescription>
+        <value>Your query submitted successfully! Your new case number is</value>
+    </labels>
+    <labels>
+        <fullName>WF_Email_Required</fullName>
+        <categories>WebForm</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF Email Required</shortDescription>
+        <value>Email address is required</value>
+    </labels>
+    <labels>
+        <fullName>WF_Error</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-Error</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>WF_Info</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-Info</shortDescription>
+        <value>Info</value>
+    </labels>
+    <labels>
+        <fullName>WF_InvalidEmail</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-InvalidEmail</shortDescription>
+        <value>Invalid Email Address</value>
+    </labels>
+    <labels>
+        <fullName>WF_MustEnterValue</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-MustEnterValue</shortDescription>
+        <value>You must enter a value</value>
+    </labels>
+    <labels>
+        <fullName>WF_RequestHelp</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-RequestHelp</shortDescription>
+        <value>Request Help</value>
+    </labels>
+    <labels>
+        <fullName>WF_ReviewErrors</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-ReviewErrors</shortDescription>
+        <value>Please review errors.</value>
+    </labels>
+    <labels>
+        <fullName>WF_SaveInProgress</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-SaveInProgress</shortDescription>
+        <value>Record saving is in progress</value>
+    </labels>
+    <labels>
+        <fullName>WF_Submit</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-Submit</shortDescription>
+        <value>Submit Request</value>
+    </labels>
+    <labels>
+        <fullName>WF_Success</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>WF_Wait</fullName>
+        <categories>Webform</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WF-Wait</shortDescription>
+        <value>Wait</value>
+    </labels>
+</CustomLabels>

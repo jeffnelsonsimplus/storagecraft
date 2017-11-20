@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Case_Assign_Debt_Date__c</fullName>
+        <description>Possible concern around various time-zone considerations. Will need testing.</description>
+        <externalId>false</externalId>
+        <label>Case Assign: Debt Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Case_Assign_Debt__c</fullName>
+        <description>Used in conjunction with Case Assign: Debt Date to modify the total of assigned cases for auto-assignment calculation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Positive numbers indicate higher number of cases that should be assigned over peers</inlineHelpText>
+        <label>Case Assign: Debt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Assign_Load_Modifier__c</fullName>
+        <description>Used to modify assignment balance for new staff, leads, and other special cases. Value is frequency of case assignment vs standard user. Load Modifier of 75% would be 3 cases for every 4 assigned to a standard user. Represents desired relative case load. Use in Auto-Assignment logic.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relative load outcome</inlineHelpText>
+        <label>Case Assign: Load Modifier</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Case_Assign_Qualified_Priorities__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Assign: Qualified Priorities</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SalesRep__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SalesRep</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

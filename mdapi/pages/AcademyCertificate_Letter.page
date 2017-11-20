@@ -1,0 +1,34 @@
+<apex:page standardcontroller="Academy_Certificate__c" extensions="AcademyCertificateLetterController">
+  <style>
+    #col1,#col2{width:49%;display:inline-block;}
+  </style>
+
+  <apex:form >
+    <apex:pageblock title="Send Academy Certificate Letter" >
+    
+      <apex:pageBlockSection columns="2" title="Information">    
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel >Contact</apex:outputLabel>
+          <apex:outputLink value="/{!contactId}">{!contactName}</apex:outputLink> 
+        </apex:pageBlockSectionItem><br />
+        
+        <apex:outputText label="Email" value="{!contactEmail}" /> <br />
+        <apex:outputField label="Certificate" value="{!Academy_Certificate__c.Certification__c}" /> <br />
+        <apex:outputText label="Account" value="{!accountName}" /> <br />  
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection columns="2" title="Send Email to">       
+        <apex:inputCheckbox value="{!emailContact}"   label="    Contact: {!contactName}" selected="true" /><br />
+        <apex:inputCheckbox value="{!emailMe}"        label="    Submitter: {!$User.FirstName} {!$User.LastName}" selected="true" /><br />
+        <apex:inputCheckbox value="{!emailAcademy}"   label="    Academy Team" selected="true" /><br />
+        <apex:inputCheckbox value="{!emailOwner}"     label="    Account Owner: {!accountOwner}" selected="true" /><br />
+        <apex:inputCheckbox value="{!emailTerritory}" label="    Territory Team: {!territoryTeam}" selected="true" /><br />
+        <apex:commandButton value="Send" action="{!sendEmail}" />
+      </apex:pageBlockSection>     
+      <br />
+      <font color="red"> <apex:outputtext value="{!message}" /> </font>
+
+    </apex:pageblock>
+  </apex:form>
+
+</apex:page>

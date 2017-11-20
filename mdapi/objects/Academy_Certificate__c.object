@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Controls data for certificates earned through the Academy</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Certificate_Sent_On__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when certificate was sent</inlineHelpText>
+        <label>Certificate Sent On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Certificate_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Was the certificate sent?</inlineHelpText>
+        <label>Certificate Sent?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Certification__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Certification received by the Contact</inlineHelpText>
+        <label>Certification</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>StorageCraft_Certified_Engineer</fullName>
+                    <default>false</default>
+                    <label>StorageCraft Certified Engineer</label>
+                </value>
+                <value>
+                    <fullName>StorageCraft_Certified_Master_Engineer</fullName>
+                    <default>false</default>
+                    <label>StorageCraft Certified Master Engineer</label>
+                </value>
+                <value>
+                    <fullName>StorageCraft_Sales_Professional</fullName>
+                    <default>false</default>
+                    <label>StorageCraft Certified Sales Professional</label>
+                </value>
+                <value>
+                    <fullName>StorageCraft_Certified_Engineer_Offsite_Recovery</fullName>
+                    <default>false</default>
+                    <label>StorageCraft Certified Engineer-Offsite Recovery</label>
+                </value>
+                <value>
+                    <fullName>StorageCraft_Certified_Professional</fullName>
+                    <default>false</default>
+                    <label>StorageCraft Certified Professional</label>
+                </value>
+                <value>
+                    <fullName>StorageCraft_Certified_Specialist</fullName>
+                    <default>false</default>
+                    <label>StorageCraft Certified Specialist</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Certified_Contact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>The contact which has been certified</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Who received the certification</inlineHelpText>
+        <label>Certified Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Academy Certificates</relationshipLabel>
+        <relationshipName>Academy_Certificates</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Certified_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when considered Certified</inlineHelpText>
+        <label>Certified Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Account related to the Certified Contact</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Academy Certificates</relationshipLabel>
+        <relationshipName>Academy_Certificates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Dynamics_Id__c</fullName>
+        <description>Related identifier in Dynamics</description>
+        <externalId>true</externalId>
+        <inlineHelpText>If from Dynamics, the related identifier</inlineHelpText>
+        <label>Dynamics Id</label>
+        <length>24</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expiration_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>When the certification ends, leave empty for never.</inlineHelpText>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Passed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Did the Contact pass the test?</inlineHelpText>
+        <label>Passed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Percent_Score__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Percent Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Raw_Score__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Raw Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SCME_Practial_Passed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SCME Practial Passed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of the Certification</description>
+        <externalId>false</externalId>
+        <formula>IF(Passed__c, 
+    IF(OR(Expiration_Date__c == null, Expiration_Date__c &lt; Today()), 
+        &apos;Expired&apos;, 
+        IF (OR(TEXT(Certified_Contact__r.Status__c) == &apos;Left the company&apos;, 
+               TEXT(Certified_Contact__r.Status__c) == &apos;Inactive&apos;), 
+            &apos;Inactive&apos;, 
+            &apos;Certified&apos;)), 
+    &apos;Not Certified&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>When the test was taken</inlineHelpText>
+        <label>Test Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Training_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How the Contact was able to become certified</inlineHelpText>
+        <label>Training Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Instructor_led</fullName>
+                    <default>false</default>
+                    <label>Instructor-led</label>
+                </value>
+                <value>
+                    <fullName>Online</fullName>
+                    <default>false</default>
+                    <label>Online</label>
+                </value>
+                <value>
+                    <fullName>Tested_Out</fullName>
+                    <default>false</default>
+                    <label>Tested Out</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Academy Certificate</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Certified_Contact__c</columns>
+        <columns>Certification__c</columns>
+        <columns>Certified_Date__c</columns>
+        <columns>Expiration_Date__c</columns>
+        <columns>Certificate_Sent_On__c</columns>
+        <columns>Passed__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>StorageCraft_Certified_Engineer</fullName>
+        <columns>NAME</columns>
+        <columns>Certification__c</columns>
+        <columns>Certified_Contact__c</columns>
+        <columns>Certified_Date__c</columns>
+        <columns>Certificate_Sent_On__c</columns>
+        <columns>Expiration_Date__c</columns>
+        <columns>Passed__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Certification__c</field>
+            <operation>equals</operation>
+            <value>StorageCraft_Certified_Engineer</value>
+        </filters>
+        <label>StorageCraft Certified Engineer</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>STCA-{YYYY}{MM}{0000}</displayFormat>
+        <label>Academy Certificate Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Academy Certificates</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Certified_Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Certification__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Certified_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Certificate_Sent__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Certificate_Sent_On__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Expiration_Date__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Certified_Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Certification__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Certified_Date__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Certified_Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Certification__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Certified_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Certificate_Sent__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Certificate_Sent_On__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Expiration_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Send</fullName>
+        <availability>online</availability>
+        <description>Display certification information then allow send of the Certificate to the contact</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Send Certificate</masterLabel>
+        <openType>sidebar</openType>
+        <page>AcademyCertificate_Letter</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

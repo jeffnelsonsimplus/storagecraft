@@ -1,0 +1,17 @@
+<apex:page standardController="DealRegistration__c" extensions="dealRegPageCompClass" showHeader="false">
+
+<apex:form >
+<apex:pageblock id="mainBlock">
+<apex:messages />
+  <apex:pageblockbuttons location="top">
+    <apex:commandbutton value="Approve" action="{!approveDR}" rendered="{!(dr.SystemStatus__c == 'new' || dr.SystemStatus__c == 'working') && dr.Status__c == "Pending Approval" && approve != true && reject != true}" rerender="mainBlock"/>
+    <apex:commandbutton value="Reject" action="{!rejectDR}" rendered="{!(dr.SystemStatus__c == 'new' || dr.SystemStatus__c == 'working') && dr.Status__c == "Pending Approval" && reject != true && approve != true}" rerender="mainBlock"/>
+    <apex:commandbutton value="Submit Approval" action="{!submitApproval}" rendered="{!(dr.SystemStatus__c == 'new' || dr.SystemStatus__c == 'working') && approve != null && approve = true}"/>
+    <apex:commandbutton value="Submit Rejection" action="{!submitRejection}" rendered="{!(dr.SystemStatus__c == 'new' || dr.SystemStatus__c == 'working')  && reject != null && reject = true}"/>
+    <apex:commandbutton value="Cancel Changes" action="{!cancel}" rendered="{!(reject != null && reject = true) || (approve != null && approve = true) }"/>
+  </apex:pageblockbuttons>
+  <apex:pageblocksection >
+  </apex:pageblocksection>
+</apex:pageblock>
+</apex:form>
+</apex:page>
