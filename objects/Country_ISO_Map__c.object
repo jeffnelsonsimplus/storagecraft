@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>JIRA SSF-62: this object maps full country names to the ISO 3166-1 alpha-2 (two letter) codes and alpha-3 (three letter) codes for the country</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>alpha2Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>JIRA SSF-62</description>
+        <externalId>true</externalId>
+        <label>Alpha-2 code</label>
+        <length>2</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>alpha3Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>JIRA SSF-62</description>
+        <externalId>false</externalId>
+        <label>Alpha-3 code</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>countryCode__c</fullName>
+        <description>This is the country calling code for IDD</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the country calling code for IDD (include &apos;+&apos; at the beginning)</inlineHelpText>
+        <label>Country Calling Code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>otherName__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>The Country may also be known under this name. For example, &apos;Korea (the Republic of)&apos; is more commonly known as &apos;South Korea&apos;.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Alternate other/common name for the Country</inlineHelpText>
+        <label>Other Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>postalCodeExample__c</fullName>
+        <description>JIRA SSF-65</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify an example of what the ZIP/Postal code should look like</inlineHelpText>
+        <label>ZIP/Postal code example</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>postalCodeRegex__c</fullName>
+        <description>JIRA SSF-65: regex formula to validate the ZIP/Postal codes for the country (if applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Regular expression (regex) formula to validate the ZIP/Postal codes for the country (if applicable)</inlineHelpText>
+        <label>ZIP/Postal code regex</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>statesProvinces__c</fullName>
+        <description>JIRA SSF-65: comma delimited list of valid states/provinces for the country (if applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comma delimited list of valid states/provinces for the country (if applicable)</inlineHelpText>
+        <label>States/Provinces</label>
+        <length>400</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>telephoneFormats__c</fullName>
+        <description>JSON document describing all possible telephone number formats</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This contains possible telephone number (landline and mobile/cell) formats as a JSON string</inlineHelpText>
+        <label>Telephone formats</label>
+        <length>8192</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>16</visibleLines>
+    </fields>
+    <label>Country</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>otherName__c</columns>
+        <columns>alpha2Code__c</columns>
+        <columns>alpha3Code__c</columns>
+        <columns>countryCode__c</columns>
+        <columns>statesProvinces__c</columns>
+        <columns>postalCodeRegex__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Country Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Countries</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

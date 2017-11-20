@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Contacted2__c</fullName>
+        <externalId>false</externalId>
+        <label>Contacted2</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                    <label>Phone</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contacted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Has the campaign member been contacted by sales</description>
+        <externalId>false</externalId>
+        <label>Contacted</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ext_Id_Value_Case_Insensitive__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID( Id )</formula>
+        <label>Ext Id Value (Case-Insensitive)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>
