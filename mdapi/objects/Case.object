@@ -121,18 +121,6 @@
         </values>
     </businessProcesses>
     <fields>
-        <fullName>Assignment_Date_Time__c</fullName>
-        <defaultValue>NOW()</defaultValue>
-        <description>Capture when the assignment was made to the current owner</description>
-        <externalId>false</externalId>
-        <label>Assignment Date/Time</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>DateTime</type>
-    </fields>
-    <fields>
         <fullName>Assistance_Type__c</fullName>
         <externalId>false</externalId>
         <label>Assistance Type</label>
@@ -237,77 +225,6 @@
                 <valueName>Product_Return</valueName>
             </valueSettings>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>Case_Review_Comments__c</fullName>
-        <externalId>false</externalId>
-        <label>Case Review: Comments</label>
-        <length>2000</length>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>3</visibleLines>
-    </fields>
-    <fields>
-        <fullName>Case_Review_Contact__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Case Review: Contact</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Case_Review_Escalation__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Case Review: Escalation</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Case_Review_General__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Case Review: General</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Case_Review_Information__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Case Review: Information</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Case_Review_Product__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Case Review: Product</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Case_Review_Serial__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Case Review: Serial</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Category__c</fullName>
@@ -3901,17 +3818,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Serial_Number_Details__c</fullName>
-        <externalId>false</externalId>
-        <label>Serial Number Details</label>
-        <length>2000</length>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>3</visibleLines>
-    </fields>
-    <fields>
         <fullName>Serial_Number__c</fullName>
         <externalId>false</externalId>
         <label>Serial Number or Account/Machine</label>
@@ -5549,4 +5455,93 @@
             </values>
         </picklistValues>
     </recordTypes>
+    <webLinks>
+        <fullName>Change_Owner_Custom</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Change Owner</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/support/console/38.0/integration.js&quot;)} 
+
+var url = &apos;/{!Case.Id}/a?retURL=%2F{!Case.Id}&apos;; 
+// IF CONSOLE ADD PARAMETER TO HIDE HEADER AND USER SRCUP 
+if(sforce.console.isInConsole()){ 
+url = url + &apos;&amp;isdtp=nv&apos;; 
+srcUp(url); 
+} else { 
+location.href = (url); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <description>This is a custom replacer that scrubs escalation data to prevent incorrect notification of escalations.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR($Action.Case.Clone, Case.Id, [&quot;retURL&quot;=&quot;/&quot;+Case.Id,&quot;00N3600000DU9ai&quot;=&quot; &quot;,&quot;CF00N3600000DU9du&quot;=&quot; &quot;,&quot;00N3600000OZlZM&quot;=&quot; &quot;,&quot;CF00N3600000OZlZW&quot;=&quot; &quot;,&quot;00N3600000Onbyk&quot;=&quot; &quot;,&quot;00N3600000DU9a3&quot;=&quot; &quot;,&quot;00N3600000OpWli&quot;=&quot; &quot;])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Close_Case_Custom</fullName>
+        <availability>online</availability>
+        <description>Custom Close Case button which is available from the custom buttons menu on the action view</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Close Case</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/support/console/38.0/integration.js&quot;)} 
+
+var url = &apos;/{!Case.Id}/s?retURL=%2F{!Case.Id}&apos;;
+            // IF CONSOLE ADD PARAMETER TO HIDE HEADER AND USER SRCUP
+            if(sforce.console.isInConsole()){
+                url = url + &apos;&amp;isdtp=nv&apos;;
+                srcUp(url);
+            } else {
+                location.href = (url);
+            }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditCase</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateCase</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Update_Serial_Details</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Update Serial Details</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/37.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/37.0/apex.js&quot;)}
+
+sforce.apex.execute(&quot;CaseSerialDetailCapture&quot;,&quot;updateLicenseDetails&quot;,{cid:&quot;{!Case.Id }&quot;});
+window.location.reload();</url>
+    </webLinks>
 </CustomObject>

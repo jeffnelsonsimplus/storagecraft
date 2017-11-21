@@ -23,19 +23,6 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>DealRegistration__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Deal Registration</label>
-        <referenceTo>DealRegistration__c</referenceTo>
-        <relationshipLabel>Leads</relationshipLabel>
-        <relationshipName>Leads</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>DomainAccountID__c</fullName>
         <externalId>false</externalId>
         <formula>Additional_Domain__r.Account__r.Id</formula>
@@ -66,11 +53,238 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>IsDisqualified__c</fullName>
+        <fullName>UserType__c</fullName>
         <externalId>false</externalId>
-        <formula>If(ispickval(Status,&quot;Disqualified&quot;),TRUE,FALSE)</formula>
-        <label>Is Disqualified</label>
-        <trackHistory>false</trackHistory>
-        <type>Checkbox</type>
+        <label>User Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alliance Partner</fullName>
+                    <default>false</default>
+                    <label>Alliance Partner</label>
+                </value>
+                <value>
+                    <fullName>Both MSP and VAR</fullName>
+                    <default>false</default>
+                    <label>Both MSP and VAR</label>
+                </value>
+                <value>
+                    <fullName>Business User</fullName>
+                    <default>true</default>
+                    <label>Business User</label>
+                </value>
+                <value>
+                    <fullName>CP</fullName>
+                    <default>false</default>
+                    <label>CP</label>
+                </value>
+                <value>
+                    <fullName>Direct Market Reseller (DMR)</fullName>
+                    <default>false</default>
+                    <label>Direct Market Reseller (DMR)</label>
+                </value>
+                <value>
+                    <fullName>Distribution Partner</fullName>
+                    <default>false</default>
+                    <label>Distribution Partner</label>
+                </value>
+                <value>
+                    <fullName>Distributors Partner Reseller</fullName>
+                    <default>false</default>
+                    <label>Distributors Partner Reseller</label>
+                </value>
+                <value>
+                    <fullName>Home User</fullName>
+                    <default>false</default>
+                    <label>Home User</label>
+                </value>
+                <value>
+                    <fullName>Managed Service Provider (MSP)</fullName>
+                    <default>false</default>
+                    <label>Managed Service Provider (MSP)</label>
+                </value>
+                <value>
+                    <fullName>Original Equipment Manufacturer (OEM)</fullName>
+                    <default>false</default>
+                    <label>Original Equipment Manufacturer (OEM)</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Press / Media Evaluator</fullName>
+                    <default>false</default>
+                    <label>Press / Media Evaluator</label>
+                </value>
+                <value>
+                    <fullName>Strategic</fullName>
+                    <default>false</default>
+                    <label>Strategic</label>
+                </value>
+                <value>
+                    <fullName>Trial User</fullName>
+                    <default>false</default>
+                    <label>Trial User</label>
+                </value>
+                <value>
+                    <fullName>Value Added Reseller (VAR)</fullName>
+                    <default>false</default>
+                    <label>Value Added Reseller (VAR)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
+    <webLinks>
+        <fullName>Convert</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Convert</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/lead/leadconvert.jsp?id={!Lead.Id}&amp;nooppti= 
+{!if( 
+ISPICKVAL( 
+Lead.UserType__c, 
+&quot;Business User&quot; 
+),0,1 
+)}&amp; 
+retURL=%2F{!Lead.Id}&amp;saveURL=%2Fapex%2FdomainLeadConversionManager%3Fid%3D{!Lead.Additional_DomainId__c}%26lid%3D{!Lead.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Convert_Lead_on_Domain_Account</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Convert as Contact on Existing Account</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/apex.js&quot;)}
+
+var displayMsg=&apos;Lead not processed due to some reason&apos;;
+alert(&apos;Lead is being converted please wait..&apos;);
+
+if(&quot;{!Lead.Additional_DomainId__c}&quot; != &apos;&apos; &amp;&amp; &quot;{!Lead.Additional_DomainId__c}&quot; != null){
+	var myquery = &quot;SELECT Id, Account__c FROM Additional_Domain__c WHERE Id = &apos;{!Lead.Additional_DomainId__c}&apos; limit 1&quot;;
+	result = sforce.connection.query(myquery);
+	records = result.getArray(&quot;records&quot;);
+	if(records[0]){
+		if(records[0].Account__c != &apos;&apos; &amp;&amp; records[0].Account__c != null){
+		var accountId = records[0].Account__c;
+		displayMsg = sforce.apex.execute(&quot;LeadConvertUtility&quot;,&quot;convertLeadsToConts&quot;,{leadId:&quot;{!Lead.Id}&quot;,accId:accountId,domainId:&quot;{!Lead.Additional_DomainId__c}&quot;});
+		alert(displayMsg);
+		window.location.href=window.location.href;
+		}else if(records[0].Account__c == &apos;&apos; || records[0].Account__c == null){
+		displayMsg = &apos;No Account on related Domain&apos;;
+		}
+	}
+}
+else if(&quot;{!Lead.Additional_DomainId__c}&quot; == &apos;&apos; || &quot;{!Lead.Additional_DomainId__c}&quot; == null){
+	displayMsg = &apos;No Domain on Lead&apos;;
+}
+
+alert(displayMsg);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Convert_Partner_Application</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Convert Partner Application</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/lead/leadconvert.jsp?retURL=%2F{!Lead.Id}&amp;id={!Lead.Id}&amp;nooppti=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Lead_Street}+{!Lead_City}+{!Lead_State}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Lead_Company}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditLead</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateLead</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
 </CustomObject>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <assignments>
+        <name>Assign_Clear_Values</name>
+        <label>Assign Clear Values</label>
+        <locationX>570</locationX>
+        <locationY>132</locationY>
+        <assignmentItems>
+            <assignToReference>NoteTitle</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ClearOverride_Title</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NoteBody</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ClearOverride_Body</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Account.Partner_Level_Overwritten__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Account.Partner_Level__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Account.Partner_Level_Calculated__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Account_Update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Set_Values</name>
+        <label>Assign Set Values</label>
+        <locationX>569</locationX>
+        <locationY>240</locationY>
+        <assignmentItems>
+            <assignToReference>NoteTitle</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SetOverride_Title</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NoteBody</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SetOverride_Body</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Account.Partner_Level_Overwritten__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Account.Partner_Level__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Override_Level</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Account_Update</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>No_Override</name>
+        <choiceText>No</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Yes_Override</name>
+        <choiceText>Yes</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>WhichOverride</name>
+        <label>Which Override?</label>
+        <locationX>362</locationX>
+        <locationY>240</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Clear_Values</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Clear</defaultConnectorLabel>
+        <rules>
+            <name>No_Change</name>
+            <conditionLogic>(1 AND 2 AND 3) OR (4 AND 5 AND 6)</conditionLogic>
+            <conditions>
+                <leftValueReference>Override</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Account.Partner_Level_Overwritten__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Account.Partner_Level__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Account.Partner_Level_Calculated__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Override</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Account.Partner_Level_Overwritten__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Override_Level</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Account.Partner_Level__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>No_Change_Made</targetReference>
+            </connector>
+            <label>No Change</label>
+        </rules>
+        <rules>
+            <name>Set</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Override</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Set_Values</targetReference>
+            </connector>
+            <label>Set</label>
+        </rules>
+    </decisions>
+    <description>Set or clear the Partner Level Override on an Account</description>
+    <dynamicChoiceSets>
+        <name>PartnerLevels</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Partner_Level__c</picklistField>
+        <picklistObject>Account</picklistObject>
+    </dynamicChoiceSets>
+    <formulas>
+        <description>User Identifier running this Flow.  Used in the Note creation.</description>
+        <name>UserId</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Id}</expression>
+    </formulas>
+    <formulas>
+        <description>Name of the user running this Flow.  Used in the Note creation.</description>
+        <name>UserName</name>
+        <dataType>String</dataType>
+        <expression>({!$User.FirstName} &amp; &quot; &quot; &amp; {!$User.LastName})</expression>
+    </formulas>
+    <interviewLabel>Partner Level Override {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Partner Level Override</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>New_Note</name>
+        <label>New Note</label>
+        <locationX>924</locationX>
+        <locationY>243</locationY>
+        <connector>
+            <targetReference>Results</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Body</field>
+            <value>
+                <elementReference>NoteBody</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsPrivate</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>UserId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Title</field>
+            <value>
+                <elementReference>NoteTitle</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Note</object>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Account_Information</name>
+        <label>Get Account Information</label>
+        <locationX>24</locationX>
+        <locationY>237</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Select_Override</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>AccountId</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputReference>Account</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Partner_Level__c</queriedFields>
+        <queriedFields>Partner_Level_Calculated__c</queriedFields>
+        <queriedFields>Partner_Level_Overwritten__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Account_Update</name>
+        <label>Account Update</label>
+        <locationX>752</locationX>
+        <locationY>244</locationY>
+        <connector>
+            <targetReference>New_Note</targetReference>
+        </connector>
+        <inputReference>Account</inputReference>
+    </recordUpdates>
+    <screens>
+        <description>Screen displayed when no change was made in the input screen.</description>
+        <name>No_Change_Made</name>
+        <label>No Change Made</label>
+        <locationX>569</locationX>
+        <locationY>347</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>NoChangesMade</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;No Changes&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;BR/&gt;&lt;BR/&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;No changes were made to the Partner Level Override on the account {!Account.Name}.&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+    </screens>
+    <screens>
+        <description>Displays the changes made</description>
+        <name>Results</name>
+        <label>Results</label>
+        <locationX>1098</locationX>
+        <locationY>241</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>OverrideResults</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Complete&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;BR/&gt;&lt;BR/&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Changes to the account {!Account.Name} result in:&lt;/FONT&gt;&lt;/DIV&gt;&lt;BR/&gt;&lt;BR/&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;  Partner Level:  {!Account.Partner_Level__c}&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;  Partner Level Overwiritten:  {!Account.Partner_Level_Overwritten__c}&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+    </screens>
+    <screens>
+        <description>The User is allowed to set or clear the Partner Level Override value.</description>
+        <name>Select_Override</name>
+        <label>Select Override</label>
+        <locationX>196</locationX>
+        <locationY>238</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>WhichOverride</targetReference>
+        </connector>
+        <fields>
+            <name>OverrideInstructions</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;You are changing the Partner Level Override on the account:&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;BR/&gt;&lt;BR/&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;  Account: {!Account.Name}&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;  Partner Level:  {!Account.Partner_Level__c}&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;  Partner Level Overwiritten:  {!Account.Partner_Level_Overwritten__c}&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;/FONT&gt;&lt;BR/&gt;&lt;BR/&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Override</name>
+            <choiceReferences>Yes_Override</choiceReferences>
+            <choiceReferences>No_Override</choiceReferences>
+            <dataType>Boolean</dataType>
+            <defaultSelectedChoiceReference>No_Override</defaultSelectedChoiceReference>
+            <fieldText>Override?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <helpText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Yes&lt;/B&gt; allows you to use the &lt;B&gt;Override Level&lt;/B&gt; to set the account&amp;apos;s working Partner Level.&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;No&lt;/B&gt; clears the override and resets the account&amp;apos;s Partner Level to the calculated level.&lt;/FONT&gt;&lt;/DIV&gt;</helpText>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Override_Level</name>
+            <choiceReferences>PartnerLevels</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Override Level</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <helpText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;When &lt;B&gt;Override?&lt;/B&gt; is &lt;B&gt;Yes&lt;/B&gt;, then this is the override Partner Level.  If &lt;FONT KERNING=&quot;1&quot;&gt;&lt;B&gt;Override?&lt;/B&gt; is &lt;FONT KERNING=&quot;0&quot;&gt;&lt;B&gt;No&lt;/B&gt;, this field has no effect.&lt;/FONT&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/DIV&gt;</helpText>
+            <isRequired>false</isRequired>
+        </fields>
+    </screens>
+    <startElementReference>Get_Account_Information</startElementReference>
+    <textTemplates>
+        <description>Note body for a Clear Override</description>
+        <name>ClearOverride_Body</name>
+        <text>{!UserName} cleared the override for the Partner Level.
+
+Old Partner Level:  {!Account.Partner_Level__c} 
+Old Override Value:  {!Account.Partner_Level_Overwritten__c}
+
+New Partner Level:  {!Override_Level}
+New Override Value:  {!Override}</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Note title for a Clear Override</description>
+        <name>ClearOverride_Title</name>
+        <text>Partner Level Override Cleared by {!UserName} on {!$Flow.CurrentDate}</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Note body for a Set Override</description>
+        <name>SetOverride_Body</name>
+        <text>{!UserName} set the override for the Partner Level.
+
+Old Partner Level:  {!Account.Partner_Level__c} 
+Old Override Value:  {!Account.Partner_Level_Overwritten__c}
+
+New Partner Level:  {!Override_Level}
+New Override Value:  {!Override}</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Note title for a Set Override</description>
+        <name>SetOverride_Title</name>
+        <text>Partner Level Override Set to {!Override_Level} by {!UserName} on {!$Flow.CurrentDate}</text>
+    </textTemplates>
+    <variables>
+        <description>Data for the account</description>
+        <name>Account</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <description>The identifer of the account to have the Partner Level Overridea adjusted.</description>
+        <name>AccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Receives the body of the Note, whether Set or Clear.</description>
+        <name>NoteBody</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Receives the title of the Note, whether Set or Clear.</description>
+        <name>NoteTitle</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Holds  the Partner Level at the start of the Flow.</description>
+        <name>OldPartnerLevel</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>Account.Partner_Level__c</elementReference>
+        </value>
+    </variables>
+</Flow>

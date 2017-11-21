@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fields>
-        <fullName>DealRegistration__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Deal Registration</label>
-        <referenceTo>DealRegistration__c</referenceTo>
-        <relationshipLabel>Opportunities</relationshipLabel>
-        <relationshipName>Opportunities</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
+    <webLinks>
+        <fullName>Create_NSD</fullName>
+        <availability>online</availability>
+        <description>Create NSD Records</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create NSD</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/flow/Create_NSD_Record?VarOpportunityId={!Opportunity.Id}&amp;VarAccountId={!Opportunity.AccountId}&amp;retURL=/{!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Deal_Reg_Approval</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Deal Reg Approval</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)}  //soap connection call
+ 
+var newRecords = [];  //declare the varaiable that will hold all the information
+ 
+var opp = new sforce.SObject(&quot;Opportunity&quot;);  //get the opp your on
+opp.id =&quot;{!Opportunity.Id}&quot;;                  //get the id of the opp
+opp.Deal_Reg_Approval__c = true; //custom field on opportunity object called Deal Reg Approval.
+ 
+newRecords.push(opp);            //push the information through
+ 
+result = sforce.connection.update(newRecords); //update the database with the information in the variable newRecords
+window.location.reload(); // reload the page</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditOpp</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <description>Mass update</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateOpportunity</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
 </CustomObject>
