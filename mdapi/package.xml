@@ -2,134 +2,16 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>retrieve</fullName>
     <types>
-        <members>GuideSections</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>Guide__c.Guide_Compact_Layout</members>
-        <name>CompactLayout</name>
-    </types>
-    <types>
-        <members>Guide__c.Community_URL__c</members>
-        <members>Guide__c.Default_Data_Category__c</members>
-        <members>Guide__c.Guide_Id__c</members>
-        <members>Guide__c.Status__c</members>
-        <members>How_To__kav.Approval_Status__c</members>
-        <members>How_To__kav.ArticleBody__c</members>
-        <members>How_To__kav.Intended_Audience__c</members>
-        <members>How_To__kav.Legacy_KB_Date_Created__c</members>
-        <members>How_To__kav.Legacy_KB_Number__c</members>
-        <members>How_To__kav.Legacy_Keywords__c</members>
-        <members>How_To__kav.Legacy_URL__c</members>
-        <members>How_To__kav.Overview__c</members>
-        <members>How_To__kav.Product_Versions__c</members>
-        <members>Informational__kav.Approval_Status__c</members>
-        <members>Informational__kav.ArticleBody__c</members>
-        <members>Informational__kav.Intended_Audience__c</members>
-        <members>Informational__kav.Legacy_KB_Date_Created__c</members>
-        <members>Informational__kav.Legacy_KB_Number__c</members>
-        <members>Informational__kav.Legacy_Keywords__c</members>
-        <members>Informational__kav.Legacy_URL__c</members>
-        <members>Informational__kav.Overview__c</members>
-        <members>Informational__kav.Product_Versions__c</members>
-        <members>Program_Message__kav.Approval_Status__c</members>
-        <members>Program_Message__kav.Error_Code__c</members>
-        <members>Program_Message__kav.Intended_Audience__c</members>
-        <members>Program_Message__kav.Location_Details__c</members>
-        <members>Program_Message__kav.Message_Example__c</members>
-        <members>Program_Message__kav.Module_Code__c</members>
-        <members>Program_Message__kav.Product_Versions__c</members>
-        <members>Program_Message__kav.Program_Module__c</members>
-        <members>Program_Message__kav.Related_Content__c</members>
-        <members>Program_Message__kav.Seen_Where__c</members>
-        <members>Troubleshooting__kav.Approval_Status__c</members>
-        <members>Troubleshooting__kav.Cause__c</members>
-        <members>Troubleshooting__kav.Intended_Audience__c</members>
-        <members>Troubleshooting__kav.Internal_Notes__c</members>
-        <members>Troubleshooting__kav.Legacy_KB_Date_Created__c</members>
-        <members>Troubleshooting__kav.Legacy_KB_Number__c</members>
-        <members>Troubleshooting__kav.Legacy_Keywords__c</members>
-        <members>Troubleshooting__kav.Legacy_URL__c</members>
-        <members>Troubleshooting__kav.Problem__c</members>
-        <members>Troubleshooting__kav.Product_Versions__c</members>
-        <members>Troubleshooting__kav.Resolution__c</members>
-        <members>User_Guide__kav.ArticleBody__c</members>
-        <members>User_Guide__kav.Community_URL__c</members>
-        <members>User_Guide__kav.Guide__c</members>
-        <members>User_Guide__kav.Landing_Page__c</members>
-        <members>User_Guide__kav.Section_Name__c</members>
-        <members>User_Guide__kav.Section__c</members>
-        <members>Video__kav.Approval_Status__c</members>
-        <members>Video__kav.Embed_URL__c</members>
-        <members>Video__kav.Intended_Audience__c</members>
-        <members>Video__kav.Product_Versions__c</members>
-        <members>Video__kav.Video_Duration__c</members>
-        <members>Video__kav.Video_URL__c</members>
-        <name>CustomField</name>
-    </types>
-    <types>
-        <members>Guide__c</members>
-        <members>How_To__kav</members>
-        <members>Informational__kav</members>
-        <members>Program_Message__kav</members>
-        <members>Troubleshooting__kav</members>
-        <members>User_Guide__kav</members>
-        <members>Video__kav</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>User_Guide__kav.Community</members>
-        <name>FieldSet</name>
-    </types>
-    <types>
-        <members>Guide_Record_Page2</members>
-        <name>FlexiPage</name>
-    </types>
-    <types>
-        <members>Guide__c-Guide Layout</members>
-        <members>Guide__c-Guide Public Layout</members>
-        <members>How_To__kav-How To Layout</members>
-        <members>How_To__kav-How To Public Layout</members>
-        <members>Informational__kav-Informational Layout</members>
-        <members>Informational__kav-Informational Public Layout</members>
-        <members>Program_Message__kav-Program Message Layout</members>
-        <members>Program_Message__kav-Program Message Public Layout</members>
-        <members>Troubleshooting__kav-Troubleshooting Layout</members>
-        <members>Troubleshooting__kav-Troubleshooting Public Layout</members>
-        <members>User_Guide__kav-Book Section Layout</members>
-        <members>User_Guide__kav-Book Section Public Layout</members>
-        <members>Video__kav-Video Layout</members>
-        <members>Video__kav-Video Public Layout</members>
-        <name>Layout</name>
-    </types>
-    <types>
-        <members>Guide__c.All</members>
-        <members>Guide__c.CurrentGuides</members>
-        <name>ListView</name>
-    </types>
-    <types>
-        <members>SendEmail</members>
-        <name>QuickAction</name>
-    </types>
-    <types>
-        <members>How_To__kav.How_To_Title_Length_Rule</members>
-        <members>How_To__kav.How_To_Title_Rule</members>
-        <members>How_To__kav.Legacy_KB_Article_Format</members>
-        <members>Informational__kav.Informational_Title_Length_Rule</members>
-        <members>Informational__kav.Legacy_KB_Article_Format</members>
-        <members>Program_Message__kav.Program_Message_Title_Length_Rule</members>
-        <members>Troubleshooting__kav.Legacy_KB_Article_Format</members>
-        <members>Troubleshooting__kav.Troubleshooting_Title_Length_Rule</members>
-        <members>User_Guide__kav.Section_should_be_populated</members>
-        <members>Video__kav.Video_Duration_Rule</members>
-        <members>Video__kav.Video_Title_Length_Rule</members>
-        <members>Video__kav.Video_Title_Rule</members>
-        <name>ValidationRule</name>
-    </types>
-    <types>
-        <members>Guide__c.Categories_and_Articles</members>
-        <members>Guide__c.New_Guide_Section</members>
-        <name>WebLink</name>
+        <members>Community_Banner</members>
+        <members>HorizontalLinePNG</members>
+        <members>HorizontalLinePNG1</members>
+        <members>HorizontalLinePNG2</members>
+        <members>HorizontalLinePNG3</members>
+        <members>HorizontalLinePNG4</members>
+        <members>SC_LOGO_HORZ_4C</members>
+        <members>phonelandscape</members>
+        <members>underconstruction</members>
+        <name>ContentAsset</name>
     </types>
     <version>41.0</version>
 </Package>
