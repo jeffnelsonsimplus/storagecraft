@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Activation Request</masterLabel>
+        <translation><!-- Activation Request --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Feature Request</masterLabel>
+        <translation>機能要求</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Internal Billing</masterLabel>
+        <translation><!-- Internal Billing --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Internal CRM Request</masterLabel>
+        <translation><!-- Internal CRM Request --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Proactive Contact</masterLabel>
+        <translation><!-- Proactive Contact --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Return Request</masterLabel>
+        <translation><!-- Return Request --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales Engineer Request</masterLabel>
+        <translation><!-- Sales Engineer Request --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales Request</masterLabel>
+        <translation><!-- Sales Request --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Technical Support Request</masterLabel>
+        <translation><!-- Technical Support Request --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

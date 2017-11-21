@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Bundle_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Bundle Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Bundled</fullName>
+                    <default>false</default>
+                    <label>Not Bundled</label>
+                </value>
+                <value>
+                    <fullName>Backup/Cloud Bundle</fullName>
+                    <default>false</default>
+                    <label>Backup/Cloud Bundle</label>
+                </value>
+                <value>
+                    <fullName>SBS with 10 Desktop bundle</fullName>
+                    <default>false</default>
+                    <label>SBS with 10 Desktop bundle</label>
+                </value>
+                <value>
+                    <fullName>Backup/IME Bundle</fullName>
+                    <default>false</default>
+                    <label>Backup/IME Bundle</label>
+                </value>
+                <value>
+                    <fullName>SPS with 10 Desktop bundle</fullName>
+                    <default>false</default>
+                    <label>SPS with 10 Desktop bundle</label>
+                </value>
+                <value>
+                    <fullName>MSP/Cloud Bundle Promo</fullName>
+                    <default>false</default>
+                    <label>MSP/Cloud Bundle Promo</label>
+                </value>
+                <value>
+                    <fullName>NFR (Not for Resale)</fullName>
+                    <default>false</default>
+                    <label>NFR (Not for Resale)</label>
+                </value>
+                <value>
+                    <fullName>Actn Pk Mini (1B/2D)</fullName>
+                    <default>false</default>
+                    <label>Actn Pk Mini (1B/2D)</label>
+                </value>
+                <value>
+                    <fullName>Actn Pk Maxi (3S/1B/3D)</fullName>
+                    <default>false</default>
+                    <label>Actn Pk Maxi (3S/1B/3D)</label>
+                </value>
+                <value>
+                    <fullName>Actn Pk Nrml (1S/5D)</fullName>
+                    <default>false</default>
+                    <label>Actn Pk Nrml (1S/5D)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>DisplayUrl</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ExternalDataSourceId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ExternalId</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Family</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IsActive</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>MSP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>MSP</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Pack_Size__c</fullName>
+        <description>Number of activations included in each license.</description>
+        <externalId>false</externalId>
+        <label>Pack Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_Group__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Group</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>Gov/Edu/Non-Profit</fullName>
+                    <default>false</default>
+                    <label>Gov/Edu/Non-Profit</label>
+                </value>
+                <value>
+                    <fullName>Competitive Upgrade</fullName>
+                    <default>false</default>
+                    <label>Competitive Upgrade</label>
+                </value>
+                <value>
+                    <fullName>OEM</fullName>
+                    <default>false</default>
+                    <label>OEM</label>
+                </value>
+                <value>
+                    <fullName>Promotion</fullName>
+                    <default>false</default>
+                    <label>Promotion</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>QuantityUnitOfMeasure</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ScribeExternalId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>ScribeExternalId</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>StockKeepingUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Time_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Period</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>3 Months</fullName>
+                    <default>false</default>
+                    <label>3 Months</label>
+                </value>
+                <value>
+                    <fullName>1 Month</fullName>
+                    <default>false</default>
+                    <label>1 Month</label>
+                </value>
+                <value>
+                    <fullName>3 Years</fullName>
+                    <default>false</default>
+                    <label>3 Years</label>
+                </value>
+                <value>
+                    <fullName>2 Months</fullName>
+                    <default>false</default>
+                    <label>2 Months</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>1 Year</fullName>
+                    <default>false</default>
+                    <label>1 Year</label>
+                </value>
+                <value>
+                    <fullName>6 Months</fullName>
+                    <default>false</default>
+                    <label>6 Months</label>
+                </value>
+                <value>
+                    <fullName>1Y</fullName>
+                    <default>false</default>
+                    <label>1Y</label>
+                </value>
+                <value>
+                    <fullName>2W</fullName>
+                    <default>false</default>
+                    <label>2W</label>
+                </value>
+                <value>
+                    <fullName>2 Years</fullName>
+                    <default>false</default>
+                    <label>2 Years</label>
+                </value>
+                <value>
+                    <fullName>2 Weeks</fullName>
+                    <default>false</default>
+                    <label>2 Weeks</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Virtual__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Virtual</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Volume_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Volume Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>10+</fullName>
+                    <default>false</default>
+                    <label>10+</label>
+                </value>
+                <value>
+                    <fullName>25+</fullName>
+                    <default>false</default>
+                    <label>25+</label>
+                </value>
+                <value>
+                    <fullName>Qty 10+</fullName>
+                    <default>false</default>
+                    <label>Qty 10+</label>
+                </value>
+                <value>
+                    <fullName>Qty 1000-2999</fullName>
+                    <default>false</default>
+                    <label>Qty 1000-2999</label>
+                </value>
+                <value>
+                    <fullName>Qty 100-199</fullName>
+                    <default>false</default>
+                    <label>Qty 100-199</label>
+                </value>
+                <value>
+                    <fullName>Qty 100-499</fullName>
+                    <default>false</default>
+                    <label>Qty 100-499</label>
+                </value>
+                <value>
+                    <fullName>Qty 10-24</fullName>
+                    <default>false</default>
+                    <label>Qty 10-24</label>
+                </value>
+                <value>
+                    <fullName>Qty 10-49</fullName>
+                    <default>false</default>
+                    <label>Qty 10-49</label>
+                </value>
+                <value>
+                    <fullName>Qty 1-19</fullName>
+                    <default>false</default>
+                    <label>Qty 1-19</label>
+                </value>
+                <value>
+                    <fullName>Qty 1-4</fullName>
+                    <default>false</default>
+                    <label>Qty 1-4</label>
+                </value>
+                <value>
+                    <fullName>Qty 1-9</fullName>
+                    <default>false</default>
+                    <label>Qty 1-9</label>
+                </value>
+                <value>
+                    <fullName>Qty 2000-3999</fullName>
+                    <default>false</default>
+                    <label>Qty 2000-3999</label>
+                </value>
+                <value>
+                    <fullName>Qty 200-299</fullName>
+                    <default>false</default>
+                    <label>Qty 200-299</label>
+                </value>
+                <value>
+                    <fullName>Qty 200-399</fullName>
+                    <default>false</default>
+                    <label>Qty 200-399</label>
+                </value>
+                <value>
+                    <fullName>Qty 20-99</fullName>
+                    <default>false</default>
+                    <label>Qty 20-99</label>
+                </value>
+                <value>
+                    <fullName>Qty 21-24</fullName>
+                    <default>false</default>
+                    <label>Qty 21-24</label>
+                </value>
+                <value>
+                    <fullName>Qty 25-49</fullName>
+                    <default>false</default>
+                    <label>Qty 25-49</label>
+                </value>
+                <value>
+                    <fullName>Qty 3000+</fullName>
+                    <default>false</default>
+                    <label>Qty 3000+</label>
+                </value>
+                <value>
+                    <fullName>Qty 300-399</fullName>
+                    <default>false</default>
+                    <label>Qty 300-399</label>
+                </value>
+                <value>
+                    <fullName>Qty 4000+</fullName>
+                    <default>false</default>
+                    <label>Qty 4000+</label>
+                </value>
+                <value>
+                    <fullName>Qty 400-499</fullName>
+                    <default>false</default>
+                    <label>Qty 400-499</label>
+                </value>
+                <value>
+                    <fullName>Qty 400-999</fullName>
+                    <default>false</default>
+                    <label>Qty 400-999</label>
+                </value>
+                <value>
+                    <fullName>Qty 500-1999</fullName>
+                    <default>false</default>
+                    <label>Qty 500-1999</label>
+                </value>
+                <value>
+                    <fullName>Qty 50-199</fullName>
+                    <default>false</default>
+                    <label>Qty 50-199</label>
+                </value>
+                <value>
+                    <fullName>Qty 50-99</fullName>
+                    <default>false</default>
+                    <label>Qty 50-99</label>
+                </value>
+                <value>
+                    <fullName>Qty 5-9</fullName>
+                    <default>false</default>
+                    <label>Qty 5-9</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <listViews>
+        <fullName>AllProducts</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Products</label>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>PRODUCT2.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.DESCRIPTION</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.FAMILY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.FAMILY</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.DESCRIPTION</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.FAMILY</searchResultsAdditionalFields>
+    </searchLayouts>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditProduct</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateProduct2</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

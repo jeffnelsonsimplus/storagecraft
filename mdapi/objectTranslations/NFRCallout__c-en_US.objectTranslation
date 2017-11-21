@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>NFR Key Callout</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>NFR Key Callout</value>
+    </caseValues>
+    <fields>
+        <label><!-- EncodedAuth_Test --></label>
+        <name>EncodedAuth_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- EncodedAuth --></label>
+        <name>EncodedAuth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Endpoint_Test --></label>
+        <name>Endpoint_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Endpoint --></label>
+        <name>Endpoint__c</name>
+    </fields>
+    <fields>
+        <label><!-- Login --></label>
+        <name>Login__c</name>
+    </fields>
+    <fields>
+        <label><!-- PassPhrase --></label>
+        <name>PassPhrase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Password_Test --></label>
+        <name>Password_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Password --></label>
+        <name>Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- SN_Endpoint_Test --></label>
+        <name>SN_Endpoint_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- SN Endpoint --></label>
+        <name>SN_Endpoint__c</name>
+    </fields>
+    <fields>
+        <label><!-- Username_Test --></label>
+        <name>Username_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Username --></label>
+        <name>Username__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

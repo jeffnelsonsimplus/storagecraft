@@ -1,0 +1,57 @@
+<apex:page standardController="Guide__c" 
+           applyBodyTag="false" 
+           showheader="false" 
+           sidebar="false" 
+           renderAs="pdf" 
+           extensions="GuidePDFExtension"
+           language="{!$CurrentPage.Parameters.Language}"
+           standardStylesheets="false">
+    <head>
+  <title>StorageCraft Support Community: {!Guide__c.Name}</title><link rel="shortcut icon" href="https://www.storagecraft.com/themes/storagecraft/favicon.ico" type="image/vnd.microsoft.icon" />
+        <style type="html/css" media="print">
+        @page {
+        size:landscape;
+        }
+        @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        }
+        body { font-family: 'Arial Unicode MS'; }
+        pre {
+            white-space: pre-wrap;       /* Since CSS 2.1 */
+            white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        }
+    </style>
+</head> 
+    <div align="center">
+    <h1>
+        <apex:outputField value="{!Guide__c.Name}"/>
+    </h1>
+        <apex:outputLabel value="Table of Contents"/>
+    </div>
+    <div>
+    <apex:repeat value="{!sections}" var="s">
+        
+            <apex:outputField rendered="{!s.Section__c != '0'}" value="{!s.Section__c}"/><apex:outputText rendered="{!s.Section__c != '0'}" value=" - "/><apex:outputField rendered="{!s.Section__c != '0'}" value="{!s.Title}"/>
+        <br/>
+    </apex:repeat>
+    </div>
+        <br/><br/>
+    <apex:repeat value="{!sections}" var="s">
+        
+        <h2>
+            <apex:outputField value="{!s.Title}"/><apex:outputText rendered="{!s.Section__c != '0'}" value=" - "/><apex:outputField rendered="{!s.Section__c != '0'}" value="{!s.Section__c}"/>
+        </h2>
+        <table width="100%">
+            <tr>
+            <td style="overflow-wrap: break-word;word-break: break-all;">
+        <div style='word-wrap:break-word; word-break: break-all;'>          
+            <apex:outputPanel style="overflow-wrap: break-word;" layout="block"><apex:outputField style="overflow-wrap: break-word; word-break: break-all;" value="{!s.ArticleBody__c}"/> </apex:outputPanel>
+        </div>
+            </td>
+            </tr>
+        </table>
+    </apex:repeat>
+</apex:page>

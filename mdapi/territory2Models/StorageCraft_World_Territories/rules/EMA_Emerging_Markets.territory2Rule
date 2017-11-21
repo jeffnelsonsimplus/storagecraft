@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <booleanFilter>1 or 2</booleanFilter>
+    <name>EMEA - Emerging Markets</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>AQ,Antartica,Bouvet Island,BV,TF,French Southern Territories,Heard and McDonald Islands,HM,GS,South Georgia and the South Sandwich Islands,BH,IQ,IL,JO,KW,LB,OM,PS,QA,SA,SY,AE,Bahrain,Iraq,Israel,Jordan,Kuwait,Lebanon,Oman,Palestine,State of,State of Palestine,Qatar,Saudi Arabia,Syria,United Arab Emirates,Algeria,DZ,Angola,AO,Benin,BJ,Botswana,BW,Burkina Faso,BF,Burundi,BI,Cameroon,CM,Cape Verde,CV,Central African Republic,CF,Chad,TD,Comoros,KM,Congo,CG,Democratic Republic of Congo,CD,Côte d&apos;Ivoire,CI,Djibouti,DJ,Egypt,EG,Equatorial Guinea,GQ</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>Eritrea,ER,Ethiopia,ET,Gabon,GA,Gambia,GM,Ghana,GH,Guinea,GN,Guinea-Bissau,GW,Ivory Coast,Kenya,KE,Lesotho,LS,Liberia,LR,Libya,LY,Madagascar,MG,Malawi,MW,Mali,ML,Mauritania,MR,Mauritius,MU,Mayotte,YT,Morocco,MA,Mozambique,MZ,Namibia,NA,Niger,NE,Nigeria,NG,Réunion,RE,Rwanda,RW,Saint Helena,SH,Sao Tome and Principe,ST,Senegal,SN,Seychelles,SC,Sierra Leone,SL,Somalia,SO,South Africa,ZA,South Sudan,SS,Sudan,SD,Swaziland,SZ,Tanzania,TZ,Togo,TG,Tunisia,TN,Uganda,UG,Western Sahara,EH,Zambia,ZM,Zimbabwe,ZW</value>
+    </ruleItems>
+</Territory2Rule>

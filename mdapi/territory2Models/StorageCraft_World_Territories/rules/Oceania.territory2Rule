@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Oceania</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>AS,American Samoa,CK,Cook Islands,TL,East Timor,FJ,Falkland Islands,PF,French Polynesia,GU,Guam,KI,Kiribati,MH,Marshall Islands,FM,Micronesia,Federated States of,NR,Nauru,NC,New Caledonia,NU,Niue,NF,Norfolk Island,MP,Northern Mariana Islands,PW,Palau,PG,Papua New Guinea,PN,Pitcairn,WS,Samoa,SB,Solomon Islands,TK,Tokelau,TO,Tonga,TV,Tuvalu,UM,United States Minor Outlying Islands,VU,Vanuatu,WF,Wallis and Futuna Islands</value>
+    </ruleItems>
+</Territory2Rule>

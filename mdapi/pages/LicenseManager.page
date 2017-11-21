@@ -1,0 +1,89 @@
+<apex:page docType="html-5.0" showHeader="true" sidebar="true" controller="licenseManagerController" action="{!goPage}" tabStyle="Account">
+<apex:form >
+	<apex:messages style="font-weight:bold;font-size:16px;color:red;"/>
+	<apex:pageBlock title="License Manager">
+		<apex:pageblockbuttons location="top">
+			<apex:commandButton action="{!modifyLicenses}" value="Modify Licenses" rendered="{!issueing != true && modifying != true && $Permission.ModifyLicenses}"/>
+			<apex:commandButton action="{!issuelicenses}" value="Issue Licenses" rendered="{!issueing != true && modifying != true && $Permission.IssueLicenses}"/>
+			<apex:commandButton action="{!returnToAccount}" value="Return To Account" immediate="true"/>
+		</apex:pageblockbuttons>
+		<apex:pageBlockSection title="Account Details" columns="2" collapsible="false">
+			<apex:outputText value="{!a.Name}"/>
+			<apex:outputText value="{!a.BillingStreet}"/>
+			<apex:outputText value="{!a.Website}"/>
+			<apex:outputText value="{!a.BillingCity}"/>
+			<apex:outputText value=""/>
+			<apex:outputText value="{!a.BillingState}"/>
+			<apex:outputText value=""/>
+			<apex:outputText value="{!a.BillingPostalCode}"/>
+		</apex:pageblocksection>
+		<apex:pageBlockSection title="Active Licenses" columns="1" collapsible="true" rendered="{!als.size > 0}">
+			<apex:pageblocktable value="{!als}" var="al" >
+				<apex:column headerValue="Class" value="{!al.Class__c}"/>
+				<apex:column headerValue="Type" value="{!al.Type__c}"/>
+				<apex:column headerValue="Language" value="{!al.Language__c}"/>
+				<apex:column headerValue="License" value="{!al.Name}"/>
+				<apex:column headerValue="Activation" value="{!al.Activation__c}"/>
+				<apex:column headerValue="Expiration" value="{!al.Expiration__c}"/>
+			</apex:pageblocktable>
+		</apex:pageblocksection>
+		<apex:pageBlockSection title="Inactive Licenses" columns="1" collapsible="true" rendered="{!ils.size > 0}">
+			<apex:pageblocktable value="{!ils}" var="il" >
+				<apex:column headerValue="Class" value="{!il.Class__c}"/>
+				<apex:column headerValue="Type" value="{!il.Type__c}"/>
+				<apex:column headerValue="Language" value="{!il.Language__c}"/>
+				<apex:column headerValue="Status" value="{!il.Status__c}"/>
+				<apex:column headerValue="License" value="{!il.Name}"/>
+				<apex:column headerValue="Activation" value="{!il.Activation__c}"/>
+				<apex:column headerValue="Expiration" value="{!il.Expiration__c}"/>
+				<apex:column headervalue="Termination Date" value="{!il.Termination_Date__c}"/>
+			</apex:pageblocktable>
+		</apex:pageblocksection>
+	</apex:pageblock>
+	<apex:messages style="font-weight:bold;font-size:16px;color:red;"/>
+	<apex:pageBlock title="Issue Licenses" rendered="{!issueing}">
+		<apex:pageBlockSection collapsible="false">
+			<apex:outputtext value="Please add new keys to request, then complete your request."/>
+			<apex:outputtext value=""/>
+			<apex:inputfield value="{!l.Type__c}" required="true"/>
+			<apex:inputfield value="{!l.Language__c}" required="true"/>
+			<apex:inputfield value="{!l.Expiration__c}" required="true"/>
+			<apex:input label="Quantity" value="{!quantity}" type="number" id="thequantity"/>
+			<apex:outputtext value="" />
+			<apex:outputtext value="" />
+		</apex:pageBlockSection>
+		<apex:pageblocktable value="{!pls}" var="pl" rendered="{!pls != null && pls.size > 0}">
+			<apex:column headerValue="Type" value="{!pl.Type__c}"/>
+			<apex:column headerValue="Language" value="{!pl.Language__c}"/>
+			<apex:column headerValue="Expiration" value="{!pl.Expiration__c}"/>
+		</apex:pageblocktable>
+		<apex:pageblockbuttons location="bottom">
+			<apex:commandButton action="{!addToRequest}" value="Add To Request"/>
+			<apex:commandButton action="{!confirmRequest}" value="Confirm Request"/>
+		</apex:pageblockbuttons>
+	</apex:pageblock>
+	<apex:pageBlock title="Modify Licenses" rendered="{!modifying}" id="ModifyBlock">
+		<apex:pageblocktable value="{!als}" var="al" >
+			<apex:column headerValue="Class" value="{!al.Class__c}"/>
+			<apex:column headerValue="Type" value="{!al.Type__c}"/>
+			<apex:column headerValue="Language" value="{!al.Language__c}"/>
+			<apex:column headerValue="Status" value="{!al.Status__c}"/>
+			<apex:column headerValue="License" value="{!al.Name}"/>
+			<apex:column headerValue="Activation" value="{!al.Activation__c}"/>
+			<apex:column headerValue="Expiration">
+				<apex:inputField value="{!al.Expiration__c}" rendered="{!al.Edit__c}"/>
+			</apex:column>
+			<apex:column >
+				<apex:inputCheckbox value="{!al.Edit__c}">
+					<apex:actionsupport event="onchange" rerender="ModifyBlock"/>
+				</apex:inputCheckbox>
+			</apex:column>
+		</apex:pageblocktable>
+		<apex:pageblockbuttons location="bottom">
+			<apex:commandButton action="{!extend}" value="Extend" rendered="{!$Permission.ExtendLicense}"/>
+			<apex:commandButton action="{!replace}" value="Replace" rendered="{!$Permission.ReplaceLicense}"/>
+			<apex:commandButton action="{!terminate}" value="Terminate" rendered="{!$Permission.TerminateLicense}"/>
+		</apex:pageblockbuttons>
+	</apex:pageblock>
+</apex:form>
+</apex:page>

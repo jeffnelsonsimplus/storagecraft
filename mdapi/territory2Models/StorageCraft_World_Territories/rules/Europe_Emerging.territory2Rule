@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Europe Emerging</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>AL,ALBANIA,AN,NETHERLANDS ANTILLES,AX,ALAND,BA,Bosnia and Herzegowina,BG,Bulgaria,BY,Belarus,CZ,CZECH REPUBLIC,EE,ESTONIA,FO,FAROE ISLANDS,GG,GUERNSEY,GI,Gibraltar,GR,Greece,HR,Croatia,HU,Hungray,JE,Jersey,LI,LIECHTENSTEIN,LT,LITHUANIA,LV,LATVIA,MC,MONACO,MD,MOLDOVA,ME,MONTENEGRO,MK,MACEDONIA,MT,MALTA,PL,Poland,RO,ROMANIA,RS,Serbia,RU,RUSSIAN FEDERATION,SI,SLOVENIA,SJ,SVALBARD AND JAN MAYEN ISLANDS,SK,SLOVAKIA Republic,SM,SAN MARINO,TR,Turkey,UA,Ukraine,VA,Holy See</value>
+    </ruleItems>
+</Territory2Rule>

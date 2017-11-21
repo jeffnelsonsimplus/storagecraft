@@ -1,0 +1,45 @@
+<apex:page standardController="Case" >
+    <style>
+        body.hasMotif.caseTab {
+        padding: 0px;
+        margin: 0px;
+        }
+    </style>
+    <apex:outputPanel layout="block" style="displaywidth:100%">
+        <table style="width:100%;">
+            <tbody>
+            <tr>
+                <td style="color:#4a4a56;font-family: Arial,Helvetica,sans-serif;width:35%;padding-top:3px;padding-bottom:3px;padding-right:10px;padding-left: 2px;text-align: right;font-size: 91%;font-weight: bold;">
+                    <apex:outputLabel value="Customer Time"/>
+                </td>
+                <td style="font-family: Arial,Helvetica,sans-serif;padding-left:10px;padding-top:3px;padding-bottom:3px;">
+                    <apex:outputText styleClass="relativeTime" value="{!NOW()}"/>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </apex:outputPanel>
+    <script>
+    // TODO: get offset value
+    var custOffset = '{!Case.TZ_UTC_Offset__c}';
+    console.log(custOffset);
+    var setTime = function(){
+        // get current time
+        var now = new Date();
+        // Get users offset
+        var usrOffset = now.getTimezoneOffset();
+        // Compare users offset to customers offset
+        var diffOffset = usrOffset - (-1*custOffset*60);
+        // adjust users time to match adjusted offset
+        var utc = new Date(now.getTime()+(diffOffset*60000));
+        // Change value of the fields
+        var fields = document.getElementsByClassName('relativeTime')[0];
+        fields.innerHTML = utc.toLocaleString();
+    }
+    // Execute at init
+    setTime();
+    // Execute setTime every 30 seconds to keep clock accurate
+    setInterval(setTime,30000);
+    
+    </script>
+</apex:page>

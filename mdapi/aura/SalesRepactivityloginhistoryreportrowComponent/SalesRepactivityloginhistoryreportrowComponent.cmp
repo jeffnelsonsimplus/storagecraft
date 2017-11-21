@@ -1,0 +1,13 @@
+<aura:component >
+	<aura:attribute name="rows" type="Object[]"/>
+    <aura:attribute name="period" type="String"/>
+    
+    <tr class="slds-text-heading--label">
+        <aura:iteration var="row" indexVar="counter" items="{!v.rows}">
+         
+            <c:SalesRepactivityhistoryreportdetailsComponent row="{!row}" period="{!v.period}"/>
+             
+        </aura:iteration>
+    </tr>       
+     
+</aura:component>

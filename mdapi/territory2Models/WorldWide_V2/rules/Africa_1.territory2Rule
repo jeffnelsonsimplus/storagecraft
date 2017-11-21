@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Africa 1</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>DZ,Algeria,AO,Angola,BW,Botswana,BF,Burkina Faso,EG,Egypt,GQ,Equatorial Guinea,ER,Eritrea,ET,Ethiopia,GM,Gambia,GH,Ghana,GN,Guinea,GW,Guinea-Bissau,CI,Ivory Coast,KE,Kenya,LS,Lesotho,LR,Liberia,LY,Libya,MW,Malawi,ML,Mali,YT,Mayotte,MA,Morocco,MZ,Mozambique,NA,Namibia,NG,Nigeria,RE,Réunion,SH,Saint Helena,SN,Senegal,SC,Seychelles,SL,Sierra Leone,SO,Somalia,ZA,South Africa,SS,South Sudan,SD,Sudan,SZ,Swaziland,TZ,Tanzania,TN,Tunisia,UG,Uganda,EH,Western Sahara,ZM,Zambia,ZW,Zimbabwe</value>
+    </ruleItems>
+</Territory2Rule>

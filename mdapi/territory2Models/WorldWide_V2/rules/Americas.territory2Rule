@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Americas</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>AI,Anguilla,AG,Antigua and Barbuda,AW,Aruba,BS,Bahamas,BB,Barbados,BM,Bermuda,BQ,Caribbean Netherlands,KY,Cayman Islands,CR,Costa Rica,CW,Curaçao,DM,Dominica,DO,Dominican Republic,GL,Greenland,GD,Grenada,GP,Guadeloupe,HT,Haiti,JM,Jamaica,MQ,Martinique,MS,Montserrat,AN,Netherlands Antilles,PR,Puerto Rico,BL,Saint Barthélemy,KN,Saint Kitts and Nevis,LC,Saint Lucia,MF,Saint Martin (France),PM,Saint Pierre and Miquelon,VC,Saint Vincent and the Grenadines,SX,Sint Maarten (Dutch part),TT,Trinidad and Tobago,TC,Turks and Caicos Islands,VG,Virgin Islands (British),VI,Virgin Islands (U.S.),BZ,Belize,SV,El Salvador,GT,Guatemala,HN,Honduras,MX,Mexico,NI,Nicaragua,PA,Panama,AR,Argentina,BO,Bolivia,BR,Brazil,CL,Chile,CO,Colombia,EC,Ecuador,GY,Guyana,PY,Paraguay,PE,Peru,SR,Suriname,UY,Uruguay,VE,Venezuela,CA,Canada,US,United States</value>
+    </ruleItems>
+</Territory2Rule>

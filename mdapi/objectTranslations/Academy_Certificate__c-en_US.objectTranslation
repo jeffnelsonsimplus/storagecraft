@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Academy Certificate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Academy Certificates</value>
+    </caseValues>
+    <fields>
+        <help><!-- Date when certificate was sent --></help>
+        <label><!-- Certificate Sent On --></label>
+        <name>Certificate_Sent_On__c</name>
+    </fields>
+    <fields>
+        <help><!-- Was the certificate sent? --></help>
+        <label><!-- Certificate Sent? --></label>
+        <name>Certificate_Sent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Certification received by the Contact --></help>
+        <label><!-- Certification --></label>
+        <name>Certification__c</name>
+        <picklistValues>
+            <masterLabel>StorageCraft Certified Engineer</masterLabel>
+            <translation><!-- StorageCraft Certified Engineer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StorageCraft Certified Engineer-Offsite Recovery</masterLabel>
+            <translation><!-- StorageCraft Certified Engineer-Offsite Recovery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StorageCraft Certified Master Engineer</masterLabel>
+            <translation><!-- StorageCraft Certified Master Engineer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StorageCraft Certified Professional</masterLabel>
+            <translation><!-- StorageCraft Certified Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StorageCraft Certified Sales Professional</masterLabel>
+            <translation><!-- StorageCraft Certified Sales Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StorageCraft Certified Specialist</masterLabel>
+            <translation><!-- StorageCraft Certified Specialist --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Who received the certification --></help>
+        <label><!-- Certified Contact --></label>
+        <name>Certified_Contact__c</name>
+        <relationshipLabel><!-- Academy Certificates --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Date when considered Certified --></help>
+        <label><!-- Certified Date --></label>
+        <name>Certified_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Account related to the Certified Contact --></help>
+        <label><!-- Account --></label>
+        <name>Contact_Account__c</name>
+        <relationshipLabel><!-- Academy Certificates --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If from Dynamics, the related identifier --></help>
+        <label><!-- Dynamics Id --></label>
+        <name>Dynamics_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- When the certification ends, leave empty for never. --></help>
+        <label><!-- Expiration Date --></label>
+        <name>Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did the Contact pass the test? --></help>
+        <label><!-- Passed --></label>
+        <name>Passed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percent Score --></label>
+        <name>Percent_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Raw Score --></label>
+        <name>Raw_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- SCME Practial Passed --></label>
+        <name>SCME_Practial_Passed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- When the test was taken --></help>
+        <label><!-- Test Date --></label>
+        <name>Test_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- How the Contact was able to become certified --></help>
+        <label><!-- Training Type --></label>
+        <name>Training_Type__c</name>
+        <picklistValues>
+            <masterLabel>Instructor-led</masterLabel>
+            <translation><!-- Instructor-led --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online</masterLabel>
+            <translation><!-- Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tested Out</masterLabel>
+            <translation><!-- Tested Out --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Academy Certificate Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Testing --></label>
+            <section>Testing</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <webLinks>
+        <label><!-- Send --></label>
+        <name>Send</name>
+    </webLinks>
+</CustomObjectTranslation>

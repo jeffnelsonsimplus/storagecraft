@@ -1,0 +1,27 @@
+<aura:component controller="UserGuideNextPrevController" access="global"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="next" type="User_Guide__kav"/>
+    <aura:attribute name="prev" type="User_Guide__kav"/>
+    <aura:attribute name="fieldLabelMap" type="Map"/>
+    <aura:attribute name="languageVal" type="String" default="{!$Locale.langLocale}"/>
+        
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <hr/>
+    <div style="display:flex;flex-direction:row;">
+        <aura:if isTrue="{!not(empty(v.prev.Community_URL__c))}">
+            <span>
+                &larr;<ui:outputURL value="{!v.prev.Community_URL__c}" label="{!v.prev.Title}"/>
+            </span>
+        </aura:if>
+        <aura:if isTrue="{!not(empty(v.next.Community_URL__c))}">
+
+            <span style="margin-left:auto;">
+                <ui:outputURL value="{!v.next.Community_URL__c}" label="{!v.next.Title}"/>&rarr;
+            </span>
+        </aura:if>
+    </div>
+    <hr/>
+    
+</aura:component>

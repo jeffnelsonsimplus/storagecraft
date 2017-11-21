@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Agreement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Agreements</value>
+    </caseValues>
+    <fields>
+        <help><!-- Date when the agreement was made --></help>
+        <label><!-- Acceptance Date --></label>
+        <name>Acceptance_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The account related to this agreement --></help>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contracting Entity --></label>
+        <name>Contracting_Entity__c</name>
+        <picklistValues>
+            <masterLabel>StorageCraft IE</masterLabel>
+            <translation><!-- StorageCraft IE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>StorageCraft US</masterLabel>
+            <translation><!-- StorageCraft US --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- When the agreement expires --></help>
+        <label><!-- Expiration Date --></label>
+        <name>Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Contact which accepted the agreement --></help>
+        <label><!-- Signed By --></label>
+        <name>Signed_By__c</name>
+        <relationshipLabel><!-- Agreements --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Where the Agreement originated --></help>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+        <picklistValues>
+            <masterLabel>Portal-IE</masterLabel>
+            <translation><!-- Portal-IE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portal-US</masterLabel>
+            <translation><!-- Portal-US --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Webstore-IE</masterLabel>
+            <translation><!-- Webstore-IE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Webstore-US</masterLabel>
+            <translation><!-- Webstore-US --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Current status of the Agreement --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash Only</masterLabel>
+            <translation><!-- Cash Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Terminated</masterLabel>
+            <translation><!-- Terminated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What type of agreement is this? --></help>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Cloud</masterLabel>
+            <translation><!-- Cloud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distribution</masterLabel>
+            <translation><!-- Distribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MSP</masterLabel>
+            <translation><!-- MSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Master MSP</masterLabel>
+            <translation><!-- Master MSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OEM</masterLabel>
+            <translation><!-- OEM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reseller</masterLabel>
+            <translation><!-- Reseller --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Version of the Agreement --></help>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <layouts>
+        <layout>Agreement Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

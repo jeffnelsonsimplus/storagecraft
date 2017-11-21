@@ -1,0 +1,18 @@
+<apex:page standardController="Case">
+<style>
+#detailview {
+    width: 45%;
+}
+#chatterview {
+    width: 45%;
+}
+</style>
+    <div id="casecontainer">
+        <div id="detailview">
+            <apex:detail inlineEdit="true" showChatter="false"/>
+        </div>
+        <div id="chatterview">
+            <chatter:feedWithFollowers entityId="{!Case.Id}"/>
+        </div>
+    </div>
+</apex:page>

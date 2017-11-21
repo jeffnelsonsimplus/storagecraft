@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>http://fs.storagecraft.com/adfs/services/trust</issuer>
+    <loginUrl>https://fs.storagecraft.com/adfs/ls/</loginUrl>
+    <logoutUrl>https://fs.storagecraft.com/adfs/ls/?wa=wsignout1.0</logoutUrl>
+    <name>STC ADFS</name>
+    <oauthTokenEndpoint>https://storagecraft.my.salesforce.com/services/oauth2/token?so=00D36000000JVmG</oauthTokenEndpoint>
+    <redirectBinding>true</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P136000002ERiA</requestSigningCertId>
+    <salesforceLoginUrl>https://storagecraft.my.salesforce.com?so=00D36000000JVmG</salesforceLoginUrl>
+    <samlEntityId>https://storagecraft.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIC4jCCAcqgAwIBAgIQTCGEY6tkMJNHh8lVztUVpTANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJBREZTIFNpZ25pbmcgLSBmcy5zdG9yYWdlY3JhZnQuY29tMB4XDTE3MDQxNzA1NDczN1oXDTE4MDQxNzA1NDczN1owLTErMCkGA1UEAxMiQURGUyBTaWduaW5nIC0gZnMuc3RvcmFnZWNyYWZ0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANKtMt+3x9HyXCnT+UwkENuOHe/PQbrSnI52sJCO3Brd82sObtTWpfoWS2pRw8k1upFwrsOsAPCqbUVk2DTNUcRsz8INl2JXy1UuC8Yuxqxvb3ozrQzvWCLqAMPycd6dtTEO5wCnnf1monQtXPWXvvv+GFijfLwfT2VJPtNxbHg+DGxZFT48JRwe7hxbz0RehBw0yJASdwwP3dp08zO0PYCFf8u56rZo9WV+rvvOpq2DBoGonSmzYiZniDsMy6qy/Ystqu+R+vspcVq9IWt1UGRJtfW7wDapLaHXovdTM27UTBUEXgqGNm5iQi8xJlbdgbYo8psDNHr4suzrpLzRZhECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAne3NBS3XCA93ETD4HBzPaf632KqN4qGfIoIcutfIQLGGGqaK1xiJi2+g78tX1kGYsnDWdmG+iy2zq2j2lClhMm9cUmWpkeQiutqP4p22qcH5y2WJeUWOf5/qQNC9jjaGLHXg6fQAXPf58N+4xW5LIW+cqPcV/ls8u4IDoQrIJW4GIFcbETfqjUaOQ+YcYavKYAcfSjdvsaNhnbaW6hTMY7rk5JiaoL3HzfAoX8Kjsr2QHQbT3+n8qwWcUNCXpPTD/92TD8KW0aDkZYbOpgBhz99NlLMb8TuRlYmm06MXsOFLjRGX8aUMVmjmmmuMPthqij9JtTIViGRQgjxRb+m2Xw==</validationCert>
+</SamlSsoConfig>

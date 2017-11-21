@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Queue Auto-Assign Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Queue Auto-Assign Settings</value>
+    </caseValues>
+    <fields>
+        <help><!-- Allow cases to be auto-assigned out of this queue --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Higher numbered priority are emptied/assigned out first. Allows ordering of which queues should be emptied in which order. --></help>
+        <label><!-- Assignment Priority --></label>
+        <name>Assignment_Priority__c</name>
+    </fields>
+    <fields>
+        <help><!-- Must be the name of another SFDC Queue --></help>
+        <label><!-- Fallback Queue Name --></label>
+        <name>Fallback_Queue_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overflow Limit --></label>
+        <name>Overflow_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overflow Queue Name --></label>
+        <name>Overflow_Queue_Name__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

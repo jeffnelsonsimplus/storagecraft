@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>StcZoneRule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>StcZoneRules</value>
+    </caseValues>
+    <fields>
+        <help><!-- When processing an Account, which User Types apply.  Leave blank to allow any. --></help>
+        <label><!-- Account User Types --></label>
+        <name>Account_User_Types__c</name>
+        <picklistValues>
+            <masterLabel>Alliance Partner</masterLabel>
+            <translation><!-- Alliance Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Both MSP and VAR</masterLabel>
+            <translation><!-- Both MSP and VAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business User</masterLabel>
+            <translation><!-- Business User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP</masterLabel>
+            <translation><!-- CP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Market Reseller (DMR)</masterLabel>
+            <translation><!-- Direct Market Reseller (DMR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distribution Partner</masterLabel>
+            <translation><!-- Distribution Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distribution Partner Reseller</masterLabel>
+            <translation><!-- Distribution Partner Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home User</masterLabel>
+            <translation><!-- Home User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International Master Distributor</masterLabel>
+            <translation><!-- International Master Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Managed Service Provider (MSP)</masterLabel>
+            <translation><!-- Managed Service Provider (MSP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Original Equipment Manufacturer (OEM)</masterLabel>
+            <translation><!-- Original Equipment Manufacturer (OEM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Press / Media Evaluator</masterLabel>
+            <translation><!-- Press / Media Evaluator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategic</masterLabel>
+            <translation><!-- Strategic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial User</masterLabel>
+            <translation><!-- Trial User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value Added Reseller (VAR)</masterLabel>
+            <translation><!-- Value Added Reseller (VAR) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Should this Rule be applied --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Comma separated list of countries --></help>
+        <label><!-- Countries --></label>
+        <name>Countries__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is this Account for High Potential, Gold or Platinum only? --></help>
+        <label><!-- High Potential --></label>
+        <name>High_Potential__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the User Types which apply to this Rule when processing a Lead.  Leave empty if any User Type is allowed. --></help>
+        <label><!-- Lead User Types --></label>
+        <name>Lead_User_Types__c</name>
+        <picklistValues>
+            <masterLabel>Alliance Partner</masterLabel>
+            <translation><!-- Alliance Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Both MSP and VAR</masterLabel>
+            <translation><!-- Both MSP and VAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business User</masterLabel>
+            <translation><!-- Business User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP</masterLabel>
+            <translation><!-- CP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Market Reseller (DMR)</masterLabel>
+            <translation><!-- Direct Market Reseller (DMR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distribution Partner</masterLabel>
+            <translation><!-- Distribution Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distribution Partner Reseller</masterLabel>
+            <translation><!-- Distribution Partner Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home User</masterLabel>
+            <translation><!-- Home User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International Master Distributor</masterLabel>
+            <translation><!-- International Master Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Managed Service Provider (MSP)</masterLabel>
+            <translation><!-- Managed Service Provider (MSP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Original Equipment Manufacturer (OEM)</masterLabel>
+            <translation><!-- Original Equipment Manufacturer (OEM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Press / Media Evaluator</masterLabel>
+            <translation><!-- Press / Media Evaluator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategic</masterLabel>
+            <translation><!-- Strategic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial User</masterLabel>
+            <translation><!-- Trial User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value Added Reseller (VAR)</masterLabel>
+            <translation><!-- Value Added Reseller (VAR) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Order in which this Rule is applied --></help>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <help><!-- Commas separated list of Postal Codes or single Function --></help>
+        <label><!-- Postal Codes --></label>
+        <name>Postal_Codes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Comma separated list of states --></help>
+        <label><!-- States --></label>
+        <name>States__c</name>
+    </fields>
+    <fields>
+        <label><!-- StcZone --></label>
+        <name>StcZone__c</name>
+        <relationshipLabel><!-- StcZoneRules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Does this rule apply to leads, accounts or both? --></help>
+        <label><!-- Works On --></label>
+        <name>Works_On__c</name>
+        <picklistValues>
+            <masterLabel>Accounts Only</masterLabel>
+            <translation><!-- Accounts Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Both Leads and Accounts</masterLabel>
+            <translation><!-- Both Leads and Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leads Only</masterLabel>
+            <translation><!-- Leads Only --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>StcZoneRule Layout</layout>
+        <sections>
+            <label><!-- Account Details --></label>
+            <section>Account Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Details --></label>
+            <section>Lead Details</section>
+        </sections>
+        <sections>
+            <label><!-- Requirements --></label>
+            <section>Requirements</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

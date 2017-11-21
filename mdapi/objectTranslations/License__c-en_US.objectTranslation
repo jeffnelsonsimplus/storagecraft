@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>License</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Licenses</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Licenses (Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- License Activation Date --></help>
+        <label><!-- Activation --></label>
+        <name>Activation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class --></label>
+        <name>Class__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source CRM --></label>
+        <name>Data_Migration_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Edit --></label>
+        <name>Edit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Key Expiration --></help>
+        <label><!-- Expiration --></label>
+        <name>Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+        <picklistValues>
+            <masterLabel>Chinese Simplified</masterLabel>
+            <translation><!-- Chinese Simplified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chinese Traditional</masterLabel>
+            <translation><!-- Chinese Traditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Czech</masterLabel>
+            <translation><!-- Czech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French</masterLabel>
+            <translation><!-- French --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italian</masterLabel>
+            <translation><!-- Italian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japanese</masterLabel>
+            <translation><!-- Japanese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Korean</masterLabel>
+            <translation><!-- Korean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Polish</masterLabel>
+            <translation><!-- Polish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portuguese (Brazil)</masterLabel>
+            <translation><!-- Portuguese (Brazil) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portuguese (Portugal)</masterLabel>
+            <translation><!-- Portuguese (Portugal) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Russian</masterLabel>
+            <translation><!-- Russian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish</masterLabel>
+            <translation><!-- Spanish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turkish</masterLabel>
+            <translation><!-- Turkish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ukrainian</masterLabel>
+            <translation><!-- Ukrainian --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Linux --></label>
+        <name>Linux__c</name>
+    </fields>
+    <fields>
+        <label><!-- Origin --></label>
+        <name>Origin__c</name>
+        <picklistValues>
+            <masterLabel>License Manager</masterLabel>
+            <translation><!-- License Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Onboarding</masterLabel>
+            <translation><!-- Onboarding --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Partner Account --></label>
+        <name>PartnerAccount__c</name>
+        <relationshipLabel><!-- End User Licenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Replaced By --></label>
+        <name>Replaced_By__c</name>
+        <relationshipLabel><!-- Licenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Replaced by License Number --></label>
+        <name>Replaced_by_License_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- RequestType --></label>
+        <name>RequestType__c</name>
+    </fields>
+    <fields>
+        <label><!-- ScribeExternalId --></label>
+        <name>ScribeExternalId__c</name>
+    </fields>
+    <fields>
+        <help><!-- License Status --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Term</masterLabel>
+            <translation><!-- Term --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Termination Date --></label>
+        <name>Termination_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Key Type --></help>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Desktop</masterLabel>
+            <translation><!-- Desktop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Image Manager</masterLabel>
+            <translation><!-- Image Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPX Linux</masterLabel>
+            <translation><!-- SPX Linux --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Server</masterLabel>
+            <translation><!-- Server --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Licensing Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Account_New_Contact</fullName>
+        <description>Contact: New Contact Notification To Account Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Sales/Contact_New_Contact</template>
+    </alerts>
+    <alerts>
+        <fullName>Contact_Orphaned_Contact_Assigned_To_Lead</fullName>
+        <description>Contact: Orphaned Contact Assigned To Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <field>LeadOwner__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Contact_Orphaned_Contact_Assigned_To_Lead</template>
+    </alerts>
+    <alerts>
+        <fullName>Contact_Terminated</fullName>
+        <ccEmails>james.angell@storagecraft.com</ccEmails>
+        <ccEmails>eric.robbins@storagecraft.com</ccEmails>
+        <ccEmails>jennifer.neujahr@storagecraft.com</ccEmails>
+        <description>Contact Terminated</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Contact_Terminated</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Do_not_allow_bulk_emails</fullName>
+        <field>DoNotAllowBulkEmails__c</field>
+        <literalValue>1</literalValue>
+        <name>Do not allow bulk emails</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Do_not_allow_emails</fullName>
+        <field>DoNotAllowEmails__c</field>
+        <literalValue>1</literalValue>
+        <name>Do not allow emails</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Do_not_allow_faxes</fullName>
+        <field>DoNotAllowFaxes__c</field>
+        <literalValue>1</literalValue>
+        <name>Do not allow faxes</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Do_not_allow_phone_calls</fullName>
+        <field>DoNotAllowPhoneCalls__c</field>
+        <literalValue>1</literalValue>
+        <name>Do not allow phone calls</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Has_Opted_Out_Of_Email</fullName>
+        <field>HasOptedOutOfEmail</field>
+        <literalValue>1</literalValue>
+        <name>Has Opted Out Of Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Has_Opted_Out_Of_Fax</fullName>
+        <field>HasOptedOutOfFax</field>
+        <literalValue>1</literalValue>
+        <name>Has Opted Out Of Fax</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Send_Marketing_Materials</fullName>
+        <field>SendMarketingMaterials__c</field>
+        <literalValue>0</literalValue>
+        <name>Send Marketing Materials</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Contact%3A New Contact To Owner</fullName>
+        <actions>
+            <name>Account_New_Contact</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+  $Setup.AutomationController__c.ExecuteContactAutomation__c,
+  NOT(
+    ISNULL(AccountId)
+  ),
+  NOT(
+    ISNULL(Account.OwnerId)
+  ),
+  Account.OwnerId  &lt;&gt;  LastModifiedById,
+  OR(
+    and(
+      NOT(
+        ISNULL(AccountId)
+      ),
+      isnew()
+    ),
+    ISCHANGED(AccountId)
+  )
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact%3A Orphaned Contact Assigned To Lead</fullName>
+        <actions>
+            <name>Contact_Orphaned_Contact_Assigned_To_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>and(
+  $Setup.AutomationController__c.ExecuteContactAutomation__c,
+  NOT(ISNULL(LeadOwner__c)), 
+  ischanged(LeadOwner__c)    
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact%3A Terminated or Left Company</fullName>
+        <actions>
+            <name>Do_not_allow_bulk_emails</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Do_not_allow_emails</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Do_not_allow_faxes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Do_not_allow_phone_calls</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Has_Opted_Out_Of_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Has_Opted_Out_Of_Fax</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Send_Marketing_Materials</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+  $Setup.AutomationController__c.ExecuteContactAutomation__c,ischanged(Status__c),
+  not(isblank(text(Status__c))),
+  NOT(
+    ispickval(
+      priorvalue(Status__c),&quot;Terminated&quot;
+    )
+  ),
+  NOT(
+    ispickval(
+      priorvalue(Status__c),&quot;Left The Company&quot;
+    )
+  ),
+  OR(
+    ispickval(Status__c,&apos;Terminated&apos;),
+    ispickval(Status__c,&apos;Left The Company&apos;)
+  )
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

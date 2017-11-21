@@ -1,0 +1,78 @@
+<apex:page controller="dealRegistration" standardStylesheets="false" sidebar="false" showHeader="false" title="Deal Registration" tabStyle="Account" cache="false" action="{!goPage}">
+<style>
+  .labelCol{
+    padding: 1px 20px 1px;
+    text-align: left;
+  }
+  .dataCol{
+    padding: 1px 20px 1px;
+  }
+  tr{
+    padding: 3px;
+  }
+</style>
+  <apex:form >
+    <apex:pageMessages id="msg"/>
+    <apex:pageblock title="Your Information" rendered="{!authenticated}">
+      <apex:pageblocksection columns="1" collapsible="false">
+        <apex:outputfield rendered="{!aOk}" value="{!a.Name}"/>
+        <apex:outputfield rendered="{!cOk}" value="{!c.Name}"/>
+        <apex:outputfield rendered="{!cOk}" value="{!c.Phone}"/>
+        <apex:outputfield rendered="{!cOk}" value="{!c.Email}"/>
+        <apex:inputfield required="true" rendered="{!aok == false}" value="{!a.name}"/>
+        <apex:inputfield required="true" rendered="{!aok == false}" value="{!a.Website}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.firstname}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.Lastname}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.JobTitle__c}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.Email}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.Phone}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingStreet}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingCity}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingState}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingPostalCode}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingCountry}"/>
+      </apex:pageblocksection>
+    </apex:pageblock>
+    <apex:pageblock title="Deal Registration" rendered="{!authenticated && aOK && cOk}">
+      <apex:pageblocksection columns="1" collapsible="false">
+        <apex:inputfield required="true" value="{!l.Email}"/>
+        <apex:inputfield required="true" value="{!l.FirstName}"/>
+        <apex:inputfield required="true" value="{!l.LastName}"/>
+        <apex:inputfield required="true" value="{!l.Title}"/>
+        <apex:inputfield required="true" value="{!l.Website}"/>
+        <apex:inputfield required="true" value="{!l.Company}"/>
+        <apex:inputfield required="true" value="{!l.Phone}"/>
+        <apex:inputfield required="true" value="{!l.Street}"/>
+        <apex:inputfield required="true" value="{!l.City}"/>
+        <apex:inputfield required="true" value="{!l.State}"/>
+        <apex:inputfield required="true" value="{!l.PostalCode}"/>
+        <apex:inputfield required="true" value="{!l.EstimatedRevenue__c}"/>
+        <apex:inputfield required="true" value="{!l.Distributor__c}"/>
+      </apex:pageblocksection>
+    </apex:pageblock>
+    <apex:pageblock rendered="{!authenticated}">
+      <apex:pageblockbuttons location="bottom">
+        <apex:commandbutton action="{!submit}" value="Submit"/>
+      </apex:pageblockbuttons>
+    </apex:pageblock>
+      <!-- <apex:pageBlockSection title="End User Information" collapsible="false" columns="2">
+        <label>* Email </label><apex:outputpanel ><input type="text" id="lem" value="{!lead.Email}" onchange="document.getElementById('{!$Component.leadEmail}').value = this.value;"> <script> var obj = actb(document.getElementById('lem'),customarray ); </script> <apex:inputHidden id="leadEmail" value="{!lead.Email}" /> </input><br></br></apex:outputpanel>
+        <label>* First name </label><apex:outputpanel ><input type="text" id="lfn" value="{!lead.FirstName}" onchange="document.getElementById('{!$Component.leadFirstName}').value = this.value;"> <script> var obj = actb(document.getElementById('lfn'),customarray ); </script> <apex:inputHidden id="leadFirstName" value="{!lead.FirstName}" /> </input><br></br></apex:outputpanel>
+        <label>* Last name </label><apex:outputpanel ><input type="text" id="lln" value="{!lead.LastName}" onchange="document.getElementById('{!$Component.leadLastName}').value = this.value;"> <script> var obj = actb(document.getElementById('lln'),customarray ); </script> <apex:inputHidden id="leadLastName" value="{!lead.LastName}" /> </input><br></br></apex:outputpanel>
+        <label>* Title </label><apex:outputpanel ><input type="text" id="lt" value="{!lead.Title}" onchange="document.getElementById('{!$Component.leadTitle}').value = this.value;"> <script> var obj = actb(document.getElementById('lt'),customarray ); </script> <apex:inputHidden id="leadTitle" value="{!lead.Title}" /> </input><br></br></apex:outputpanel>
+        <label>* Website </label><apex:outputpanel ><input type="text" id="lw" value="{!lead.Website}" onchange="document.getElementById('{!$Component.leadWebsite}').value = this.value;"> <script> var obj = actb(document.getElementById('lw'),customarray ); </script> <apex:inputHidden id="leadWebsite" value="{!lead.Website}" /> </input><br></br></apex:outputpanel>
+        <label>* Company </label> <apex:outputpanel ><input type="text" id="lcmp" value="{!lead.Company}" onchange="document.getElementById('{!$Component.leadCompany}').value = this.value;"> <script> var obj = actb(document.getElementById('lcmp'),customarray ); </script> <apex:inputHidden id="leadCompany" value="{!lead.Company}" /> </input><br></br></apex:outputpanel>
+        <label>* Phone </label><apex:outputpanel ><input type="text" id="lp" value="{!lead.Phone}" onchange="document.getElementById('{!$Component.leadPhone}').value = this.value;"> <script> var obj = actb(document.getElementById('lp'),customarray ); </script> <apex:inputHidden id="leadPhone" value="{!lead.Phone}" /> </input><br></br></apex:outputpanel>
+        <label>* Street </label><apex:outputpanel ><input type="text" id="ls" value="{!lead.Street}" onchange="document.getElementById('{!$Component.leadStreet}').value = this.value;"> <script> var obj = actb(document.getElementById('ls'),customarray ); </script> <apex:inputHidden id="leadStreet" value="{!lead.Street}" /> </input><br></br></apex:outputpanel>
+        <label>* City </label><apex:outputpanel ><input type="text" id="lc" value="{!lead.City}" onchange="document.getElementById('{!$Component.leadCity}').value = this.value;"> <script> var obj = actb(document.getElementById('lc'),customarray ); </script> <apex:inputHidden id="leadCity" value="{!lead.City}" /> </input><br></br></apex:outputpanel>
+        <label>* State </label><apex:outputpanel ><input type="text" id="lst" value="{!lead.State}" onchange="document.getElementById('{!$Component.leadState}').value = this.value;"> <script> var obj = actb(document.getElementById('lst'),customarray ); </script> <apex:inputHidden id="leadState" value="{!lead.State}" /> </input><br></br></apex:outputpanel>
+        <label>* PostalCode </label><apex:outputpanel ><input type="text" id="lpc" value="{!lead.PostalCode}" onchange="document.getElementById('{!$Component.leadPost}').value = this.value;"> <script> var obj = actb(document.getElementById('lpc'),customarray ); </script> <apex:inputHidden id="leadPost" value="{!lead.PostalCode}" /> </input><br></br></apex:outputpanel>
+        <label>* Country </label><apex:outputpanel ><input type="text" id="lcnt" value="{!lead.Country}" onchange="document.getElementById('{!$Component.leadCountry}').value = this.value;"> <script> var obj = actb(document.getElementById('lcnt'),customarray ); </script> <apex:inputHidden id="leadCountry" value="{!lead.Country}" /> </input><br></br></apex:outputpanel>
+        <label>* Estimated Revenue </label><apex:outputpanel ><input type="text" id="ler" value="{!lead.Estimated_Revenue__c}" onchange="document.getElementById('{!$Component.leadEstimated_Revenue__c}').value = this.value;"> <script> var obj = actb(document.getElementById('ler'),customarray ); </script> <apex:inputHidden id="leadEstimated_Revenue__c" value="{!lead.Estimated_Revenue__c}" /> </input><br></br></apex:outputpanel>
+        --<label>* Distributor </label><apex:outputpanel ><apex:inputField value="{!lead.Distributor__c}"/></apex:outputpanel>
+        <label>* Distributor </label><apex:outputpanel ><select id="mySelect" onchange="document.getElementById('{!$Component.leadDistributor}').value = this.value;"><option value=""> -- None -- </option><option value="D&H Distributing">D and H Distributing</option><option value="Lifeboat">Lifeboat</option><option value="Synnex">Synnex</option><option value="Tech Data">Tech Data</option> <script> var obj = actb(document.getElementById('mySelect'),customarray ); </script> <apex:inputHidden id="leadDistributor" value="{!lead.Distributor__c}" /> </select><br></br></apex:outputpanel>
+      </apex:pageBlockSection>
+      <apex:commandButton action="{!continueAction}" reRender="msg" value="Continue" id="theButton"/>
+    </apex:pageBlock> -->
+  </apex:form>
+</apex:page>

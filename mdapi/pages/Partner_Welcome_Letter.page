@@ -1,0 +1,62 @@
+<apex:page standardcontroller="Account" extensions="PartnerWelcomeLetterController">
+  <style type="text/css">
+    #col1,#col2{width:49%;display:inline-block;}
+  </style>
+
+  <apex:form >
+    <apex:pageblock title="Grant Access to Partner Portal" >
+      <apex:pageBlockSection columns="2" title="Information">
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel >Account</apex:outputLabel>
+          <apex:outputLink value="/{!Account.Id}">{!Account.Name}</apex:outputLink> 
+        </apex:pageBlockSectionItem><br/>        
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel >Primary Contact</apex:outputLabel>
+          <apex:outputLink value="/{!Account.Primary_Contact__c}">{!Account.Primary_Contact__r.Name}</apex:outputLink> 
+        </apex:pageBlockSectionItem><br/>
+        <apex:outputField label="Primary Contact Email" value="{!Account.Primary_Contact__r.Email}" /> <br/>
+        <apex:outputField label="Type" value="{!Account.Type}" /> <br/>
+        <apex:outputField label="State" value="{!Account.BillingState}" /> <br/>
+        <apex:outputField label="Country" value="{!Account.BillingCountry}" /> <br/>
+        <apex:outputField label="Postal Code" value="{!Account.BillingPostalCode}" />     
+      </apex:pageBlockSection>
+
+      <apex:pageBlockSection columns="2" title="Create NFR Keys" rendered="{!AND(NOT(showDone), createNRFs)}" >       
+        <apex:selectList label="* NFR Language"  value="{!languageNFRs}" size="4" multiselect="false" required="true">
+          <apex:selectOptions value="{!LanguageOptions}"/>
+        </apex:selectList>
+        <apex:outputtext value="  " />
+        <apex:commandButton value="Create NFRs" action="{!createNFRKeys}" onComplete="location.reload();" />
+        <apex:commandButton value="Cancel" action="{!cancel}" />
+      </apex:pageBlockSection>    
+         
+      <apex:pageBlockSection columns="2" title="NFR Keys" rendered="{!AND(NOT(showDone), NOT(createNRFs))}" > 
+        <apex:outputField label="  Desktop Serial" value="{!Account.NFR_ShadowProtect_Desktop_Serial__c}" /> <br/>
+        <apex:outputField label="  ImageManager" value="{!Account.NFR_ShadowProtect_ImageManager_Serial__c}" /> <br/>
+        <apex:outputField label="  Server Serial" value="{!Account.NFR_ShadowProtect_Server_Serial__c}" /> <br/>
+        <apex:outputField label="  SPX Linux" value="{!Account.NFR_ShadowProtect_SPX_Linux__c}" />
+      </apex:pageBlockSection> 
+
+      <apex:pageBlockSection columns="2" title="Email" rendered="{!AND(NOT(showDone), NOT(createNRFs))}" > 
+        <apex:selectList label="* Select Language" value="{!language}" size="4" multiselect="false" required="true" >
+          <apex:selectOption itemValue="English" itemLabel="English"></apex:selectOption>
+          <apex:selectOption itemValue="French" itemLabel="French"></apex:selectOption>
+          <apex:selectOption itemValue="German" itemLabel="German"></apex:selectOption>
+          <apex:selectOption itemValue="Italian" itemLabel="Italian"></apex:selectOption>
+          <apex:selectOption itemValue="Japanese" itemLabel="Japanese"></apex:selectOption>
+          <apex:selectOption itemValue="Portuguese" itemLabel="Portuguese"></apex:selectOption>
+        </apex:selectList> <br />
+               
+        <apex:inputCheckbox value="{!emailMe}" label="Send a copy of the email to me" selected="true" /><br/>
+        <apex:commandButton value="Send" action="{!sendEmail}" />
+        <apex:commandButton value="Cancel" action="{!cancel}" />
+      </apex:pageBlockSection> 
+      
+      <apex:pagemessages />
+      
+      <apex:pageBlockSection columns="1"  rendered="{!showDone}" >  
+        <apex:commandButton value="Done" action="{!cancel}" />
+      </apex:pageBlockSection> 
+    </apex:pageblock>
+  </apex:form>
+</apex:page>

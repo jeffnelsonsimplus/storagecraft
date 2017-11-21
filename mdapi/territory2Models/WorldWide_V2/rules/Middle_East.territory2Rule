@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Middle East</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>BH,IQ,IL,JO,KW,LB,OM,PS,QA,SA,SY,AE,Bahrain,Iraq,Israel,Jordan,Kuwait,Lebanon,Oman,Palestine,State of Palestine,Qatar,Saudi Arabia,Syria,United Arab Emirates</value>
+    </ruleItems>
+</Territory2Rule>

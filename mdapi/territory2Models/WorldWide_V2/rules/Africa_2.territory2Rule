@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Africa 2</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>BJ,Benin,BI,Burundi,CM,Cameroon,CV,Cape Verde,CF,Central African Republic,TD,Chad,KM,Comoros,CG,Congo,CD,Congo,Democratic Republic of,CI,Côte d&apos;Ivoire,DJ,Djibouti,GA,Gabon,MG,Madagascar,MR,Mauritania,MU,Mauritius,NE,Niger,RW,Rwanda,ST,Sao Tome and Principe,TG,Togo</value>
+    </ruleItems>
+</Territory2Rule>

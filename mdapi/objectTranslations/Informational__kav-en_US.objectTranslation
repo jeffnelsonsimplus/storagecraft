@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Informational</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Informational</value>
+    </caseValues>
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Information --></label>
+        <name>ArticleBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intended Audience --></label>
+        <name>Intended_Audience__c</name>
+        <picklistValues>
+            <masterLabel>External</masterLabel>
+            <translation><!-- External --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal</masterLabel>
+            <translation><!-- Internal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Legacy KB Date Created --></label>
+        <name>Legacy_KB_Date_Created__c</name>
+    </fields>
+    <fields>
+        <help><!-- Format: KB ### --></help>
+        <label><!-- Legacy KB Number --></label>
+        <name>Legacy_KB_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- NOT REQUIRED FOR NEW ARTICLES:  Copy and paste the keyword field content from the Legacy site article. --></help>
+        <label><!-- Legacy Keywords --></label>
+        <name>Legacy_Keywords__c</name>
+    </fields>
+    <fields>
+        <help><!-- Not required for new content.  Paste the Full HTTPS URL from the legacy website. --></help>
+        <label><!-- Legacy URL --></label>
+        <name>Legacy_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overview --></label>
+        <name>Overview__c</name>
+    </fields>
+    <fields>
+        <help><!-- List of products and exact versions or ranges of versions where this message can be seen.
+Example:  ShadowProtect SPX (Windows) - All --></help>
+        <label><!-- Product Versions Affected --></label>
+        <name>Product_Versions__c</name>
+    </fields>
+    <layouts>
+        <layout>Informational Layout</layout>
+        <sections>
+            <label><!-- Article --></label>
+            <section>Article</section>
+        </sections>
+        <sections>
+            <label><!-- Article Details --></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy KB References (Do not populate for new articles) --></label>
+            <section>Legacy KB References (Do not populate for new articles)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Informational Public Layout</layout>
+        <sections>
+            <label><!-- Article --></label>
+            <section>Article</section>
+        </sections>
+        <sections>
+            <label><!-- Article Details --></label>
+            <section>Article Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Title Length too long - To optimize Search Engine results, the article title must be less than 66 characters. --></errorMessage>
+        <name>Informational_Title_Length_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Legacy KB Article field is reserved for KB ### article number references. Required format example: KB 263 --></errorMessage>
+        <name>Legacy_KB_Article_Format</name>
+    </validationRules>
+</CustomObjectTranslation>

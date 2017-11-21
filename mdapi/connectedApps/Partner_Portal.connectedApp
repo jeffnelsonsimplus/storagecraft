@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>devon.winkler@storagecraft.com</contactEmail>
+    <label>Partner Portal</label>
+    <oauthConfig>
+        <callbackUrl>https://localhost:8090/callback</callbackUrl>
+        <consumerKey>3MVG9uudbyLbNPZPV9rSK3gUdUPwwr_I.4cQUKbC1hCTdfvK9ncAlt8lbtAk8gzXDeRvhsO.lQgUZclC3aVt6</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

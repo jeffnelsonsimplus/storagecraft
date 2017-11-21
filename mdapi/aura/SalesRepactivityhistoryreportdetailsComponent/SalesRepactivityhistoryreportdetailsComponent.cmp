@@ -1,0 +1,15 @@
+<aura:component >
+	<aura:attribute name="row" type="Object"/>
+    
+    <aura:attribute name="period" type="String"/>
+    <aura:registerEvent name="showdetails" type="c:SalesActivityandLoginhistoryAppEvent" />
+    <td class="" data-label="{!v.row.value}">
+        <aura:if isTrue="{!and(v.row.reportField!='Full Name',v.row.value>0)}">
+         <a href="javascript:void(0);" onclick="{!c.displayModal}">{!v.row.value}</a>	                       
+        <aura:set attribute="else">
+            {!v.row.value}
+        </aura:set>
+        </aura:if>
+    </td>  
+         
+</aura:component>

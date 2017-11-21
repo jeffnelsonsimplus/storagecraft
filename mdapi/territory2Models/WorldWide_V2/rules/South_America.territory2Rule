@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>South America</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>BZ,Belize,SV,El Salvador,GT,Guatemala,HN,Honduras,MX,Mexico,NI,Nicaragua,PA,Panama,AR,Argentina,BO,Bolivia,BR,Brazil,CL,Chile,CO,Colombia,EC,Ecuador,GY,Guyana,PY,Paraguay,PE,Peru,SR,Suriname,UY,Uruguay,VE,Venezuela</value>
+    </ruleItems>
+</Territory2Rule>

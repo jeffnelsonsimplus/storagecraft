@@ -1,0 +1,3950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>End User</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>--cancelled--</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>--duplicate--</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed%2FLost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed%2FWon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evaluation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualifying</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quoted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspect</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Partner</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>--cancelled--</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>--duplicate--</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evaluation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Transaction Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gathering Opportunity Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending First Transaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quoted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set Onboarding Appointment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspect</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>New_Awesome_Companct_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>New_Awesome_Companct_Layout</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>CloseDate</fields>
+        <fields>Amount</fields>
+        <fields>OwnerId</fields>
+        <label>New Awesome Compact Layout</label>
+    </compactLayouts>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>ARR_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>ARR Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AccountUserType__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.transactionTypesAsText__c</formula>
+        <label>Account User Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualCloseDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ActualCloseDate_del__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ActualRevenue__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AdditionalDetails__c</fullName>
+        <externalId>false</externalId>
+        <label>Assistance Details</label>
+        <length>4000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Amount</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>BudgetAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>Budget Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Confirmed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Budget Confirmed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CloseDate</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>4000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Competitors__c</fullName>
+        <externalId>false</externalId>
+        <label>Competitors</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>--unknown--</fullName>
+                    <default>false</default>
+                    <label>--unknown--</label>
+                </value>
+                <value>
+                    <fullName>--other/new--</fullName>
+                    <default>false</default>
+                    <label>--other/new--</label>
+                </value>
+                <value>
+                    <fullName>--cancelled--</fullName>
+                    <default>false</default>
+                    <label>--cancelled--</label>
+                </value>
+                <value>
+                    <fullName>Acronis</fullName>
+                    <default>false</default>
+                    <label>Acronis</label>
+                </value>
+                <value>
+                    <fullName>Actifio</fullName>
+                    <default>false</default>
+                    <label>Actifio</label>
+                </value>
+                <value>
+                    <fullName>AppAssure</fullName>
+                    <default>false</default>
+                    <label>AppAssure</label>
+                </value>
+                <value>
+                    <fullName>Arcserve (CA)</fullName>
+                    <default>false</default>
+                    <label>Arcserve (CA)</label>
+                </value>
+                <value>
+                    <fullName>Asigra</fullName>
+                    <default>false</default>
+                    <label>Asigra</label>
+                </value>
+                <value>
+                    <fullName>Axcient</fullName>
+                    <default>false</default>
+                    <label>Axcient</label>
+                </value>
+                <value>
+                    <fullName>Barracuda</fullName>
+                    <default>false</default>
+                    <label>Barracuda</label>
+                </value>
+                <value>
+                    <fullName>Commvault</fullName>
+                    <default>false</default>
+                    <label>Commvault</label>
+                </value>
+                <value>
+                    <fullName>Datto</fullName>
+                    <default>false</default>
+                    <label>Datto</label>
+                </value>
+                <value>
+                    <fullName>Dell RapidRecovery (AppAssure)</fullName>
+                    <default>false</default>
+                    <label>Dell RapidRecovery (AppAssure)</label>
+                </value>
+                <value>
+                    <fullName>eFolder</fullName>
+                    <default>false</default>
+                    <label>eFolder</label>
+                </value>
+                <value>
+                    <fullName>EMC (Avamar)</fullName>
+                    <default>false</default>
+                    <label>EMC (Avamar)</label>
+                </value>
+                <value>
+                    <fullName>FalconStor</fullName>
+                    <default>false</default>
+                    <label>FalconStor</label>
+                </value>
+                <value>
+                    <fullName>HP</fullName>
+                    <default>false</default>
+                    <label>HP</label>
+                </value>
+                <value>
+                    <fullName>IBM</fullName>
+                    <default>false</default>
+                    <label>IBM</label>
+                </value>
+                <value>
+                    <fullName>Infrascale</fullName>
+                    <default>false</default>
+                    <label>Infrascale</label>
+                </value>
+                <value>
+                    <fullName>Microsoft DPM</fullName>
+                    <default>false</default>
+                    <label>Microsoft DPM</label>
+                </value>
+                <value>
+                    <fullName>N-able</fullName>
+                    <default>false</default>
+                    <label>N-able</label>
+                </value>
+                <value>
+                    <fullName>Replibit</fullName>
+                    <default>false</default>
+                    <label>Replibit</label>
+                </value>
+                <value>
+                    <fullName>Seagate</fullName>
+                    <default>false</default>
+                    <label>Seagate</label>
+                </value>
+                <value>
+                    <fullName>Unitrends</fullName>
+                    <default>false</default>
+                    <label>Unitrends</label>
+                </value>
+                <value>
+                    <fullName>Veeam</fullName>
+                    <default>false</default>
+                    <label>Veeam</label>
+                </value>
+                <value>
+                    <fullName>Vembu</fullName>
+                    <default>false</default>
+                    <label>Vembu</label>
+                </value>
+                <value>
+                    <fullName>Veritas (Symantec)</fullName>
+                    <default>false</default>
+                    <label>Veritas (Symantec)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>End User Opportunities</relationshipLabel>
+        <relationshipName>Opportunities1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CreatedOn__c</fullName>
+        <externalId>false</externalId>
+        <label>Created On</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>CurrentSituation__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Situation</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CustomerNeed__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Need</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Data_Migration_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Source CRM</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealCompany__c</fullName>
+        <externalId>false</externalId>
+        <label>End User Company</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealEmail__c</fullName>
+        <externalId>false</externalId>
+        <label>End User Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealExpiration__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Expiration</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DealFirstName__c</fullName>
+        <externalId>false</externalId>
+        <label>End User First Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealLastName__c</fullName>
+        <externalId>false</externalId>
+        <label>End User Last Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealPhone__c</fullName>
+        <externalId>false</externalId>
+        <label>End User Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>DealRegContactEmail__c</fullName>
+        <externalId>false</externalId>
+        <formula>DealRegistrationSubmittingPartner__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deal Reg Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealRegContactPhone__c</fullName>
+        <externalId>false</externalId>
+        <formula>DealRegistrationSubmittingPartner__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deal Reg Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealRegEstimatedCloseDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Reg Estimated Close Date</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealRegPartnerAddress__c</fullName>
+        <externalId>false</externalId>
+        <formula>DealRegSubmittingPartnerAccount__r.BillingStreet &amp;&quot;,&quot;&amp; DealRegSubmittingPartnerAccount__r.BillingCity &amp;&quot;,&quot;&amp; DealRegSubmittingPartnerAccount__r.BillingState &amp;&quot;,&quot;&amp;DealRegSubmittingPartnerAccount__r.BillingCountry</formula>
+        <label>DealRegPartnerAddress</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealRegSubmittingPartnerAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Deal Reg Submitting Partner Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Deal Reg Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DealRegistrationDetails__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Registration Details</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DealRegistrationNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Registration Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealRegistrationStatus__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Registration Status</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DealRegistrationSubmittingPartner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Deal Registration Submitting Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Partner Deal Reg Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DealRegistration__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Deal Registration</label>
+        <referenceTo>DealRegistration__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DealWebsite__c</fullName>
+        <externalId>false</externalId>
+        <label>End User Website</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Deal_Reg_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used for Process Builder Execution</description>
+        <externalId>false</externalId>
+        <label>Deal Reg Approval</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Deal_Reg_Estimated_Revinue__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Reg Est Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Deal_Registration_Modified_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Registration Modified By</label>
+        <length>60</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Details__c</fullName>
+        <description>Details about why an Opportunity was won or lost</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Why was this Opportunity won or lost?</inlineHelpText>
+        <label>Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Discovery_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Discovery Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Distributor__c</fullName>
+        <externalId>false</externalId>
+        <label>Distributor</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_User_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>End User Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Home User</fullName>
+                    <default>false</default>
+                    <label>Home User</label>
+                </value>
+                <value>
+                    <fullName>Business User</fullName>
+                    <default>false</default>
+                    <label>Business User</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EstCloseDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Est. Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>EstRevenue__c</fullName>
+        <externalId>false</externalId>
+        <label>Orignal Est. Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ExcludeFromAutomation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ExcludeFromAutomation</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ExpectedRevenue</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Features__c</fullName>
+        <externalId>false</externalId>
+        <label>Features</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Feature A</fullName>
+                    <default>false</default>
+                    <label>Feature A</label>
+                </value>
+                <value>
+                    <fullName>Feature B</fullName>
+                    <default>false</default>
+                    <label>Feature B</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ForecastRevenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount *  Probability</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Forecast Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IsExcludedFromTerritory2Filter</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsPrivate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>LastActivity__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Activity</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LastAppointment__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Appointment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LastCall__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Call</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LastEmail__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loss_Reason__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select why the opportunity was won or lost</inlineHelpText>
+        <label>Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Won on Relationship</fullName>
+                    <default>false</default>
+                    <label>Won on Relationship</label>
+                </value>
+                <value>
+                    <fullName>Won on Price and Features</fullName>
+                    <default>false</default>
+                    <label>Won on Price and Features</label>
+                </value>
+                <value>
+                    <fullName>Won on Feature</fullName>
+                    <default>false</default>
+                    <label>Won on Feature</label>
+                </value>
+                <value>
+                    <fullName>Won on Price</fullName>
+                    <default>false</default>
+                    <label>Won on Price</label>
+                </value>
+                <value>
+                    <fullName>Won Run Rate</fullName>
+                    <default>false</default>
+                    <label>Won Run Rate</label>
+                </value>
+                <value>
+                    <fullName>Lost on Feature</fullName>
+                    <default>false</default>
+                    <label>Lost on Feature</label>
+                </value>
+                <value>
+                    <fullName>Lost No Budget / Lost Funding</fullName>
+                    <default>false</default>
+                    <label>Lost No Budget / Lost Funding</label>
+                </value>
+                <value>
+                    <fullName>Lost No Decision / Non-Responsive</fullName>
+                    <default>false</default>
+                    <label>Lost No Decision / Non-Responsive</label>
+                </value>
+                <value>
+                    <fullName>Lost on Price</fullName>
+                    <default>false</default>
+                    <label>Lost on Price</label>
+                </value>
+                <value>
+                    <fullName>Lost on Other</fullName>
+                    <default>false</default>
+                    <label>Lost on Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ModifiedOn__c</fullName>
+        <externalId>false</externalId>
+        <label>Modified On</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Needs_Escalation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Sends email alert to VP</inlineHelpText>
+        <label>Needs Escalation</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NextStep</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>NoOfHeadStartRestore__c</fullName>
+        <externalId>false</externalId>
+        <label># of HeadStart Restore</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfIntelligentFTP__c</fullName>
+        <externalId>false</externalId>
+        <label># of Intelligent FTP</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfShadowControlImageManager__c</fullName>
+        <externalId>false</externalId>
+        <label># of ShadowControl ImageManager</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfShadowProtectDesktop__c</fullName>
+        <externalId>false</externalId>
+        <label># of ShadowProtect Desktop</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfShadowProtectGRE__c</fullName>
+        <externalId>false</externalId>
+        <label># of ShadowProtect GRE</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfShadowProtectITEdition__c</fullName>
+        <externalId>false</externalId>
+        <label># of ShadowProtect IT Edition</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfShadowProtectImageManager__c</fullName>
+        <externalId>false</externalId>
+        <label># of ShadowProtect ImageManager</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfShadowProtectSBS__c</fullName>
+        <externalId>false</externalId>
+        <label># of ShadowProtect SBS</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfShadowProtectServer__c</fullName>
+        <externalId>false</externalId>
+        <label># of ShadowProtect Server</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfShadowProtectVirtual__c</fullName>
+        <externalId>false</externalId>
+        <label># of ShadowProtect Virtual</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoOfShadowStreamJobs__c</fullName>
+        <externalId>false</externalId>
+        <label># of ShadowStream Jobs</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunityName__c</fullName>
+        <externalId>false</externalId>
+        <label>Topic</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunitySource__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Source</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Deal Registration</fullName>
+                    <default>false</default>
+                    <label>Deal Registration</label>
+                </value>
+                <value>
+                    <fullName>Direct</fullName>
+                    <default>false</default>
+                    <label>Direct</label>
+                </value>
+                <value>
+                    <fullName>Inbound</fullName>
+                    <default>false</default>
+                    <label>Inbound</label>
+                </value>
+                <value>
+                    <fullName>Lead Sharing</fullName>
+                    <default>false</default>
+                    <label>Lead Sharing</label>
+                </value>
+                <value>
+                    <fullName>MSP Run Rate</fullName>
+                    <default>false</default>
+                    <label>MSP Run Rate</label>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                    <label>Partner</label>
+                </value>
+                <value>
+                    <fullName>VAR Run Rate</fullName>
+                    <default>false</default>
+                    <label>VAR Run Rate</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>VAR</fullName>
+                    <default>true</default>
+                    <label>VAR</label>
+                </value>
+                <value>
+                    <fullName>MSP</fullName>
+                    <default>false</default>
+                    <label>MSP</label>
+                </value>
+                <value>
+                    <fullName>STC-Cloud</fullName>
+                    <default>false</default>
+                    <label>STC-Cloud</label>
+                </value>
+                <value>
+                    <fullName>App-Cloud</fullName>
+                    <default>false</default>
+                    <label>App-Cloud</label>
+                </value>
+                <value>
+                    <fullName>Exablox</fullName>
+                    <default>false</default>
+                    <label>Exablox</label>
+                </value>
+                <value>
+                    <fullName>FBR</fullName>
+                    <default>false</default>
+                    <label>FBR</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>OtherCompetitor__c</fullName>
+        <externalId>false</externalId>
+        <label>Other/New Competitor</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OtherFeature__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Feature</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OwnerTerritory__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner.TerritoryName__c</formula>
+        <label>Owner Territory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ownership_Check__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(OwnerId = Account.OwnerId, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ownership Check</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PMI_Rating__c</fullName>
+        <externalId>false</externalId>
+        <label>PMI Rating</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PartnerAccountId</fullName>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Partner Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>End User Opportunities</relationshipLabel>
+        <relationshipName>Opportunities1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PipelinePhase__c</fullName>
+        <externalId>false</externalId>
+        <label>Pipeline Phase</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricebook2Id</fullName>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Probability</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Proposed_Solution__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Solution</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ROI_Analysis_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ROI Analysis Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SalesStage__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Stage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Qualify</fullName>
+                    <default>false</default>
+                    <label>Qualify</label>
+                </value>
+                <value>
+                    <fullName>Develop</fullName>
+                    <default>false</default>
+                    <label>Develop</label>
+                </value>
+                <value>
+                    <fullName>Propose</fullName>
+                    <default>false</default>
+                    <label>Propose</label>
+                </value>
+                <value>
+                    <fullName>Close</fullName>
+                    <default>false</default>
+                    <label>Close</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ScribeExternalId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>ScribeExternalId</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SpecialPricingGovEduCompUpgrade__c</fullName>
+        <externalId>false</externalId>
+        <label>Special Pricing (gov/edu/comp. upgrade)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StageName</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StateProvince__c</fullName>
+        <externalId>false</externalId>
+        <label>State/Province</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StatusReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Enabled</fullName>
+                    <default>false</default>
+                    <label>Enabled</label>
+                </value>
+                <value>
+                    <fullName>Disabled</fullName>
+                    <default>false</default>
+                    <label>Disabled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Enabled</fullName>
+                    <default>false</default>
+                    <label>Enabled</label>
+                </value>
+                <value>
+                    <fullName>Disabled</fullName>
+                    <default>false</default>
+                    <label>Disabled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>StcZone_Territory__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Territory for the Opportunity</inlineHelpText>
+        <label>Stc Territory</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Territory</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Street1__c</fullName>
+        <externalId>false</externalId>
+        <label>Street 1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street2__c</fullName>
+        <externalId>false</externalId>
+        <label>Street 2</label>
+        <length>250</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SyncedQuoteId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Territory2Id</fullName>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>Territory CRM</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_Trigger_Flow_1_min__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Now()-0.04097)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Time Trigger Flow 1 min</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>TotalOpportunityQuantity</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Tracking__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Field used by Project Management</inlineHelpText>
+        <label>Tracking Features</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UserType__c</fullName>
+        <externalId>false</externalId>
+        <label>User Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Home User</fullName>
+                    <default>false</default>
+                    <label>Home User</label>
+                </value>
+                <value>
+                    <fullName>Business User</fullName>
+                    <default>false</default>
+                    <label>Business User</label>
+                </value>
+                <value>
+                    <fullName>Managed Service Provider (MSP)</fullName>
+                    <default>false</default>
+                    <label>Managed Service Provider (MSP)</label>
+                </value>
+                <value>
+                    <fullName>Value Added Reseller (VAR)</fullName>
+                    <default>false</default>
+                    <label>Value Added Reseller (VAR)</label>
+                </value>
+                <value>
+                    <fullName>Both MSP and VAR</fullName>
+                    <default>false</default>
+                    <label>Both MSP and VAR</label>
+                </value>
+                <value>
+                    <fullName>Original Equipment Manufacturer (OEM)</fullName>
+                    <default>false</default>
+                    <label>Original Equipment Manufacturer (OEM)</label>
+                </value>
+                <value>
+                    <fullName>Direct Market Reseller (DMR)</fullName>
+                    <default>false</default>
+                    <label>Direct Market Reseller (DMR)</label>
+                </value>
+                <value>
+                    <fullName>Press / Media Evaluator</fullName>
+                    <default>false</default>
+                    <label>Press / Media Evaluator</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Alliance Partner</fullName>
+                    <default>false</default>
+                    <label>Alliance Partner</label>
+                </value>
+                <value>
+                    <fullName>Distributors Partner Reseller</fullName>
+                    <default>false</default>
+                    <label>Distributors Partner Reseller</label>
+                </value>
+                <value>
+                    <fullName>CP</fullName>
+                    <default>false</default>
+                    <label>CP</label>
+                </value>
+                <value>
+                    <fullName>Strategic</fullName>
+                    <default>false</default>
+                    <label>Strategic</label>
+                </value>
+                <value>
+                    <fullName>Trial User</fullName>
+                    <default>false</default>
+                    <label>Trial User</label>
+                </value>
+                <value>
+                    <fullName>Distribution Partner</fullName>
+                    <default>false</default>
+                    <label>Distribution Partner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ZipPostalCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip/Postal code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>leadFormName__c</fullName>
+        <description>JIRA SSF-34: copied from Lead upon conversion to Opportunity</description>
+        <externalId>false</externalId>
+        <label>Form Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>leadLeadSource__c</fullName>
+        <description>JIRA SSF-34: copied from Lead upon conversion to Opportunity</description>
+        <externalId>false</externalId>
+        <label>Lead Source</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>leadSourceCampaign__c</fullName>
+        <description>JIRA SSF-34: copied from Lead upon conversion to Opportunity</description>
+        <externalId>false</externalId>
+        <label>Source Campaign</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>mkto_si__MarketoAnalyzer__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This creates a link to the Marketo Opportunity Influence Analyzer. This feature requires an active subscription to Marketo Revenue Cycle Analytics.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK (&quot;/apex/mkto_si__MarketoRedirect?actionName=salesInsightAnalytics&amp;reportType=AccountAnalyzer&amp;objType=Opportunity&amp;objId=&quot; &amp; Id, IMAGE($Label.mkto_si__Marketo_Logo_16, $Label.mkto_si__Marketo_Opportunity_Analysis))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Marketo Opportunity Analysis</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>productMaintenanceId__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <inlineHelpText>The unique Product Maintenance Identifier pulled from the Maintenance database</inlineHelpText>
+        <label>productMaintenanceId*</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <listViews>
+        <fullName>AllOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>OPPORTUNITY.TYPE</columns>
+        <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Suspect,Qualification,Evaluation,Quoted,Negotiation,Commit</value>
+        </filters>
+        <label>All Opportunities</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Opportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>Partner__c</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>OPPORTUNITY.NEXT_STEP</columns>
+        <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <columns>OPPORTUNITY.LAST_UPDATE</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>TERR2_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>notEqual</operation>
+            <value>Closed Won,Closed Lost,--cancelled--,--duplicate--</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.ALIAS</field>
+            <operation>equals</operation>
+            <value>NMacedo,RLow,Reibel,Bnolli,Iatson</value>
+        </filters>
+        <filters>
+            <field>OwnerTerritory__c</field>
+            <operation>equals</operation>
+            <value>Eastern Canada,Western Canada,Canada</value>
+        </filters>
+        <label>Open Canada Opportunities</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Master_View_s_Champions</group>
+            <group>Sales_NA_East_Canada</group>
+            <group>Sales_NA_West_Canada</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Closed_Lost_this_Quarter</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Closed Lost,Closed/Lost</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <label>Closed/Lost this Quarter</label>
+    </listViews>
+    <listViews>
+        <fullName>Closed_Won_this_Quarter</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Closed Won,Closed/Won</value>
+        </filters>
+        <label>Closed/Won this Quarter</label>
+    </listViews>
+    <listViews>
+        <fullName>ClosingNextMonth</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>NEXT_MONTH</value>
+        </filters>
+        <label>Closing Next Month</label>
+    </listViews>
+    <listViews>
+        <fullName>ClosingThisMonth</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>Closing This Month</label>
+    </listViews>
+    <listViews>
+        <fullName>Closing_this_Quarter</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <label>Closing this Quarter</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Created_this_Quarter</fullName>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>ForecastRevenue__c</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>OwnerTerritory__c</columns>
+        <columns>leadSourceCampaign__c</columns>
+        <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+        <columns>leadLeadSource__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_QUARTER</value>
+        </filters>
+        <label>Created this Quarter</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Default_Opportunity_Pipeline</fullName>
+        <booleanFilter>(1 OR 2)</booleanFilter>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>LAST_N_DAYS:30</value>
+        </filters>
+        <label>Opportunity Pipeline</label>
+    </listViews>
+    <listViews>
+        <fullName>Eastern_Canada_Opportunity_View</fullName>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>Partner__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>ForecastRevenue__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>StateProvince__c</columns>
+        <columns>CreatedOn__c</columns>
+        <columns>OpportunitySource__c</columns>
+        <columns>DealRegistrationStatus__c</columns>
+        <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ALIAS</field>
+            <operation>equals</operation>
+            <value>NMacedo,RLow,Reibel</value>
+        </filters>
+        <filters>
+            <field>StateProvince__c</field>
+            <operation>equals</operation>
+            <value>ON,QC,NB,NS,PE,NF,NL</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Suspect,Qualification,Evaluation,Approval,Commit</value>
+        </filters>
+        <label>Eastern Canada Opportunity View</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Master_View_s_Champions</group>
+            <group>Sales_NA_East_Canada</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Master_Opportunity_View</fullName>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>Partner__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>ForecastRevenue__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>StateProvince__c</columns>
+        <columns>CreatedOn__c</columns>
+        <columns>OpportunitySource__c</columns>
+        <columns>DealRegistrationStatus__c</columns>
+        <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ALIAS</field>
+            <operation>equals</operation>
+            <value>Bnolli,MMonro,Iatson</value>
+        </filters>
+        <filters>
+            <field>StateProvince__c</field>
+            <operation>equals</operation>
+            <value>BC,AB,SK,MB,YT,NT,NU</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Suspect,Qualification,Evaluation,Approval,Commit</value>
+        </filters>
+        <label>Western Canada Opportunity View</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Master_View_s_Champions</group>
+            <group>Sales_NA_West_Canada</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Master_Opportunity_View1</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>Partner__c</columns>
+        <columns>StateProvince__c</columns>
+        <columns>CreatedOn__c</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>ForecastRevenue__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>OpportunitySource__c</columns>
+        <columns>DealRegistrationStatus__c</columns>
+        <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>Master Opportunity View</label>
+        <sharedTo>
+            <group>Master_View_s_Champions</group>
+            <group>Sales_NA_West_Canada</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MyOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <operation>equals</operation>
+            <value>Andrew</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>1/1/2016</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>lessThan</operation>
+            <value>1/1/2017</value>
+        </filters>
+        <label>My Opportunities</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeek</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>New This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>Opportunities_by_Stage</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Opportunities by Stage</label>
+    </listViews>
+    <listViews>
+        <fullName>Pacific_Northwest_Opps_No_Renewals</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>Partner__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>ForecastRevenue__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>StateProvince__c</columns>
+        <columns>CreatedOn__c</columns>
+        <columns>OpportunitySource__c</columns>
+        <columns>DealRegistrationStatus__c</columns>
+        <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OwnerTerritory__c</field>
+            <operation>equals</operation>
+            <value>Pacific Northwest</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Suspect,Qualification,Evaluation,Quoted,Negotiation,Commit</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.NAME</field>
+            <operation>notContain</operation>
+            <value>Renewal:</value>
+        </filters>
+        <label>Pacific Northwest Opps - No Renewals</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Master_View_s_Champions</group>
+            <group>Sales_NA_Pacific_NW</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Salesforce_Migration</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <columns>OPPORTUNITY.TYPE</columns>
+        <columns>OpportunitySource__c</columns>
+        <columns>EstRevenue__c</columns>
+        <columns>Status__c</columns>
+        <columns>StatusReason__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Data_Migration_Source__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>ScribeExternalId__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Data_Migration_Source__c</field>
+            <operation>equals</operation>
+            <value>IE</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Qualification</value>
+        </filters>
+        <label>Salesforce Migration</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Silver_Northwest_Opps_No_Renewals</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>DealEmail__c</columns>
+        <columns>DealPhone__c</columns>
+        <columns>Partner__c</columns>
+        <columns>Contact__c</columns>
+        <columns>DealRegContactEmail__c</columns>
+        <columns>DealRegContactPhone__c</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>ForecastRevenue__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>CreatedOn__c</columns>
+        <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Harding</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Suspect,Qualification,Evaluation,Quoted,Negotiation,Commit</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.NAME</field>
+            <operation>notContain</operation>
+            <value>Renewal:</value>
+        </filters>
+        <label>Silver Northwest Opps - No Renewals</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Master_View_s_Champions</group>
+            <group>Sales_NA_Pacific_NW</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>South_Texas_Opportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>Partner__c</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>ForecastRevenue__c</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>contains</operation>
+            <value>holshue,allen</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Suspect,Qualification,Evaluation,Quoted,Negotiation,Commit</value>
+        </filters>
+        <label>South Texas Opportunities</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Sales_NA_So_Texas</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TLB_Opps</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>OpportunityName__c</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>EstRevenue__c</columns>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>DealCompany__c</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>Distributor__c</columns>
+        <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>contains</operation>
+            <value>Suspect,Qualification,Evaluation,Quoted,Negotiation,Commit</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Bennion,Uttich</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.NAME</field>
+            <operation>notContain</operation>
+            <value>Renewal:</value>
+        </filters>
+        <label>TLB Opps</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Sales_NA_Florida</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Western_Canada_Opportunity_View</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>Partner__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>ForecastRevenue__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>StateProvince__c</columns>
+        <columns>CreatedOn__c</columns>
+        <columns>OpportunitySource__c</columns>
+        <columns>DealRegistrationStatus__c</columns>
+        <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OwnerTerritory__c</field>
+            <operation>equals</operation>
+            <value>Pacific Northwest</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Suspect,Qualification,Evaluation,Quoted,Negotiation,Commit</value>
+        </filters>
+        <label>Pacific Northwest Opportunity View</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Master_View_s_Champions</group>
+            <group>Sales_NA_Pacific_NW</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Won</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.WON</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Won</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>End_User</fullName>
+        <active>true</active>
+        <businessProcess>End User</businessProcess>
+        <label>End User</label>
+        <picklistValues>
+            <picklist>Competitors__c</picklist>
+            <values>
+                <fullName>--cancelled--</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>--other%2Fnew--</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>--unknown--</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acronis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Actifio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AppAssure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arcserve %28CA%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asigra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Axcient</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Barracuda</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commvault</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Datto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dell RapidRecovery %28AppAssure%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMC %28Avamar%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FalconStor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IBM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrascale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Microsoft DPM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N-able</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replibit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seagate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unitrends</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veeam</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vembu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veritas %28Symantec%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eFolder</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Features__c</picklist>
+            <values>
+                <fullName>Feature A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feature B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alliance Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%26B360</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deal Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Traffic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gillware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Go To Meeting %28ClickDimensions%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hubspot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased Leads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Generated</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Seminar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Syndicated Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website %28ClickDimensions%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of Mouth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zenith</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Lost No Budget %2F Lost Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost No Decision %2F Non-Responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost on Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost on Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost on Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won Run Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won on Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won on Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won on Price and Features</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won on Relationship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OpportunitySource__c</picklist>
+            <values>
+                <fullName>Deal Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lead Sharing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSP Run Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR Run Rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type__c</picklist>
+            <values>
+                <fullName>App-Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exablox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FBR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STC-Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SalesStage__c</picklist>
+            <values>
+                <fullName>Close</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Develop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Propose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StatusReason__c</picklist>
+            <values>
+                <fullName>Disabled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enabled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Disabled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enabled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StcZone_Territory__c</picklist>
+            <values>
+                <fullName>Asia Emerging Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Australia %2F New Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Austria %2F Switzerland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benelux</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Big Apple</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carolinas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cypress %2F Greece</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMEA Emerging Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Florida</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany North</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany South</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ireland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LATAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Los Angeles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maui to Maine - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Atlantic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New England</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New South Wales North</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New South Wales South</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nordics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North Asia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North Texas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern California</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oceania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pacific Northwest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portugal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queensland%2C WA%2C NT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rocky Mountain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Atlantic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Great Lakes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Gulf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Heartland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver NorthWest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Northeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South East Asia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South Texas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southern California</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US DMR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US OEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Kingdom North</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Kingdom South</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Victoria%2C Tasmania%2C SA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>UserType__c</picklist>
+            <values>
+                <fullName>Alliance Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Both MSP and VAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Market Reseller %28DMR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distribution Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributors Partner Reseller</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Service Provider %28MSP%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Original Equipment Manufacturer %28OEM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Press %2F Media Evaluator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trial User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value Added Reseller %28VAR%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Partner</fullName>
+        <active>true</active>
+        <businessProcess>Partner</businessProcess>
+        <label>Partner</label>
+        <picklistValues>
+            <picklist>Competitors__c</picklist>
+            <values>
+                <fullName>--cancelled--</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>--other%2Fnew--</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>--unknown--</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Acronis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Actifio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AppAssure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arcserve %28CA%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asigra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Axcient</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Barracuda</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commvault</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Datto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dell RapidRecovery %28AppAssure%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMC %28Avamar%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FalconStor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IBM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Infrascale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Microsoft DPM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N-able</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replibit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seagate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unitrends</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veeam</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vembu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veritas %28Symantec%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eFolder</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>End_User_Type__c</picklist>
+            <values>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alliance Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%26B360</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deal Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Traffic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gillware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Go To Meeting %28ClickDimensions%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hubspot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased Leads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Generated</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Seminar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Syndicated Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website %28ClickDimensions%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of Mouth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zenith</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Lost No Budget %2F Lost Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost No Decision %2F Non-Responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost on Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost on Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost on Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won Run Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won on Feature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won on Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won on Price and Features</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Won on Relationship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OpportunitySource__c</picklist>
+            <values>
+                <fullName>Deal Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lead Sharing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSP Run Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR Run Rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type__c</picklist>
+            <values>
+                <fullName>App-Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exablox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FBR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STC-Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SalesStage__c</picklist>
+            <values>
+                <fullName>Close</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Develop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Propose</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualify</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StatusReason__c</picklist>
+            <values>
+                <fullName>Disabled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enabled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Disabled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enabled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StcZone_Territory__c</picklist>
+            <values>
+                <fullName>Asia Emerging Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Australia %2F New Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Austria %2F Switzerland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benelux</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Big Apple</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carolinas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cypress %2F Greece</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMEA Emerging Markets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Florida</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany North</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany South</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ireland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LATAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Los Angeles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maui to Maine - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Atlantic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New England</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New South Wales North</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New South Wales South</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nordics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North Asia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North Texas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern California</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oceania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pacific Northwest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portugal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queensland%2C WA%2C NT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rocky Mountain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Atlantic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Great Lakes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Gulf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Heartland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver NorthWest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Northeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South East Asia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South Texas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southern California</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US DMR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US OEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Kingdom North</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Kingdom South</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Victoria%2C Tasmania%2C SA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>UserType__c</picklist>
+            <values>
+                <fullName>Alliance Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Both MSP and VAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Market Reseller %28DMR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distribution Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributors Partner Reseller</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Service Provider %28MSP%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Original Equipment Manufacturer %28OEM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Press %2F Media Evaluator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trial User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Value Added Reseller %28VAR%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.CLOSE_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupFilterFields>OPPORTUNITY.NAME</lookupFilterFields>
+        <lookupFilterFields>ACCOUNT.NAME</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.STAGE_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Cannot_change_the_original_Est_Revenue</fullName>
+        <active>true</active>
+        <description>Cannot_change_the_original_Est_Revenue</description>
+        <errorConditionFormula>AND(
+  $Setup.ValidationController__c.ExecuteOpportunityValidation__c,
+  NOT(
+    ISBLANK(
+      PRIORVALUE( EstRevenue__c )
+    )
+  ),
+  ISCHANGED(EstRevenue__c )
+)</errorConditionFormula>
+        <errorDisplayField>EstRevenue__c</errorDisplayField>
+        <errorMessage>Cannot change original estimated revenue</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_change_the_originalest_close_date</fullName>
+        <active>true</active>
+        <description>Cannot change the originalest close date</description>
+        <errorConditionFormula>AND(
+  $Setup.ValidationController__c.ExecuteOpportunityValidation__c,
+  NOT(
+    ISBLANK(
+      PRIORVALUE(EstCloseDate__c)
+    )
+  ),
+  ISCHANGED(EstCloseDate__c)
+)</errorConditionFormula>
+        <errorDisplayField>EstCloseDate__c</errorDisplayField>
+        <errorMessage>Cannot change the original est close date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OnClose_Require_Reason</fullName>
+        <active>true</active>
+        <description>Reason for closing the Opportunity</description>
+        <errorConditionFormula>AND(CONTAINS(TEXT(StageName), &quot;Closed&quot;), ISPICKVAL(Loss_Reason__c, &quot;&quot;))</errorConditionFormula>
+        <errorDisplayField>Loss_Reason__c</errorDisplayField>
+        <errorMessage>Please select a Reason for closing the Opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reason_Loss_Competitor</fullName>
+        <active>true</active>
+        <description>If lost opportunity, must have competitor set</description>
+        <errorConditionFormula>AND(ISPICKVAL(StageName, &quot;Closed Lost&quot;), ISBLANK(Competitors__c))</errorConditionFormula>
+        <errorDisplayField>Competitors__c</errorDisplayField>
+        <errorMessage>Please select the competitor(s) contributed to losing this opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reason_Loss_Competitor_Other</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(INCLUDES(Competitors__c, &quot;--other/new--&quot;), ISBLANK(OtherCompetitor__c))</errorConditionFormula>
+        <errorDisplayField>OtherCompetitor__c</errorDisplayField>
+        <errorMessage>Please enter the name of the other/new competitor</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reason_Loss_Details</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISBLANK(Details__c), OR(TEXT(StageName) = &quot;Duplicate&quot;, TEXT(StageName) = &quot;Cancelled&quot;, CONTAINS(TEXT(Loss_Reason__c), &quot;Lost&quot;)))</errorConditionFormula>
+        <errorDisplayField>Details__c</errorDisplayField>
+        <errorMessage>Please give details on the reason for loss, the duplicate record or why cancelled</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Create_NSD</fullName>
+        <availability>online</availability>
+        <description>Create NSD Records</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create NSD</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/flow/Create_NSD_Record?VarOpportunityId={!Opportunity.Id}&amp;VarAccountId={!Opportunity.AccountId}&amp;retURL=/{!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Deal_Reg_Approval</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Deal Reg Approval</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)}  //soap connection call
+ 
+var newRecords = [];  //declare the varaiable that will hold all the information
+ 
+var opp = new sforce.SObject(&quot;Opportunity&quot;);  //get the opp your on
+opp.id =&quot;{!Opportunity.Id}&quot;;                  //get the id of the opp
+opp.Deal_Reg_Approval__c = true; //custom field on opportunity object called Deal Reg Approval.
+ 
+newRecords.push(opp);            //push the information through
+ 
+result = sforce.connection.update(newRecords); //update the database with the information in the variable newRecords
+window.location.reload(); // reload the page</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditOpp</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <description>Mass update</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateOpportunity</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,84 @@
+<apex:page controller="dealRegistration" standardStylesheets="false" sidebar="false" showHeader="false" title="Deal Registration" tabStyle="Account" cache="false" action="{!goPage}">
+<style>
+  .labelCol{
+    padding: 1px 20px 1px;
+    text-align: left;
+  }
+  .dataCol{
+    padding: 1px 20px 1px;
+  }
+  tr{
+    padding: 3px;
+  }
+</style>
+  <apex:form >
+    <apex:pageMessages id="msg"/>
+    <apex:pageblock title="Terms and Conditions" >
+      <apex:pageblocksection columns="1" collapsible="false"> 
+        <ul> 
+          <li>Deal Registrations are for channel partners only. </li>
+          <li>Deal registration is only available through one of StorageCraft’s distribution partners. </li>
+          <li>Deals must transact through the chosen distributor as originally submitted on this form. </li>
+          <li>Deals $1,500 - $4,999 get an additional 5% margin </li>
+          <li>Deals $5,000 - $9,999 get an additional 10% margin </li>
+          <li>Deals $10,000 and above get an additional 15% margin </li>
+          <li>Registered deals are valid for 60 days, with option of extension. (Valid reason required for extension.) </li>
+          <li>Deal Registration is only approved on qualified opportunities initiated by reseller. </li>
+          <li>StorageCraft will determine whether a deal registration application has been approved and/or denied and will be communicated back to the partner. </li>
+          <li>Deal Registration will be available in North America to those resellers signed up through the StorageCraft Partner Portal. </li>
+          <li>The first partner to register a qualified deal will be awarded the extra points for deal registration. </li>
+          <li>StorageCraft reserves the right to change or cancel any aspect of this program at any time. </li>
+          <li>StorageCraft has sole discretion on eligibility under this program. </li>
+         </ul>
+      </apex:pageblocksection>
+    </apex:pageblock>    
+    <apex:pageblock title="Your Information" rendered="{!ready}">
+      <apex:pageblocksection columns="1" collapsible="false" rendered="{!email != null}">
+        <apex:outputfield rendered="{!aOk}" value="{!a.Name}"/>
+        <apex:outputfield rendered="{!cOk}" value="{!c.Name}"/>
+        <apex:outputfield rendered="{!cOk}" value="{!c.Phone}"/>
+        <apex:outputfield rendered="{!cOk}" value="{!c.Email}"/>
+        <apex:inputfield required="true" rendered="{!aok == false}" value="{!a.name}"/>
+        <apex:inputfield required="true" rendered="{!aok == false}" value="{!a.Website}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.firstname}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.Lastname}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.JobTitle__c}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.Email}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.Phone}"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingStreet}" label="Street"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingCity}" label="City"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingState}" label="State"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingPostalCode}"  label="Postal Code"/>
+        <apex:inputfield required="true" rendered="{!cOk = false}" value="{!c.MailingCountry}" label="Country"/>
+      </apex:pageblocksection>
+      <apex:pageblocksection columns="1" collapsible="false" rendered="{!email == null}">
+        <apex:inputfield required="true" value="{!c.Email}"/>
+      </apex:pageblocksection>
+    </apex:pageblock>
+    <apex:pageblock title="Deal Registration" rendered="{!ready && aOK && cOk}">
+      <apex:pageblocksection columns="1" collapsible="false">
+        <apex:outputtext value="End User Deal Registration Details:" style="padding: 0 20px 20px 20px;font-style: italic;font-weight: bold;"/>
+        <apex:inputfield required="true" value="{!l.Email}"/>
+        <apex:inputfield required="true" value="{!l.FirstName}"/>
+        <apex:inputfield required="true" value="{!l.LastName}"/>
+        <apex:inputfield required="true" value="{!l.Title}"/>
+        <apex:inputfield required="true" value="{!l.Website}"/>
+        <apex:inputfield required="true" value="{!l.Company}"/>
+        <apex:inputfield required="true" value="{!l.Phone}"/>
+        <apex:inputfield required="true" value="{!l.Street}"/>
+        <apex:inputfield required="true" value="{!l.City}"/>
+        <apex:inputfield required="true" value="{!l.State}"/>
+        <apex:inputfield required="true" value="{!l.PostalCode}"/>
+        <apex:inputfield required="true" value="{!l.Country}"/>
+        <apex:inputfield required="true" value="{!l.EstimatedRevenue__c}"/>
+        <apex:inputfield required="true" value="{!l.Distributor__c}"/>
+        <apex:inputfield required="true" value="{!l.DealRegistrationDetails__c}" label="Deal Registration Summary"/>
+      </apex:pageblocksection>
+    </apex:pageblock>
+    <apex:pageblock rendered="{!ready}">
+      <apex:pageblockbuttons location="bottom">
+        <apex:commandbutton action="{!submit}" value="Submit"/>
+      </apex:pageblockbuttons>
+    </apex:pageblock>
+  </apex:form>
+</apex:page>

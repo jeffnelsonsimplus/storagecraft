@@ -1,0 +1,22 @@
+<aura:component controller="GuideIndexController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" >
+	<aura:attribute name="guidesections" type="User_Guide__kav[]"/>
+    <aura:attribute name="fieldLabelMap" type="Map"/>
+    <aura:attribute name="languageVal" type="String" default="{!$Locale.langLocale}"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"  />
+    <table>
+        <tr><td align="left" valign="top">Guide Name</td><td align="left" valign="top">PDF Link</td></tr>
+        <aura:iteration items="{!v.guidesections}" var="s">
+            <tr border-color="grey" border-spacing="2px" line-height="125%">
+                <td>
+                    <ui:outputURL value="{!s.Community_URL__c}" label="{!s.Title}"/>
+                </td>
+                <td>
+                    <ui:outputURL value="{!'/GuidePDF?id=' + s.Guide__c}" label="PDF Download"/>
+                </td>
+            </tr>
+        </aura:iteration>
+    </table>
+</aura:component>

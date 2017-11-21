@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>jeffrey.arwady@simplus.com</contactEmail>
+    <description>Allows Travis CI to run check-only deploys against this environment</description>
+    <label>Travis CI Integration</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIDTDCCAjQCCQDqSe9Jit6J8DANBgkqhkiG9w0BAQsFADBoMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTUkxDzANBgNVBAcMBkNhbnRvbjEQMA4GA1UECgwHU2ltcGx1czEpMCcGCSqGSIb3DQEJARYaamVmZnJleS5hcndhZHlAc2ltcGx1cy5jb20wHhcNMTcxMTIwMjAxOTQ2WhcNMTgxMTIwMjAxOTQ2WjBoMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTUkxDzANBgNVBAcMBkNhbnRvbjEQMA4GA1UECgwHU2ltcGx1czEpMCcGCSqGSIb3DQEJARYaamVmZnJleS5hcndhZHlAc2ltcGx1cy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDyu+AOXJut73dKxRSN2GBolnNQjoFr9c1llvwepMUQLqmCRsyulq7JXySuSSd6jIjFbu31rd7VonsC29fAV5NCeCy9ATMS7oEHnfrNT0cP76r4hEzZPy1PAwGuXoZmt6IquYEEganj8YWEJOSnx37Qf+eGq6VYpQoaPaGIbN7AZMD/G63gkhO4h7+3m+xt6wabDXeyrpmQXQ51G1seE2SvVEnb6QRPpDZWTFaE2A4f8sIOKdgrYm89hvEmZ3ZHMYm8oVY+KdNL9YrWgpeBlW8SnSHt12Hz3m/8CSrtZSvGlg+dKg8MPxP29OxU5sVZ15JugLhTuYtTPi++eT1fjOjhAgMBAAEwDQYJKoZIhvcNAQELBQADggEBADZKrTzTZeWCNuhFqmV5bSeEoXnkwIznr1K7QwKV8DGE/G15p4ipttfFYqVuGMfVwW4+mCaRr0+L5TJDPee2bpn0iA8arK/6hnvidZHm1lKE9Soh9DtSTpcC/iMN2mtTx1dgOJjthE8XTXI/PGyO4sgR2RU5d7/PAAnltOw2qtL9PoCbmAm2YMEYxpAp6lt0kZjatxhPOEJbqdXuWmlYbv1IAHyeHTy5YQA4D7MZZ6XR1BNiSzKL6kdOEHvdCAB2eMWxIMmaLZgo5ph/EhYdcxf3+2kJXEta11TWHKgFzGwaoXBdVyNFS2U8cPtIQgqzE7/+UL2EG3muk9JdyOFiSPo=</certificate>
+        <consumerKey>3MVG9uudbyLbNPZPV9rSK3gUdUOvyqo9Z009YYa5Xvih9tRMVHeBSbGeJ4n4yTry7WxtM34K5RzV5kYHdK.hz</consumerKey>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+</ConnectedApp>

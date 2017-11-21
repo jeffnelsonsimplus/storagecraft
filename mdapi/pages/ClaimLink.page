@@ -1,0 +1,33 @@
+<apex:page standardController="Case" showHeader="false" applyBodyTag="false" applyHtmlTag="false">
+    <style>
+        body.hasMotif.caseTab {
+        padding: 0px;
+        margin: 0px;
+        }
+    </style>
+    <apex:outputPanel layout="block" style="displaywidth:100%">
+        <table style="width:100%;">
+            <tbody>
+            <tr>
+                <td>
+                    <apex:form id="formbutton">
+                        <apex:outputLabel style="font-weight:bold" value="Use the 100k Claim tab in the left pane of Service Cloud or "/>
+                        <apex:commandButton value="Open Claim Form" id="Claim" onclick="OpenVfpage();"/></apex:form>
+                </td>
+                <td>
+                    <apex:form id="newcaseform">
+                        <apex:commandButton value="New Case" id="newcasebutton" onclick="OpenNewCase();"/></apex:form>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </apex:outputPanel>
+    <script>
+        function OpenVfpage(){
+        window.open('/apex/GuaranteeClaim?id={!Case.Id}','claimwindow','width=700,height=700,left=100,top=100,menubar=no,titlebar=no');     
+        }
+        function OpenNewCase(){
+        window.open('/apex/RequestHelp','requesthelp','width=700,height=700,left=100,top=100,menubar=no,titlebar=no');     
+        }
+    </script>
+</apex:page>

@@ -1,0 +1,698 @@
+<apex:page standardController="Case" language="{!selectedLanguage}" doctype="HTML-5.0" extensions="RequestHelpController"  showHeader="false" sidebar="false" title="Request Help">     
+    <head>
+        <apex:includeScript value="{!URLFOR($Resource.CaseSubmissionCSS, 'js/jquery.min.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.CaseSubmissionCSS, 'js/bootstrap.min.js')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.CaseSubmissionCSS, 'css/bootstrap.min.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.CaseSubmissionCSS, 'css/bootstrap-theme.min.css')}"/>
+    </head>
+    <style> 
+        .dataTables_info{display:none!important;}
+        .buttons
+        {
+        display: inline-block;  
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        }
+        .clickable{
+        cursor: pointer;   
+        }
+        
+        .panel-heading span {
+        margin-top: -20px; 
+        font-size: 15px; 
+        }
+        
+        .required:after 
+        {
+        content: "*";
+        color: red; 
+        }
+        select {
+        display: block;
+        /*width: 100%;*/
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+        select{
+        max-width:50%;
+        }
+        .tzfield {
+        display:none !important;
+        }
+        th{
+        padding:10px;
+        }
+        #case_category .form-control.deactivateCheckbox{
+        width: auto;
+        }
+        .separator {
+        padding: 20px;
+        color: #f5f5f5;
+        }
+    </style>
+    <script>
+    function evalWebStorePop(){
+        console.log(countryCode);
+        console.log(licDetails);
+        if(licDetails != null && licDetails.message != 'success'){
+            if(countryCode != 'US' && countryCode != 'CA'){
+                console.log('Incorrect country:'+countryCode);
+                return;
+            }
+            
+            if(licDetails.is_NFR == 'no' && licDetails.in_grace == 'no' && licDetails.no_serial == 'no' && licDetails.expired == 'yes')
+                parent.postMessage({"countrycode":countryCode, "expire_date":licDetails.expire_date, "serial_number": "{!Case.Product_Key__c}"},"*");
+        }
+    }
+    var licDetails = {!msgJSON};
+    var countryCode = '{!selectedCountry}';
+    evalWebStorePop();
+    </script>
+    <apex:form id="requestHelpDetails">
+        <apex:actionFunction name="saveCaseAF" action="{!checkDeactivate}"/>
+        <div class="container">
+<!-- was h3 -->
+            <apex:outputPanel styleClass="page-header text-center" layout="block" rendered="{!ISNULL($CurrentPage.parameters.country)}">{!$Label.WF_RequestHelp}</apex:outputPanel>
+            <div class="alert alert-success" style="display:{!IF(successMSG !='', '', 'none')}">
+                <strong>{!$Label.WF_Success}!</strong> {!successMSG}<br/>
+            </div>
+            <div class="alert alert-danger" style="display:{!IF(erroMSG !='', '', 'none')}">
+                <strong>{!$Label.WF_Error}!</strong>{!erroMSG}<br/>
+            </div>
+            <!-- <div class=" row text-center" style="padding-bottom:2%;">
+<span class="buttons btn-primary" onclick="formValidation();">Submit Request</span>
+<!-- </div> -->
+            <section class="row form-inline" id="topsection">
+                <div class="panel panel-default">
+                    <div class="panel-body" id="mainsection">
+                        <apex:outputPanel id="countrySection" >
+                            <apex:actionRegion >
+                                <div class="row">
+                                    
+                                    <div class="col-xs-8 col-sm-6 col-lg-4">     
+                                        <label>{!$Label.Case_Form_Country}</label>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-6 col-lg-3" style="padding:.25%">
+                                        <apex:selectList styleClass="form-control" value="{!selectedCountry}" size="1" >
+                                            <apex:selectOptions value="{!lstCountries}"/> 
+                                            <apex:actionSupport event="onchange" action="{!changeCountry}"/> 
+                                        </apex:selectList>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-6 col-lg-2">
+                                        <label>{!$Label.Case_Form_Language}</label>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-6 col-lg-2" style="padding:.25%">
+                                        <apex:selectList styleClass="form-control" value="{!selectedLanguage}" size="1">
+                                            <apex:selectOptions value="{!languages}"/>
+                                            <apex:actionSupport event="onchange" action="{!changeLanguage}"/>
+                                        </apex:selectList>
+                                    </div>
+                                </div>
+                            </apex:actionRegion>
+                        </apex:outputPanel>
+                    </div>
+                </div>
+            </section>
+            <apex:actionRegion >
+                <apex:outputPanel id="casedetailId" rendered="{!deactivateChosen = false}">
+                    <section class="row form-inline">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title text-center">
+                                    <h3>{!$Label.Case_Details}</h3>      
+                                </div>
+                            </div>
+                            <div class="panel-body" id="">
+                                <div class="row case_usertype">
+                                    <div class="col-xs-8 col-sm-6 col-lg-6">
+                                        <label class="required">{!$ObjectType.Case.fields.Select_User_Type__c.Label}</label>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_usertype">
+                                        <apex:inputField styleClass="form-control" value="{!objCase.Select_User_Type__c}"  />
+                                        <div class="errorMsg" ></div>
+                                    </div>
+                                </div>
+                                <div class="row case_assistancetype">
+                                    <div class="col-xs-8 col-sm-6 col-lg-6">
+                                        <label class="required">{!$ObjectType.Case.fields.Assistance_Type__c.Label}</label>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_assistancetype">
+                                        <apex:inputField styleClass="form-control" value="{!objCase.Assistance_Type__c}" id="assistanceTypeId">
+                                            <apex:actionSupport event="onchange" rerender="requestHelpDetails"/> <!-- casedetailId"/> -->
+                                        </apex:inputField>
+                                        <div class="errorMsg" ></div>
+                                    </div>
+                                </div>
+                                <apex:outputPanel rendered="{!IF(objCase.Assistance_Type__c != 'Product_Return', true, false)}">
+                                    <div class="row case_category">
+                                        <div class="col-xs-8 col-sm-6 col-lg-6">
+                                            <label class="required">{!$ObjectType.Case.fields.Category__c.Label}</label>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_category">
+                                            <apex:inputField styleClass="form-control" value="{!objCase.Category__c}" style="max-width: 90% !important">
+                                                <apex:actionsupport event="onchange" rerender="casedetailId"/>
+                                            </apex:inputField>
+                                            <div class="errorMsg" ></div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!IF(objCase.Category__c == 'LA - I am requesting a license deactivation.', true, false)}">
+                                    <div class="row">
+                                        <div class="col-xs-8 col-sm-6 col-lg-6">
+                                            <label class="required">{!$Label.Case_Want_Deactivate}</label>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_category">
+                                            <!-- <apex:inputCheckbox styleClass="form-control deactivateCheckbox" value="{!deactivateChosen}" /> -->
+                                            <apex:inputCheckbox styleClass="form-control deactivateCheckbox" value="{!deactivateChosen2}" />
+                                            <div class="errorMsg" ></div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!IF(objCase.Assistance_Type__c != 'Sales Assistance', true, false)}">
+                                    <div class="row case_product">
+                                        <div class="col-xs-8 col-sm-6 col-lg-6">
+                                            <label class="required">{!$ObjectType.Case.fields.Product__c.Label}</label>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_product">
+                                            <apex:inputField styleClass="form-control" value="{!objCase.Product__c}">
+                                                <apex:actionsupport event="onchange" rerender="casedetailId"/>
+                                            </apex:inputField>
+                                            <div class="errorMsg" ></div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!IF(objCase.Assistance_Type__c == 'Sales Assistance' || objCase.Assistance_Type__c == 'Product_Return', false, true)}">
+                                    <div class="row case_productcomponent">
+                                        <div class="col-xs-8 col-sm-6 col-lg-6">
+                                            <label class="required">{!$ObjectType.Case.fields.Product_Component__c.Label}</label>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_productcomponent">
+                                            <apex:inputField styleClass="form-control" value="{!objCase.Product_Component__c}" />
+                                            <div class="errorMsg" ></div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!IF(objCase.Assistance_Type__c == 'Technical Assistance', true, false)}">
+                                    <div class="row case_wfip">
+                                        
+                                        <div class="col-xs-8 col-sm-6 col-lg-6">
+                                            <apex:outputLabel styleClass="" value="{!$ObjectType.Case.fields.Web_Form_Incident_Pack__c.Label}"/>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_wfip">
+                                            <apex:inputField styleClass="form-control" value="{!objCase.Web_Form_Incident_Pack__c}" />
+                                            <div class="errorMsg" ></div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!IF(objCase.Assistance_Type__c == 'Product_Return', true, false)}">
+                                    <div class="row case_won">
+                                        
+                                        <div class="col-xs-8 col-sm-6 col-lg-6">
+                                            <label class="required">{!$ObjectType.Case.fields.Webform_Order_Number__c.Label}</label>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_won">
+                                            <apex:inputField styleClass="form-control" value="{!objCase.Webform_Order_Number__c}" />
+                                            <div class="errorMsg" ></div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!IF(OR(objCase.Product__c = 'File_Backup_and_Recovery',objCase.Product__c = 'Exablox',objCase.Product__c = 'Cloud_Backup', objCase.Assistance_Type__c = 'Sales Assistance') , false, true)}">
+                                    <div class="row case_productkey">
+                                        <div class="col-xs-8 col-sm-6 col-lg-6">
+                                            <label class="{!IF(objCase.Select_User_Type__c != 'Trial User','required','')}">{!$ObjectType.Case.fields.Product_Key__c.Label}</label>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_productkey">
+                                            <apex:inputField styleClass="form-control" value="{!objCase.Product_Key__c}" />
+                                            <div class="errorMsg" ></div>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                                <div class="row case_desc">
+                                    
+                                    <div class="col-xs-8 col-sm-6 col-lg-6">
+                                        <label class="required">{!$ObjectType.Case.fields.Description.Label}</label>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="case_desc">
+                                        <apex:inputField styleClass="form-control" value="{!objCase.Description}"/>
+                                        <div class="errorMsg" ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </apex:outputPanel>
+            </apex:actionRegion>
+            <apex:outputPanel layout="block" styleClass="" rendered="{!deactivateChosen = true}" id="deactivatePanel">
+                <section class="row form-inline">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title text-center">
+                                <h3>Serial Number Deactivation</h3>      
+                            </div>
+                            
+                        </div>
+                        <apex:outputPanel id="thismessages">
+                            <apex:pageMessages />
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!licensesFound = true  && lock == false}">
+                            <table width="100%" cellspacing="1" cellpadding="3" class="table-bordered" >
+                                <thead>
+                                    <tr>
+                                        <th>&nbsp;&nbsp;Activation Type</th>
+                                        <th>&nbsp;&nbsp;Name</th>
+                                        <th>&nbsp;&nbsp;Key Version</th>
+                                        <th>&nbsp;&nbsp;Machine Id</th>
+                                    </tr><tr>
+                                        <th>&nbsp;&nbsp;Activation Id</th>
+                                        <th>&nbsp;&nbsp;Activation Date</th>
+                                        <th>&nbsp;&nbsp;Deactivate?</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!helpRes.activations}" var="l">
+                                        <tr>
+                                            <td>&nbsp;&nbsp;Regular Activation</td>
+                                            <td>&nbsp;&nbsp;{!l.name}</td>
+                                            <td>&nbsp;&nbsp;{!l.keyVersion}</td>
+                                            <td>&nbsp;&nbsp;{!l.machineId}</td>
+                                        </tr><tr>
+                                            <td>&nbsp;&nbsp;{!l.activationId}</td>
+                                            <td>&nbsp;&nbsp;{!l.activationDate}</td>
+                                            <th>&nbsp;&nbsp;<apex:CommandButton value="Deactivate" rendered="{!lock == false}" action="{!deactivateLicense}" rerender="deactivatePanel">
+                                                <apex:param name="machine" value="{!l.activationId}" assignTo="{!chosenLicense}"/>
+                                                </apex:CommandButton></th>
+                                        </tr>
+                                        <tr><td class="separator"/></tr>
+                                    </apex:repeat>
+                                    <apex:repeat value="{!helpRes.spxActivations}" var="l">
+                                        <tr>
+                                            <td>&nbsp;&nbsp;SPX Activation</td>
+                                            <td>&nbsp;&nbsp;{!l.name}</td>
+                                            <td>&nbsp;&nbsp;{!l.keyVersion}</td>
+                                            <td>&nbsp;&nbsp;{!l.machineId}</td>
+                                        </tr><tr>
+                                            <td>&nbsp;&nbsp;{!l.activationId}</td>
+                                            <td>&nbsp;&nbsp;{!l.activationDate}</td>
+                                            <th>&nbsp;&nbsp;<apex:CommandButton value="Deactivate" rendered="{!lock == false}" action="{!deactivateLicense}" rerender="deactivatePanel">
+                                                <apex:param name="machine" value="{!l.activationId}" assignTo="{!chosenLicense}"/>
+                                                </apex:CommandButton></th>
+                                        </tr>
+                                        <tr><td class="separator"/></tr>
+                                    </apex:repeat>
+                                    <apex:repeat value="{!helpRes.legacyActivations}" var="l">
+                                        <tr>
+                                            <td>&nbsp;&nbsp;Legacy Activation</td>
+                                            <td>&nbsp;&nbsp;{!l.name}</td>
+                                            <td>&nbsp;&nbsp;{!l.keyVersion}</td>
+                                            <td>&nbsp;&nbsp;{!l.machineId}</td>
+                                        </tr><tr>
+                                            <td>&nbsp;&nbsp;{!l.activationId}</td>
+                                            <td>&nbsp;&nbsp;{!l.activationDate}</td>
+                                            <th>&nbsp;&nbsp;<apex:CommandButton value="Deactivate" rendered="{!lock == false}" action="{!deactivateLicense}" rerender="deactivatePanel">
+                                                <apex:param name="machine" value="{!l.activationId}" assignTo="{!chosenLicense}"/>
+                                                </apex:CommandButton></th>
+                                        </tr>
+                                        <tr><td class="separator"/></tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </apex:outputPanel>
+                    </div>
+                </section>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block" styleClass="" rendered="{!deactivateChosen = false}" id="bottomPanel">
+                <section class="row form-inline">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title text-center">
+                                <h3>{!$Label.Contact_Details}</h3>      
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="panel-body" id="attachmentSection">
+                            <!-- if japanese language should reorder the first and last names -->
+                            <apex:outputPanel layout="block" styleClass="row con_ln" rendered="{!$CurrentPage.parameters.language = 'ja'}">
+                                <div class="col-xs-8 col-sm-6 col-lg-6">
+                                    <label class="required">{!$ObjectType.Contact.fields.lastname.Label}</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="con_ln">
+                                    <apex:inputField styleClass="form-control" value="{!objContact.lastname}" required="false"/>
+                                    <div class="errorMsg" ></div>
+                                </div>
+                            </apex:outputPanel>
+                            <div class="row con_fn">
+                                <div class="col-xs-8 col-sm-6 col-lg-6">
+                                    <label class="required">{!$ObjectType.Contact.fields.firstname.Label}</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="con_fn">
+                                    <apex:inputField styleClass="form-control" value="{!objContact.firstname}" required="false"/>
+                                    <div class="errorMsg" ></div>
+                                </div>
+                            </div>
+                            <apex:outputPanel layout="block" styleClass="row con_ln" rendered="{!NOT($CurrentPage.parameters.language = 'ja')}">
+                                <div class="col-xs-8 col-sm-6 col-lg-6">
+                                    <label class="required">{!$ObjectType.Contact.fields.lastname.Label}</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="con_ln">
+                                    <apex:inputField styleClass="form-control" value="{!objContact.lastname}" required="false"/>
+                                    <div class="errorMsg" ></div>
+                                </div>
+                            </apex:outputPanel>
+                            <div class="row con_email">
+                                <div class="col-xs-8 col-sm-6 col-lg-6">
+                                    <label class="required">{!$ObjectType.Contact.fields.email.Label}</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="con_email">
+                                    <apex:inputField styleClass="form-control" value="{!objContact.email}" required="false"/>
+                                    <div class="errorMsg" ></div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row con_phone">
+                                <div class="col-xs-8 col-sm-6 col-lg-6">
+                                    <label class="required">{!$ObjectType.Contact.fields.phone.Label}</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="con_phone">
+                                    <apex:inputField styleClass="form-control" value="{!objContact.phone}" required="false"/>
+                                    <div class="errorMsg" ></div>
+                                </div>
+                            </div>
+                            
+                            <div class="row con_city">
+                                <div class="col-xs-8 col-sm-6 col-lg-6">
+                                    <label class="required">{!$ObjectType.Contact.fields.MailingCity.Label}</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="con_city">
+                                    <apex:inputField styleClass="form-control" value="{!objContact.MailingCity}" required="false"/>
+                                    <div class="errorMsg" ></div>
+                                </div>
+                            </div>
+                            
+                            <div class="row con_state">
+                                <div class="col-xs-8 col-sm-6 col-lg-6">
+                                    <label class="required">{!$ObjectType.Contact.fields.MailingState.Label}</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="con_state">
+                                    <!-- TODO: make picklist where available -->
+                                    <apex:inputField styleClass="form-control" value="{!objContact.MailingState}" rendered="{!lstStates.Size = 0}" required="false"/>
+                                    <apex:selectList styleClass="form-control" size="1" value="{!objContact.MailingState}"  rendered="{!lstStates.Size > 0}" required="false">
+                                        <apex:selectOption itemValue="" itemLabel=""/>
+                                        <apex:selectOptions value="{!lstStates}"/>
+                                    </apex:selectList>
+                                    <div class="errorMsg" ></div>
+                                </div>
+                            </div>
+                            
+                            <div class="row con_zip">
+                                <div class="col-xs-8 col-sm-6 col-lg-6">
+                                    <label class="{!IF(ISBLANK(selectedCountryISO.postalCodeRegex__c),'','required')}">{!$ObjectType.Contact.fields.MailingPostalCode.Label}</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%" id="con_zip">
+                                    <apex:inputField styleClass="form-control" value="{!objContact.MailingPostalCode}" required="false"/>
+                                    <div class="errorMsg" ></div>
+                                </div>
+                            </div>
+                            <apex:inputText styleClass="form-control tzfield" value="{!objCase.TZ_UTC_Offset__c}" required="false"/>
+                        </div>
+                    </div>
+                </section>
+                <section class="row form-inline">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title text-center">
+                                <h3>{!$Label.Case_File}</h3>      
+                                
+                                
+                                
+                            </div>
+                            
+                            
+                            
+                            
+                        </div>
+                        <div class="panel-body" id="attachmentSection">
+                            <div class="row" style="padding:.25%">
+                                <div class="alert alert-info" >
+                                    <strong>{!$Label.WF_Info}!</strong> {!$Label.WF_Attachment}
+                                    <div><apex:outputLink value="https://support.storagecraft.com/s/article/How-To-Gathering-diagnostics-for-StorageCraft-Support" target="_blank">How To: Gathering diagnostics for StorageCraft Support</apex:outputLink></div>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-6 col-lg-6">
+                                    <label >{!$Label.Case_File}</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-6 col-lg-6" style="padding:.25%">
+                                    <apex:inputFile value="{!objAttachment.body}" filename="{!objAttachment.name}"/>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+                <div class=" row text-center" style="padding-bottom:2%;">
+                    <span class="buttons btn-primary" onclick="formValidation();">{!$Label.WF_Submit}</span>
+                </div>
+                <!-- Start - Modal -->
+                <button type="button" data-toggle="modal" data-target="#myModal" style="display:none;" id="showerror"/>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content"> 
+                            <div class="modal-body">
+                                <div class="alert alert-danger" style="text-align:left;">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <strong>{!$Label.WF_Error}!</strong> {!$Label.WF_ReviewErrors}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </apex:outputPanel>
+            <!-- End - Modal -->
+            <!-- Start - Modal -->
+            <button type="button" data-toggle="modal" data-target="#saveModel" style="display:none;" id="onSave"/>
+            <!-- Modal -->
+            <div class="modal fade" id="saveModel" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content"> 
+                        <div class="modal-body">
+                            <div class="alert alert-success" style="text-align:left;">
+                                <button type="button" class="close" data-dismiss="modal" id="saved">&times;</button>
+                                <strong>{!$Label.WF_Wait}!</strong> {!$Label.WF_SaveInProgress}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End - Modal -->
+            <!-- Start - Modal -->
+            <!-- <button type="button" data-toggle="modal" data-target="#deactivateModel" style="display:none;" id="onDeactivate"/> -->
+            
+            <!-- Modal -->
+            <apex:outputPanel id="deactivateModal">
+                <div class="modal fade" id="deactivateModel" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content"> 
+                            <div class="modal-body">
+                                <div class="alert alert-danger" style="text-align:left;">
+                                    
+                                    <button type="button" class="close" data-dismiss="modal" id="saved">&times;</button>
+                                    <div style="padding:1em;">
+                                        {!$Label.Case_Deactivate_Too_Many}
+                                        <p></p>
+                                        {!$Label.Case_Deactivate_Too_Many_2}
+                                        <a href="https://www.storagecraft.com/legal/license-agreement" target="_blank">
+                                            {!$Label.Case_Click_Here}</a>
+                                        <p>
+                                            <input type="checkbox" id="deactivation3_agreement"/>{!$Label.Case_Understand_Terms}
+                                        </p><p>
+                                        <apex:commandButton styleClass="accept_deactivate3_legal btnDisabled" value="{!$Label.Case_OK}" action="{!saveCase}"/>
+                                        <button type="button" data-dismiss="modal" id="no_acceptance_deactivate3_legal">{!$Label.Case_Cancel}</button>
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                                <apex:outputPanel rendered="{!displayTooManyActivationsError}">
+                                    <script>
+                                    function toggleOK(e){
+                                        console.log('Changed checkbox');
+                                        if($('#deactivation3_agreement').is(':checked')){
+                                            $('.accept_deactivate3_legal').prop('disabled', false);
+                                            $('.accept_deactivate3_legal').removeClass('btnDisabled');
+                                        } else {
+                                            $('.accept_deactivate3_legal').prop('disabled', true);
+                                            $('.accept_deactivate3_legal').addClass('btnDisabled');
+                                            
+                                        }
+                                    }
+                                    $('#deactivation3_agreement').change(toggleOK);
+                                    $('#deactivateModel').modal('show');
+                                    </script>
+                                </apex:outputPanel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End - Modal -->
+            </apex:outputPanel>
+        </div>
+        
+        <script>
+        // Capture user TZ offset
+        $('.tzfield').val((new Date().getTimezoneOffset()/60)*-1);
+        
+        function validateFileSize(input)
+        {
+            var file = input.files[0];
+            if(file.size > 10000000)
+            {
+                document.getElementById('fileError').click();
+                input.value=null;
+                input.name = '';
+            }
+        }
+        function formValidation(){
+            var case_usertype = requireFieldValidation(document.getElementById('case_usertype'), 'picklist');
+            var case_assistancetype = requireFieldValidation(document.getElementById('case_assistancetype'), 'picklist');
+            var case_category = requireFieldValidation(document.getElementById('case_category'), 'picklist');
+            var case_product = requireFieldValidation(document.getElementById('case_product'),'picklist');
+            var case_productcomponent = requireFieldValidation(document.getElementById('case_productcomponent'), 'picklist');
+            // var case_wfip = requireFieldValidation(document.getElementById('case_wfip'), 'text');
+            var case_won = requireFieldValidation(document.getElementById('case_won'), 'text');
+            var case_productkey = requireFieldValidation(document.getElementById('case_productkey'), 'text');
+            var case_desc = requireFieldValidation(document.getElementById('case_desc'), 'textarea');
+            var con_fn = requireFieldValidation(document.getElementById('con_fn'), 'text');
+            var con_ln = requireFieldValidation(document.getElementById('con_ln'), 'text');
+            var con_email = requireFieldValidation(document.getElementById('con_email'), 'email');
+            var con_phone = requireFieldValidation(document.getElementById('con_phone'), 'text');
+            var con_city = requireFieldValidation(document.getElementById('con_city'), 'text');
+            var con_state = isStateValid();
+            var con_zip = isPostalValid();
+            if(case_usertype && case_assistancetype && case_category && case_product && case_productcomponent &&
+               case_won && case_productkey && case_desc && con_fn && con_ln && con_email && con_phone && con_city
+              && con_state && con_zip){
+                saveCaseAF();
+                document.getElementById('onSave').click();
+            }
+            else{
+                document.getElementById('showerror').click();
+            }
+        }
+        function isStateValid(){
+            try{
+                return requireFieldValidation(document.getElementById('con_state'), 'picklist');
+            } catch (e) {
+                return requireFieldValidation(document.getElementById('con_state'), 'text');
+            }
+        }
+        function isPostalValid(){
+            var postalRegex = '{!JSENCODE(selectedCountryISO.postalCodeRegex__c)}';
+            console.log('Postal Regex:'+postalRegex);
+            var postalErrorMessage = '{!JSENCODE(zipErrorLabel)}';
+            console.log('Postal Regex Error: '+postalErrorMessage);
+            // no zip validation required
+            
+            var section = document.getElementById('con_zip');
+            var zip = section.getElementsByTagName('input')[0].value;
+            
+            if(postalRegex.length == 0){
+                section.getElementsByClassName('errorMsg')[0].innerHTML = '';
+                return true;
+            }
+            
+            // if zip matches regex
+            if(zip.match(postalRegex) != undefined){
+                section.getElementsByClassName('errorMsg')[0].innerHTML = '';
+                return true;
+            }
+            
+            
+            section.getElementsByClassName('errorMsg')[0].innerHTML =
+                        '<strong>{!$Label.WF_Error}:</strong> '+ postalErrorMessage;
+            console.log('set error');
+            console.log(section.getElementsByClassName('errorMsg')[0].innerHTML);
+            return false;
+        }
+        function requireFieldValidation(section, fieldType){
+            var isSuccess = true;
+            if(section != null && $('.'+section.getAttribute('id')).has('label.required').length > 0){
+                if(fieldType == 'picklist'){
+                    var select = section.getElementsByTagName('select')[0]
+                    section.getElementsByClassName('errorMsg')[0].innerHTML = select.options[select.selectedIndex].value == '' ? 
+                        '<strong>{!$Label.WF_Error}:</strong> {!$Label.WF_MustEnterValue}' : '';
+                    isSuccess = select.options[select.selectedIndex].value == '' ? false : isSuccess;
+                }
+                else if(fieldType == 'textarea'){
+                    section.getElementsByClassName('errorMsg')[0].innerHTML = section.getElementsByTagName('textarea')[0].value == ''
+                    ? '<strong>{!$Label.WF_Error}:</strong> {!$Label.WF_MustEnterValue}' : '';
+                    isSuccess = section.getElementsByTagName('textarea')[0].value == '' ? false : isSuccess;
+                }
+                    else if(fieldType == 'text'){
+                        section.getElementsByClassName('errorMsg')[0].innerHTML = section.getElementsByTagName('input')[0].value == '' 
+                        ? '<strong>{!$Label.WF_Error}:</strong> {!$Label.WF_MustEnterValue}' : '';
+                        isSuccess = section.getElementsByTagName('input')[0].value == '' ? false : isSuccess;
+                    }
+                        else if(fieldType == 'email'){
+                            if(section.getElementsByTagName('input')[0].value != ''){
+                                var emailNotValid = !validateEmail(section.getElementsByTagName('input')[0].value);
+                                isSuccess = emailNotValid ? false : isSuccess; 
+                                section.getElementsByClassName('errorMsg')[0].innerHTML = emailNotValid ? '<strong>{!$Label.WF_Error}:</strong> {!$Label.WF_InvalidEmail}' : '';
+                            }else{
+                                section.getElementsByClassName('errorMsg')[0].innerHTML = section.getElementsByTagName('input')[0].value == '' 
+                                ? '<strong>{!$Label.WF_Error}:</strong> {!$Label.WF_MustEnterValue}' : '';
+                                isSuccess = section.getElementsByTagName('input')[0].value == '' ? false : isSuccess;
+                            }
+                        }
+            }
+            return isSuccess;  
+        }
+        
+        function validateEmail(email)  
+        {
+            var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,200})\.([a-z]{2,50}(?:\.[a-z]{2})?)$/i;
+            return regex.test(email);
+        }
+        </script>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Guide_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Guide_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Guide_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Default_Data_Category__c</fields>
+        <fields>LastModifiedById</fields>
+        <fields>CreatedById</fields>
+        <fields>Community_URL__c</fields>
+        <label>Guide Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Product Documentation - User Guide container for indexing order of articles</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Community_URL__c</fullName>
+        <description>Formula for link to the Guide in the Community</description>
+        <externalId>false</externalId>
+        <formula>&quot;/support/s/guide/&quot;&amp;Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula for link to the Guide in the Community</inlineHelpText>
+        <label>Community URL src=</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Data_Category__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional - Enter the Product Data Category API name to be used as a default for new articles in this guide.  Examples:  ShadowControl, Cloud_Services</inlineHelpText>
+        <label>Default Data Category</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Guide_Id__c</fullName>
+        <description>Field to display the Id on the page, for import purposes.</description>
+        <externalId>false</externalId>
+        <formula>Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Guide Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>false</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Needs Review</fullName>
+                    <default>false</default>
+                    <label>Needs Review</label>
+                </value>
+                <value>
+                    <fullName>Current</fullName>
+                    <default>false</default>
+                    <label>Current</label>
+                </value>
+                <value>
+                    <fullName>Archived</fullName>
+                    <default>false</default>
+                    <label>Archived</label>
+                </value>
+                <value>
+                    <fullName>Internal</fullName>
+                    <default>false</default>
+                    <label>Internal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Guide</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Default_Data_Category__c</columns>
+        <columns>Status__c</columns>
+        <columns>OBJECT_ID</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>CurrentGuides</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Draft,Archived</value>
+        </filters>
+        <label>Current</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Guides</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Default_Data_Category__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OBJECT_ID</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Categories_and_Articles</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Categories and Articles</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/support/console/38.0/integration.js&quot;)} 
+
+
+var url = &apos;{! URLFOR(&apos;/apex/ArticleList&apos;, null)}&apos;; 
+
+// IF CONSOLE ADD PARAMETER TO HIDE HEADER AND USER SRCUP 
+if(sforce.console.isInConsole()){ 
+url = url + &apos;&amp;isdtp=nv&apos;; 
+srcUp(url); 
+} else { 
+location.href = (url); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Guide_Section</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Guide Section</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/support/console/38.0/integration.js&quot;)} 
+
+
+var url = &apos;/knowledge/publishing/articleEdit.apexp?lang=en_US&amp;type=User_Guide__kav&amp;sourceId=5003600000ITe19AAD&amp;guideId={!Guide__c.Id}&apos;; 
+
+// IF CONSOLE ADD PARAMETER TO HIDE HEADER AND USER SRCUP 
+if(sforce.console.isInConsole()){ 
+url = url + &apos;&amp;isdtp=nv&apos;; 
+srcUp(url); 
+} else { 
+location.href = (url); 
+}</url>
+    </webLinks>
+</CustomObject>

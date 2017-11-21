@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>STC Process Controls</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>STC Process Controls</value>
+    </caseValues>
+    <fields>
+        <help><!-- Enable auto-assign cases from enabled queues to active membership using load balancing logic --></help>
+        <label><!-- Case Auto-Assignment Enabled --></label>
+        <name>Case_Auto_Assignment_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- License EU URL --></label>
+        <name>License_EU_Url__c</name>
+    </fields>
+    <fields>
+        <label><!-- License Login --></label>
+        <name>License_Login__c</name>
+    </fields>
+    <fields>
+        <label><!-- License Passphrase --></label>
+        <name>License_Passphrase__c</name>
+    </fields>
+    <fields>
+        <label><!-- License Password --></label>
+        <name>License_Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- License US URL --></label>
+        <name>License_US_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- License Username --></label>
+        <name>License_Username__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

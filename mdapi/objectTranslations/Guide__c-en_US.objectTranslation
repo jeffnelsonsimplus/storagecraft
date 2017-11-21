@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Guide</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Guides</value>
+    </caseValues>
+    <fields>
+        <help><!-- Formula for link to the Guide in the Community --></help>
+        <label><!-- Community URL src= --></label>
+        <name>Community_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Optional - Enter the Product Data Category API name to be used as a default for new articles in this guide.  Examples:  ShadowControl, Cloud_Services --></help>
+        <label><!-- Default Data Category --></label>
+        <name>Default_Data_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Guide Id --></label>
+        <name>Guide_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Archived</masterLabel>
+            <translation><!-- Archived --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal</masterLabel>
+            <translation><!-- Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Review</masterLabel>
+            <translation><!-- Needs Review --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Guide Layout</layout>
+        <sections>
+            <label><!-- (Publish a landing page to display in the list) --></label>
+            <section>(Publish a landing page to display in the list)</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Guide Public Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Categories_and_Articles --></label>
+        <name>Categories_and_Articles</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Guide_Section --></label>
+        <name>New_Guide_Section</name>
+    </webLinks>
+</CustomObjectTranslation>

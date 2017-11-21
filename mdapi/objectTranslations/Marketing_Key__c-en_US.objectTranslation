@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Marketing Key</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Marketing Keys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activation Key --></label>
+        <name>Activation_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocated On --></label>
+        <name>Allocated_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Claimed On --></label>
+        <name>Claimed_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Claimed --></label>
+        <name>Claimed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company --></label>
+        <name>Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Marketing Keys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event --></label>
+        <name>Event__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Marketing Keys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal Code --></label>
+        <name>Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Key --></label>
+        <name>Product_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>Product_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Disaster</masterLabel>
+            <translation><!-- Disaster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT Key</masterLabel>
+            <translation><!-- IT Key --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Marketing Key Layout</layout>
+        <sections>
+            <label><!-- Claimant --></label>
+            <section>Claimant</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,31 @@
+<apex:page standardController="Case" extensions="LiveSerialInfoExt">
+    <!-- easy way to make the standard controller query the serial number -->
+    <apex:form id="form">
+        <apex:outputText rendered="false" value="{!Case.Serial_Number__c}"/>
+        <apex:outputText rendered="false" value="{!Case.Serial_Number_Details__c}"/>
+        
+        <apex:outputPanel rendered="{!ISBLANK(Case.Serial_Number__c)}">
+            NO LICENSE TO EVALUATE
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!NOT(ISBLANK(Case.Serial_Number__c))}">
+        <table>
+            <tbody>
+                <tr>
+                    <th><apex:outputText value="LIVE"/></th>
+                    <th><apex:outputText value="STORED"/></th>
+                </tr>
+                <tr>
+                    <td><apex:outputText value="{!liveDetails}" escape="false"/></td>
+                    <td><apex:outputText value="{!storedDetails}" escape="false"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b><apex:outputText rendered="{!IF(liveDetails = storedDetails, false, true)}" value="{!$Label.Case_Update_Lic}"/></b>
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

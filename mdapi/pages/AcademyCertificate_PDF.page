@@ -1,0 +1,30 @@
+<apex:page renderas="PDF" applyBodyTag="false" showheader="false" standardController="Academy_Certificate__c" extensions="AcademyCertificateLetterController" >
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+      
+    <style>
+      @page { size: landscape; margin: 0px;}
+      html, .html {height:100%; width:100%; margin: 0px; padding: 0px;}
+      body { height:100%; width:100%; margin: 0px; padding: 0px; background-image: URL("{!BackgroundImage}"); background-repeat:no-repeat; background-size:100%; background-position:center;}
+      .html { position:relative; }
+      .floating { position:absolute; layout:inline; }
+      .name { top:{!NameTop}; left:{!NameLeft}; width: 920px; height:60px; text-align:center; font-family: 'Arial Unicode MS'; font-size:35pt; color: {!NameColor}; }
+      .date { top:{!DateTop}; left:{!DateLeft}; width: 285px; height:25px; text-align:center; font-family: 'Arial Unicode MS'; font-size:12pt; color: {!DateColor}; text-transform: uppercase; }
+      .border { border-style: solid; border-width: 1px; border-color: red; }
+    </style>
+  </head> 
+   
+  <body>
+    <div class="html">
+        <div class="name floating" >
+          {!Academy_Certificate__c.Certified_Contact__r.Name}
+        </div>
+        
+        <div class="date floating" >
+          <apex:outputText value="{0, date, dd-MMM-yyyy}">
+            <apex:param value="{!Academy_Certificate__c.Certified_Date__c}" /> 
+          </apex:outputText>
+        </div>     
+    </div>   
+  </body>
+</apex:page>

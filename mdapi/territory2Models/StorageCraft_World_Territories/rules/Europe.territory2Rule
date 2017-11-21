@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Europe</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>AT,Austria,AL,Albania,AD,Andorra,BY,Belarus,BA,Bosnia and Herzegovina,BE,Belgium,BG,Bulgaria,CH,Switzerland,CY,Cyprus,CZ,Czech Republic,DE,Germany,DK,Denmark,EE,Estonia,FI,Finland,FO,Faroe Islands,FR,France,ES,Spain,GB,Great Britain,GI,Gibraltar,GG,Guernsey,GR,Greece,HR,Croatia,HU,Hungary,IE,Ireland,IM,Isle of Man,IS,Iceland,IT,Italy,JE,Jersey,LI,Liechtenstein,LT,Lithuania,LU,Luxembourg,LV,Latvia,MC,Monaco,MD,Moldova,ME,Montenegro,MK,Macedonia,MT,Malta,NL,Netherlands,NO,Norway,PL,Poland,PT,Portugal,RO,Romania,RU,Russia,SM,San Marino,RS,Serbia,SK,Slovakia,SI,Slovenia,SJ,Svalbard and Jan Mayen Islands,SE,Sweden,UA,Ukraine,UK,United Kingdom,VA,Vatican,XK,Kosovo</value>
+    </ruleItems>
+</Territory2Rule>

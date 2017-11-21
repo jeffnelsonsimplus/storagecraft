@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <articleTypeChannelDisplay>
+        <articleTypeTemplates>
+            <channel>App</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Prm</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Csp</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Pkb</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+    </articleTypeChannelDisplay>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Quick information regarding Program GUI messages, Error messages, log entry messages, etc.</description>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <description>Hidden field used by the approval process email</description>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>true</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                    <label>Submitted</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Error_Code__c</fullName>
+        <description>Program or System Error code found in message</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional Field - Program or System Error code found in message - Example:  -32</inlineHelpText>
+        <label>Error Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Intended_Audience__c</fullName>
+        <externalId>false</externalId>
+        <label>Intended Audience</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Internal</fullName>
+                    <default>true</default>
+                    <label>Internal</label>
+                </value>
+                <value>
+                    <fullName>External</fullName>
+                    <default>false</default>
+                    <label>External</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Location_Details__c</fullName>
+        <description>List where the exact message can be found, examples:  ImageManager.log, ImageManager GUI, Endpoint Log, Appliance Window, Email notification from ImageManager, SPX Service log, etc.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List where the exact message can be found, examples:  ImageManager.log, ImageManager GUI, Endpoint Log, Appliance Window, Email notification from ImageManager, SPX Service log, etc.</inlineHelpText>
+        <label>Location Details</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Message_Example__c</fullName>
+        <description>Entire context example of the program message found on the screen or in logs, including timestamps and values.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Example:  13-Aug-2016 08:18:29 sbvol 503 Fatal I/O error on \\?\STC_SnapShot_Volume_21_0 offset 1504dc2000 on read (-31 A device attached to the system is not functioning.)</inlineHelpText>
+        <label>Message Example</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Module_Code__c</fullName>
+        <description>If there is a program module code in the message</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional Field - Module Code found in log message - Example:  503</inlineHelpText>
+        <label>Module Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Versions__c</fullName>
+        <description>List of products and exact versions or ranges of versions where this message can be seen.
+Example:  ShadowProtect SPX (Windows) - All</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of products and exact versions or ranges of versions where this message can be seen.
+Example:  ShadowProtect SPX (Windows) - All</inlineHelpText>
+        <label>Product Versions Affected</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Program_Module__c</fullName>
+        <description>If a module name is mentioned in the message, usually a log.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional Field - Module Name in message, usually found in logs - Example:  sbvol</inlineHelpText>
+        <label>Program Module</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Content__c</fullName>
+        <description>Links to other related content regarding this message.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Insert Smart Links to other related articles.</inlineHelpText>
+        <label>Related Content</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Seen_Where__c</fullName>
+        <description>Select all locations where this message is found.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select all locations where this message is found.</inlineHelpText>
+        <label>Seen Where</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email Notification</fullName>
+                    <default>false</default>
+                    <label>Email Notification</label>
+                </value>
+                <value>
+                    <fullName>GUI Message</fullName>
+                    <default>false</default>
+                    <label>GUI Message</label>
+                </value>
+                <value>
+                    <fullName>Popup Window</fullName>
+                    <default>false</default>
+                    <label>Popup Window</label>
+                </value>
+                <value>
+                    <fullName>Program Logs</fullName>
+                    <default>false</default>
+                    <label>Program Logs</label>
+                </value>
+                <value>
+                    <fullName>Windows Application Event Log</fullName>
+                    <default>false</default>
+                    <label>Windows Application Event Log</label>
+                </value>
+                <value>
+                    <fullName>Windows System Event Log</fullName>
+                    <default>false</default>
+                    <label>Windows System Event Log</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>7</visibleLines>
+    </fields>
+    <label>Program Message</label>
+    <pluralLabel>Program Messages</pluralLabel>
+    <validationRules>
+        <fullName>Program_Message_Title_Length_Rule</fullName>
+        <active>true</active>
+        <description>Require that the title is less than 66 characters</description>
+        <errorConditionFormula>LEN( Title ) &gt; 65</errorConditionFormula>
+        <errorMessage>Title Length too long - To optimize Search Engine results, the article title must be less than 66 characters.</errorMessage>
+    </validationRules>
+</CustomObject>

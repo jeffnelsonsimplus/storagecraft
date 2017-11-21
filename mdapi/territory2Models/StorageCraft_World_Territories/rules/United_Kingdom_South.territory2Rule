@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <booleanFilter>1 OR (2 AND NOT 3)</booleanFilter>
+    <name>United Kingdom South</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingPostalCode</field>
+        <operation>equals</operation>
+        <value>AL,BA,BH,BN,BR,BS,CB,CM,CO,CR,CT,DA,DT,E,E,EC,EN,EX,GU,HA,HP,IG,IP,KT,LU,N,NR,NW,PL,PO,RG,RH,RM,SE,SG,SL,SM,SN,SO,SP,SS,SW,TA,TN,TQ,TR,TW,UB,W,WC,WD</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.BillingPostalCode</field>
+        <operation>startsWith</operation>
+        <value>E,N,W</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.BillingPostalCode</field>
+        <operation>startsWith</operation>
+        <value>EH,NE,NG,NN,NP,WA,WF,WN,WR,WS,WV</value>
+    </ruleItems>
+</Territory2Rule>

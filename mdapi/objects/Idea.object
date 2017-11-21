@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Categories</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <listViews>
+        <fullName>All_Community_Ideas</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.BODY</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <columns>VOTE.HAS_VOTED</columns>
+        <columns>IDEA.LAST_COMMENT_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>COMMUNITY.NAME</field>
+            <operation>equals</operation>
+            <value>StorageCraft Support Community</value>
+        </filters>
+        <label>All Community Ideas</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Ideas</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.BODY</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <columns>VOTE.HAS_VOTED</columns>
+        <columns>IDEA.LAST_COMMENT_DATE</columns>
+        <columns>IDEA.CREATED_BY_ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Ideas</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Internal_Ideas</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>IDEA.BODY</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <columns>VOTE.HAS_VOTED</columns>
+        <columns>IDEA.LAST_COMMENT_DATE</columns>
+        <columns>IDEA.CREATED_BY_ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>COMMUNITY.NAME</field>
+            <operation>contains</operation>
+            <value>Internal</value>
+        </filters>
+        <label>All Internal Ideas</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Cloud_Ideas</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.BODY</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <columns>VOTE.HAS_VOTED</columns>
+        <columns>IDEA.LAST_COMMENT_DATE</columns>
+        <columns>IDEA.CREATED_BY_ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>COMMUNITY.NAME</field>
+            <operation>equals</operation>
+            <value>StorageCraft Support Community</value>
+        </filters>
+        <filters>
+            <field>IDEA.CATEGORIES</field>
+            <operation>includes</operation>
+            <value>Cloud Backup,Cloud Services</value>
+        </filters>
+        <label>Cloud Ideas</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Ideas_Last_7_Days</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>IDEA.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:7</value>
+        </filters>
+        <label>Last 7 Days</label>
+    </listViews>
+    <listViews>
+        <fullName>Ideas_Last_7_Days</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <columns>IDEA.IDEA_THEME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>IDEA.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:7</value>
+        </filters>
+        <label>Last 7 Days</label>
+    </listViews>
+    <listViews>
+        <fullName>ImageManager_Ideas</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.BODY</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <columns>VOTE.HAS_VOTED</columns>
+        <columns>IDEA.LAST_COMMENT_DATE</columns>
+        <columns>IDEA.CREATED_BY_ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>COMMUNITY.NAME</field>
+            <operation>equals</operation>
+            <value>StorageCraft Support Community</value>
+        </filters>
+        <filters>
+            <field>IDEA.CATEGORIES</field>
+            <operation>equals</operation>
+            <value>ImageManager</value>
+        </filters>
+        <label>ImageManager Ideas</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>ShadowControl_Ideas</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.BODY</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <columns>VOTE.HAS_VOTED</columns>
+        <columns>IDEA.LAST_COMMENT_DATE</columns>
+        <columns>IDEA.CREATED_BY_ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>COMMUNITY.NAME</field>
+            <operation>equals</operation>
+            <value>StorageCraft Support Community</value>
+        </filters>
+        <filters>
+            <field>IDEA.CATEGORIES</field>
+            <operation>equals</operation>
+            <value>ShadowControl</value>
+        </filters>
+        <label>ShadowControl Ideas</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>ShadowProtect_Ideas</fullName>
+        <columns>IDEA.CREATED_DATE</columns>
+        <columns>IDEA.TITLE</columns>
+        <columns>IDEA.CATEGORIES</columns>
+        <columns>IDEA.CREATED_BY_NICKNAME</columns>
+        <columns>VOTE_STATS.WEIGHTED_SUM</columns>
+        <columns>IDEA.NUM_COMMENTS</columns>
+        <columns>IDEA.STATUS</columns>
+        <columns>IDEA.BODY</columns>
+        <columns>COMMUNITY.NAME</columns>
+        <columns>VOTE.HAS_VOTED</columns>
+        <columns>IDEA.LAST_COMMENT_DATE</columns>
+        <columns>IDEA.CREATED_BY_ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>COMMUNITY.NAME</field>
+            <operation>equals</operation>
+            <value>StorageCraft Support Community</value>
+        </filters>
+        <filters>
+            <field>IDEA.CATEGORIES</field>
+            <operation>equals</operation>
+            <value>ShadowProtect SPX</value>
+        </filters>
+        <label>ShadowProtect Ideas</label>
+        <language>en_US</language>
+    </listViews>
+    <recordTypes>
+        <fullName>InternalIdeasIdeaRecordType</fullName>
+        <active>true</active>
+        <description>Record Type used to associate ideas with a specific community</description>
+        <label>Internal Ideas: Idea Record Type</label>
+        <picklistValues>
+            <picklist>Categories</picklist>
+            <values>
+                <fullName>Cloud Backup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cloud Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>File Backup and Recovery with Backup Analyzer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Granular Recovery for Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ImageManager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oneblox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recovery Environments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowControl</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowProtect IT Edition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowProtect SPX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website - Support Community</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Coming Soon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Now Available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reviewed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Will Not Implement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Record_type_for_community_09a36000000LNyEAAW_entity_Idea</fullName>
+        <active>true</active>
+        <description>Record type used to associate Idea with a specific zone</description>
+        <label>StorageCraft Support Community: Idea Record Type</label>
+        <picklistValues>
+            <picklist>Categories</picklist>
+            <values>
+                <fullName>Cloud Backup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cloud Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>File Backup and Recovery with Backup Analyzer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Granular Recovery for Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ImageManager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oneblox</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recovery Environments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowControl</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowProtect IT Edition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ShadowProtect SPX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website - Support Community</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Coming Soon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Now Available</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reviewed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Under Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Will Not Implement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>IDEA.TITLE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.BODY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>COMMUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.CREATED_BY_NICKNAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.NUM_COMMENTS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>VOTE.HAS_VOTED</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.CATEGORIES</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.STATUS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDEA.LAST_COMMENT_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>IDEA.TITLE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>COMMUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>IDEA.TITLE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>COMMUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.BODY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>COMMUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.NUM_COMMENTS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.CREATED_BY_NICKNAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.CATEGORIES</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IDEA.CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

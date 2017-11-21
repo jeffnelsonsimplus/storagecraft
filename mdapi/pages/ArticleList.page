@@ -1,0 +1,53 @@
+<apex:page >
+ <style>
+  td{
+  vertical-align : top;  
+  text-align: left;
+  }
+ </style>
+
+ <apex:form >
+      <apex:pageBlock title="Data Category List">
+         <apex:panelGrid width="100%">
+             <table width="50%" style="border-top: 1px solid #cdd0d4; border-bottom: 1px solid #cdd0d4;">
+                 <tr>
+                  <th width="50%">Category Name</th>
+                  <th width="50%">API Name</th>
+                 </tr>
+                 <tr><td>All</td><td>All</td></tr>
+                 <knowledge:categoryList categoryVar="category" categoryGroup="Products" rootCategory="All" level="-1">
+                     <tr><td>{!category.label}</td><td>{!category.name}</td></tr>
+                     </knowledge:categoryList>
+             </table>
+         </apex:panelGrid>
+     </apex:pageBlock>
+     
+  <apex:pageBlock title="User Guide Article List" >
+   <apex:panelGrid width="100%">
+    <table width="99%" style="border-top: 1px solid #cdd0d4; border-bottom: 1px solid #cdd0d4;">
+     <tr>
+      <th width="30%">Internal Link</th>
+      <th width="30%">Url Name</th>
+      <th width="30%">Community Link src=</th>
+      <th width="10%">Summary</th>
+
+     </tr>
+     
+    </table>
+   <knowledge:articleList articleVar="article" pageSize="200" hasMoreVar="hasMoreItems" articleTypes="User_Guide__kav" sortby="title">
+    <table width="99%" style="border-bottom: 1px solid #cdd0d4;">
+     <tr>
+      <td width="30%">
+       <apex:outputLink target="_blank" value="{!URLFOR($Action.KnowledgeArticle.View, article.id,['popup' = 'true'])}">{!article.title}</apex:outputLink>
+      </td>
+      <td width="30%"><apex:outputText >{!article.urlName}</apex:outputText></td>
+      <td width="30%"><apex:outputText >https://support.storagecraft.com/s/article/{!article.urlName}</apex:outputText></td>
+      <td width="10%"><apex:outputText >{!article.summary}</apex:outputText></td>
+
+     </tr>
+    </table>
+    </knowledge:articleList>
+   </apex:panelGrid>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

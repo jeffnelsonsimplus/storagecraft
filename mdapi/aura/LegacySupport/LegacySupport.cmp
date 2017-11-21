@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="srcUrl" type="String"/>   
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <iframe height="600px" width="100%" src="{!v.srcUrl}" onload="alert('hello');"/>
+</aura:component>

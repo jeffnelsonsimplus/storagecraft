@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <name>Asia 1</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>AF,Afghanistan,AM,Armenia,AZ,Azerbaijan,BD,Bangladesh,BT,Bhutan,IO,British Indian Ocean Territory,BN,Brunei,KH,Cambodia,CN,China,CX,Christmas Island,CC,Cocos Islands,GE,Georgia,HK,Hong Kong,IN,India,KZ,Kazakhstan,KG,Kyrgyzstan,MO,Macao,MV,Maldives,MN,Mongolia,MM,Myanmar,NP,Nepal,PK,Pakistan,KR,South Korea,TW,Taiwan,TJ,Tajikistan,TM,Turkmenistan,UZ,Uzbekistan,VN,Vietnam</value>
+    </ruleItems>
+</Territory2Rule>

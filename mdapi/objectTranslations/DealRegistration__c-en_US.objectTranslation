@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Deal Registration</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Deal Registrations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Domain Account --></label>
+        <name>DomainAccount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Domain --></label>
+        <name>Domain__c</name>
+    </fields>
+    <fields>
+        <label><!-- End User Account --></label>
+        <name>EndUserAccount__c</name>
+        <relationshipLabel><!-- Deal Registrations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End User Opportunity --></label>
+        <name>EndUserOpportunity__c</name>
+        <relationshipLabel><!-- Deal Registrations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expiration Date --></label>
+        <name>ExpirationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Deal Registrations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Qualified By --></label>
+        <name>QualifiedBy__c</name>
+        <relationshipLabel><!-- Deal Registrations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Qualified Date --></label>
+        <name>QualifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reseller Account --></label>
+        <name>ResellerAccount__c</name>
+        <relationshipLabel><!-- Reseller Deal Registrations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reseller Contact --></label>
+        <name>ResellerContact__c</name>
+        <relationshipLabel><!-- Reseller Deal Registrations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Lost</masterLabel>
+            <translation><!-- Closed Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won</masterLabel>
+            <translation><!-- Closed Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working</masterLabel>
+            <translation><!-- Working --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- System Status --></label>
+        <name>SystemStatus__c</name>
+    </fields>
+    <layouts>
+        <layout>Deal Registration Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- DealRegApprovalComp --></label>
+            <section>DealRegApprovalComp</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

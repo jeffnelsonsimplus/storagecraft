@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Country and Language</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Country and Language</value>
+    </caseValues>
+    <fields>
+        <help><!-- Please provide all the language supported by country comma separated --></help>
+        <label><!-- Language (CSV) --></label>
+        <name>Language_CSV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Name --></label>
+        <name>Short_Name__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

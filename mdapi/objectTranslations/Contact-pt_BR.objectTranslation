@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Public</layout>
+        <sections>
+            <label><!-- Company --></label>
+            <section>Company</section>
+        </sections>
+        <sections>
+            <label><!-- Reseller Information --></label>
+            <section>Reseller Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sales</layout>
+        <sections>
+            <label><!-- Activities --></label>
+            <section>Activities</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Contact Info --></label>
+            <section>Additional Contact Info</section>
+        </sections>
+        <sections>
+            <label><!-- Company --></label>
+            <section>Company</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Conversion Information --></label>
+            <section>Lead Conversion Information</section>
+        </sections>
+        <sections>
+            <label><!-- MSCRM Activities --></label>
+            <section>MSCRM Activities</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Marketo Sales Insight --></label>
+            <section>Marketo Sales Insight</section>
+        </sections>
+        <sections>
+            <label><!-- Reseller Information --></label>
+            <section>Reseller Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Support</layout>
+        <sections>
+            <label><!-- Additional Contact Info --></label>
+            <section>Additional Contact Info</section>
+        </sections>
+        <sections>
+            <label><!-- Company --></label>
+            <section>Company</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Reseller Information --></label>
+            <section>Reseller Information</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

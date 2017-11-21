@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>StcZone</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>StcZones</value>
+    </caseValues>
+    <fields>
+        <help><!-- Is this StcZone active? --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Who gets assigned new Accounts for the Territory --></help>
+        <label><!-- Assign Accounts To --></label>
+        <name>Assign_Accounts_To__c</name>
+        <relationshipLabel><!-- StcZones (Assign Accounts To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Who gets assigned new Leads for the Territory --></help>
+        <label><!-- Assign Leads To --></label>
+        <name>Assign_To__c</name>
+        <relationshipLabel><!-- StcZones (Assign Leads To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Controlling Office --></label>
+        <name>Controlling_Office__c</name>
+        <picklistValues>
+            <masterLabel>Cork, IE</masterLabel>
+            <translation><!-- Cork, IE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draper, Utah  US</masterLabel>
+            <translation><!-- Draper, Utah  US --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sydney, NSW AU</masterLabel>
+            <translation><!-- Sydney, NSW AU --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Global Region --></label>
+        <name>Global_Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+    </fields>
+    <layouts>
+        <layout>StcZone Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowHomePage>false</allowHomePage>
+    <allowStandardAnswersPages>false</allowStandardAnswersPages>
+    <allowStandardIdeasPages>false</allowStandardIdeasPages>
+    <allowStandardLookups>false</allowStandardLookups>
+    <allowStandardPortalPages>true</allowStandardPortalPages>
+    <allowStandardSearch>false</allowStandardSearch>
+    <authorizationRequiredPage>CommunitiesLogin</authorizationRequiredPage>
+    <bandwidthExceededPage>BandwidthExceeded</bandwidthExceededPage>
+    <browserXssProtection>false</browserXssProtection>
+    <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
+    <contentSniffingProtection>false</contentSniffingProtection>
+    <cspUpgradeInsecureRequests>false</cspUpgradeInsecureRequests>
+    <customWebAddresses>
+        <certificate>StorageCraft_Star_Cert</certificate>
+        <domainName>support.storagecraft.com</domainName>
+        <primary>true</primary>
+    </customWebAddresses>
+    <fileNotFoundPage>FileNotFound</fileNotFoundPage>
+    <genericErrorPage>Exception</genericErrorPage>
+    <inMaintenancePage>InMaintenance</inMaintenancePage>
+    <indexPage>CommunitiesLanding</indexPage>
+    <masterLabel>StorageCraft Support Community</masterLabel>
+    <referrerPolicyOriginWhenCrossOrigin>false</referrerPolicyOriginWhenCrossOrigin>
+    <requireHttps>true</requireHttps>
+    <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
+    <selfRegPage>CommunitiesSelfReg</selfRegPage>
+    <siteAdmin>nephi.printy@storagecraft.com</siteAdmin>
+    <siteType>ChatterNetwork</siteType>
+    <subdomain>storagecraft-com</subdomain>
+    <urlPathPrefix>support</urlPathPrefix>
+</CustomSite>

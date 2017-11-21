@@ -1,0 +1,24 @@
+<aura:component controller="Guide_SectionsController" access="global"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+    
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="guidesections" type="User_Guide__kav[]"/>
+    <aura:attribute name="fieldLabelMap" type="Map"/>
+    <aura:attribute name="languageVal" type="String" default="{!$Locale.langLocale}"/>
+        
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <ul>
+        <aura:iteration items="{!v.guidesections}" var="s">
+            <li>
+                <aura:if isTrue="{!s.Section__c == '0'}">
+                	<ui:outputURL value="{!s.Community_URL__c}" label="{!s.Title}"/>
+				</aura:if>
+                <aura:if isTrue="{!s.Section__c != '0'}">
+                	<ui:outputURL value="{!s.Community_URL__c}" label="{!s.Section__c + '&nbsp;&nbsp;' + s.Title}"/>
+                </aura:if>
+            </li>
+        </aura:iteration>
+    </ul>
+
+</aura:component>

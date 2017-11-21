@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sales Stage</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sales Stages</value>
+    </caseValues>
+    <fields>
+        <label><!-- Academy Onboarded --></label>
+        <name>AcademyOnboarded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selling Model --></label>
+        <name>AccountType__c</name>
+        <picklistValues>
+            <masterLabel>MSP</masterLabel>
+            <translation><!-- MSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MSP and VAR</masterLabel>
+            <translation><!-- MSP and VAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VAR</masterLabel>
+            <translation><!-- VAR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Sales Stages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel><!-- Sales Stages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Built BDR --></label>
+        <name>BuiltBDR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Sales Stages (Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Discussed how to make money --></label>
+        <name>DiscussedHowToMakeMoney__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discussed Ramp Options --></label>
+        <name>DiscussedRampOptions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generate NFR Keys --></label>
+        <name>GenerateNFRKeys__c</name>
+    </fields>
+    <fields>
+        <label><!-- GenerateNFRString --></label>
+        <name>GenerateNFRString__c</name>
+    </fields>
+    <fields>
+        <label><!-- Installed NFR --></label>
+        <name>InstalledNFR__c</name>
+    </fields>
+    <fields>
+        <label><!-- MDF Joint Planning/Marketing/Events --></label>
+        <name>MDFJointPME__c</name>
+    </fields>
+    <fields>
+        <label><!-- MSP Offering cloud services? --></label>
+        <name>MSPOfferingCloudServices__c</name>
+    </fields>
+    <fields>
+        <label><!-- MSP Revenue Greater than 300? --></label>
+        <name>MSPRevenueGreaterThan300__c</name>
+    </fields>
+    <fields>
+        <label><!-- NFR Language --></label>
+        <name>NFRLanguage__c</name>
+        <picklistValues>
+            <masterLabel>Chinese Simplified</masterLabel>
+            <translation><!-- Chinese Simplified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chinese Traditional</masterLabel>
+            <translation><!-- Chinese Traditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Czech</masterLabel>
+            <translation><!-- Czech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French</masterLabel>
+            <translation><!-- French --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italian</masterLabel>
+            <translation><!-- Italian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japanese</masterLabel>
+            <translation><!-- Japanese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Korean</masterLabel>
+            <translation><!-- Korean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Polish</masterLabel>
+            <translation><!-- Polish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portuguese (Brazil)</masterLabel>
+            <translation><!-- Portuguese (Brazil) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portuguese (Portugal)</masterLabel>
+            <translation><!-- Portuguese (Portugal) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Russian</masterLabel>
+            <translation><!-- Russian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish</masterLabel>
+            <translation><!-- Spanish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turkish</masterLabel>
+            <translation><!-- Turkish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ukrainian</masterLabel>
+            <translation><!-- Ukrainian --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Onsite Visit Contact --></label>
+        <name>OnsiteVisitContact__c</name>
+        <relationshipLabel><!-- Sales Stages (Onsite Visit Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Onsite Visit Date --></label>
+        <name>OnsiteVisitDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currently have opportunities in pipeline --></label>
+        <name>OpportunitiesInPipeline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Alliance Partner / OEM --></label>
+        <name>OtherAlliancePartnerOEM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Competitor --></label>
+        <name>OtherCompetitor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Components --></label>
+        <name>OtherComponents__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Distributor --></label>
+        <name>OtherDistributor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other PSA --></label>
+        <name>OtherPSA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Purchase Method --></label>
+        <name>OtherPurchaseMethod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other RMM --></label>
+        <name>OtherRMM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do you use a PSA tool --></label>
+        <name>PSATool__c</name>
+        <picklistValues>
+            <masterLabel>Autotask</masterLabel>
+            <translation><!-- Autotask --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ConnectWise</masterLabel>
+            <translation><!-- ConnectWise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tigerpaw</masterLabel>
+            <translation><!-- Tigerpaw --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Partner Network Discussion --></label>
+        <name>PartnerNetworkDiscussion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner portal walkthrough --></label>
+        <name>PartnerPortalWalkthrough__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Demo Contact --></label>
+        <name>PreferredDemoContact__c</name>
+        <relationshipLabel><!-- Sales Stages (Preferred Demo Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Preferred Distributor --></label>
+        <name>PreferredDistributor__c</name>
+        <picklistValues>
+            <masterLabel>D&amp;H Distributing</masterLabel>
+            <translation><!-- D&amp;H Distributing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lifeboat</masterLabel>
+            <translation><!-- Lifeboat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Synnex</masterLabel>
+            <translation><!-- Synnex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tech Data</masterLabel>
+            <translation><!-- Tech Data --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Preferred AlliancePartner / OEM --></label>
+        <name>PreferredOEMAlliancePartner__c</name>
+        <picklistValues>
+            <masterLabel>ConnectWise (Labtech)</masterLabel>
+            <translation><!-- ConnectWise (Labtech) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Datto</masterLabel>
+            <translation><!-- Datto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESET</masterLabel>
+            <translation><!-- ESET --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kaseya</masterLabel>
+            <translation><!-- Kaseya --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SolarWinds (N-Able)</masterLabel>
+            <translation><!-- SolarWinds (N-Able) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pricing Calculator --></label>
+        <name>PricingCalculator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Demo Date --></label>
+        <name>ProductDemoDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Methods Of Purchase --></label>
+        <name>PurchasePreference__c</name>
+        <picklistValues>
+            <masterLabel>Alliance Partner / OEM</masterLabel>
+            <translation><!-- Alliance Partner / OEM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distribution</masterLabel>
+            <translation><!-- Distribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Do you use a RMM tool --></label>
+        <name>RMMTool__c</name>
+        <picklistValues>
+            <masterLabel>Kaseya</masterLabel>
+            <translation><!-- Kaseya --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LabTech</masterLabel>
+            <translation><!-- LabTech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Level Platforms</masterLabel>
+            <translation><!-- Level Platforms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N-Able</masterLabel>
+            <translation><!-- N-Able --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PacketTrap</masterLabel>
+            <translation><!-- PacketTrap --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ramp End Date --></label>
+        <name>RampEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ramp Signed MSP --></label>
+        <name>RampSignedMSP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ramp Start Date --></label>
+        <name>RampStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- How did you hear about StorageCraft? --></label>
+        <name>ReferralSource__c</name>
+        <picklistValues>
+            <masterLabel>Attended Webinar</masterLabel>
+            <translation><!-- Attended Webinar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google</masterLabel>
+            <translation><!-- Google --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Magazine / Advertising</masterLabel>
+            <translation><!-- Magazine / Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other search engine</masterLabel>
+            <translation><!-- Other search engine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Used StorageCraft through OEM</masterLabel>
+            <translation><!-- Used StorageCraft through OEM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Send Welcome Letter --></label>
+        <name>SendWelcomeLetter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- StorageCraft Product Experience Level --></label>
+        <name>StorageCraftExperienceLevel__c</name>
+        <picklistValues>
+            <masterLabel>Advanced</masterLabel>
+            <translation><!-- Advanced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beginner</masterLabel>
+            <translation><!-- Beginner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expert</masterLabel>
+            <translation><!-- Expert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intermediate</masterLabel>
+            <translation><!-- Intermediate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Structured MSP SLA --></label>
+        <name>StructuredMSPSLA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Completion Date --></label>
+        <name>Target_Completion_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Technical Support Process --></label>
+        <name>TechnicalSupportProcess__c</name>
+    </fields>
+    <fields>
+        <label><!-- Training Completed --></label>
+        <name>TrainingCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Was Training Onsite? --></label>
+        <name>TrainingOnsite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Utilized Components --></label>
+        <name>Utilized_Components__c</name>
+        <picklistValues>
+            <masterLabel>Cloud</masterLabel>
+            <translation><!-- Cloud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRE</masterLabel>
+            <translation><!-- GRE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImageManager</masterLabel>
+            <translation><!-- ImageManager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MSP</masterLabel>
+            <translation><!-- MSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RE</masterLabel>
+            <translation><!-- RE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ShadowControl</masterLabel>
+            <translation><!-- ShadowControl --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VirtualBoot</masterLabel>
+            <translation><!-- VirtualBoot --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Experience with competitive products --></label>
+        <name>competitiveExperience__c</name>
+        <picklistValues>
+            <masterLabel>Acronis</masterLabel>
+            <translation><!-- Acronis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appassure</masterLabel>
+            <translation><!-- Appassure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STC OEM</masterLabel>
+            <translation><!-- STC OEM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Symantec</masterLabel>
+            <translation><!-- Symantec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unitrends</masterLabel>
+            <translation><!-- Unitrends --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Veeam</masterLabel>
+            <translation><!-- Veeam --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Referral Details --></label>
+        <name>referralSourceDetails__c</name>
+    </fields>
+    <layouts>
+        <layout>7-16 MSP Contract</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Grow Your Partner (Stage 3)</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Partner Onboarding Stage 1</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Partner Onboarding Stage 2</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Grow Your Partner --></label>
+        <name>Grow_Your_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Know Your Partner --></label>
+        <name>Partner_Onboarding_Stage_1</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Enable Your Partner --></label>
+        <name>Partner_Onboarding_Stage_2</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 7-16 MSP Contract --></label>
+        <name>X7_16_MSP_Contract</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Other Competitor must be completed. --></errorMessage>
+        <name>Competitive_Experience</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Onsite Visit Date and Onsite Visit Contact fields must be completed. --></errorMessage>
+        <name>Onsite_Visit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Other PSA must be completed. --></errorMessage>
+        <name>PSA_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If preferred distributor inlcudes &quot;Other&quot; other distributor cannot be blank --></errorMessage>
+        <name>Preferred_Distributor_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If purchase method includes &quot;Other&quot; other purchase method field cannot be blank --></errorMessage>
+        <name>Preferred_Method_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If preferred purchase method includes alliance partner, preferred alliance partner cannot be blank --></errorMessage>
+        <name>Preferred_method_Alliance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If preferred purchase method includes distributor, preferred distributor cannot be blank --></errorMessage>
+        <name>Preferred_method_disti</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If preferred alliance partner inlcudes &quot;Other&quot; other alliance partner cannot be blank. --></errorMessage>
+        <name>Preffered_Alliance_Partner_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Both Product Demo/Date &amp; Product Demo Contact must be populated. --></errorMessage>
+        <name>Product_Demo_DateTime_and_Demo_Contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Other RMM must be completed. --></errorMessage>
+        <name>RMM_Tool</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please complete the Ramp Start Date and Ramp End Date fields. --></errorMessage>
+        <name>Ramp_Signed_MSP_Dates_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Referral Details must be completed. --></errorMessage>
+        <name>Referral_Source</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Other Components field is required. --></errorMessage>
+        <name>Utilized_Components_Other_Components</name>
+    </validationRules>
+    <workflowTasks>
+        <name>First_Onsite_Visit</name>
+        <subject><!-- First Onsite Visit --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Product_demo_for_Account</name>
+        <subject><!-- Product demo for Account --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

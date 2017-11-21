@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Video</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Videos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Video --></label>
+        <name>Embed_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intended Audience --></label>
+        <name>Intended_Audience__c</name>
+        <picklistValues>
+            <masterLabel>External</masterLabel>
+            <translation><!-- External --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal</masterLabel>
+            <translation><!-- Internal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- List of products and exact versions or ranges of versions where this message can be seen.
+Example:  ShadowProtect SPX (Windows) - All --></help>
+        <label><!-- Product Versions Affected --></label>
+        <name>Product_Versions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Video Duration --></label>
+        <name>Video_Duration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Video URL --></label>
+        <name>Video_URL__c</name>
+    </fields>
+    <layouts>
+        <layout>Video Layout</layout>
+        <sections>
+            <label><!-- Article Details --></label>
+            <section>Article Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Video Public Layout</layout>
+        <sections>
+            <label><!-- Article Details --></label>
+            <section>Article Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Make sure Video Duration is in time format 00:00 --></errorMessage>
+        <name>Video_Duration_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Title Length too long - To optimize Search Engine results, the article title must be less than 66 characters. --></errorMessage>
+        <name>Video_Title_Length_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- To make it easier to find video articles, make sure the title begins with &quot;Video: &quot; --></errorMessage>
+        <name>Video_Title_Rule</name>
+    </validationRules>
+</CustomObjectTranslation>

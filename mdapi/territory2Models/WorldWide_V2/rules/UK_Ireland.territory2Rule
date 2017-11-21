@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <name>UK/Ireland</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingPostalCode</field>
+        <operation>equals</operation>
+        <value>KW,IV,AB,PH,DD,PA,FK,KY,G,EH,ML,KA,DG,TD,CA,NE,DH,SR,LA,DL,TS,BD,HG,YO,HX,LS,HD,WF,HU,S,DN,DE,NG,LN,FY,PR,BB,L,WN,BI,OL,WA,M,CH,CW,SK,LL,SY,SA,LD,CF,NP,ST,TF,WV,WS,DY,B,CV,LE,PE,HR,WR,NN,GL,OX,MK,BT</value>
+    </ruleItems>
+</Territory2Rule>

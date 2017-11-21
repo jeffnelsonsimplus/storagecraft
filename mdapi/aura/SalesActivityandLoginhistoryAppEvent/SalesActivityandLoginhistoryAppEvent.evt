@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="Event template" >
+<aura:attribute name="uId" type="String"/>
+<aura:attribute name="reportField" type="String"/>
+<aura:attribute name="period" type="String"/>
+</aura:event>

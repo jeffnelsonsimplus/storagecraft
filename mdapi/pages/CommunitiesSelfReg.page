@@ -1,0 +1,126 @@
+<apex:page docType="HTML-5.0" showHeader="false" sidebar="false" language="{!selectedLanguage}" controller="CommunitiesSelfRegController" title="{!$Label.site.user_registration}">
+    <!--
+<head>
+<apex:includeScript value="{!URLFOR($Resource.CaseSubmissionCSS, 'js/jquery.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.CaseSubmissionCSS, 'js/bootstrap.min.js')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.CaseSubmissionCSS, 'css/bootstrap.min.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.CaseSubmissionCSS, 'css/bootstrap-theme.min.css')}"/>
+</head>
+
+
+
+<apex:define name="body">
+
+</apex:define>
+
+<apex:pageMessages id="error"/>
+
+<apex:outputLabel style="color:#FFFFFF; font-weight:bold;" value="Country" />
+
+                <div class="slds-align_absolute-center">
+
+     <apex:commandButton value="{!$Label.site.register}" id="submit" />
+
+<apex:pageMessages showDetail="true" id="error"/>
+
+
+
+-->
+
+<style>
+.slds-scope .slds-form-element__label {
+	color: #FFFFFF;
+	font-weight:bold;
+}
+
+</style>
+    <apex:slds />
+
+    <apex:form id="theForm" forceSSL="true">
+    <div class="slds-scope">
+        <div class="slds-form slds-form_stacked">
+
+            <apex:pageMessages showDetail="true" id="error"/>
+
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="firstName">{!$ObjectType.Contact.fields.firstname.Label}</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField required="true" id="firstName" value="{!objContact.firstname}"/>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="lastName">{!$ObjectType.Contact.fields.lastname.Label}</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField required="true" id="lastName" value="{!objContact.lastname}"/>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="communityNickname">{!$Label.site.community_nickname}</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputText required="true" id="communityNickname" value="{!communityNickname}"/>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="email">{!$Label.site.email}</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField type="email" required="true" id="email" value="{!objContact.email}"/>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="companyname">Company Name</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputText required="false" id="companyname" value="{!companyname}"/>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="phone">{!$ObjectType.Contact.fields.phone.Label}</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField type="tel" required="true" id="phone" value="{!objContact.phone}"/>
+                    </div>
+                </div>
+
+                <apex:actionRegion >
+                    <apex:outputPanel id="SelectCountry">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="country">Select your country</label>
+                            <div class="slds-form-element__control">
+                                <apex:selectList id="country" value="{!selectedCountry}" size="1">
+                                    <apex:selectOptions value="{!lstCountries}"/>
+                                    <apex:actionSupport event="onchange" action="{!changeCountry}" rerender="SelectCountry"/>
+                                </apex:selectList>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-align_absolute-center">
+                            <label class="slds-form-element__label" for="state">{!$ObjectType.Contact.fields.MailingState.Label}</label>
+                            <div class="slds-form-element__control">
+                                <apex:inputField value="{!objContact.MailingState}" id="state" rendered="{!lstStates.Size = 0}" required="false"/>
+                                <apex:selectList size="1" value="{!objContact.MailingState}" rendered="{!lstStates.Size > 0}" required="false">
+                                    <apex:selectOptions value="{!lstStates}"/>
+                                </apex:selectList>
+                            </div>
+                        </div>
+
+                    </apex:outputPanel>
+                </apex:actionRegion>
+
+                <div class="slds-form-element slds-align_absolute-center">
+                    <label class="slds-form-element__label" for="city">{!$ObjectType.Contact.fields.MailingCity.Label}</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField required="true" id="city" value="{!objContact.MailingCity}"/>
+                    </div>
+                </div>
+                <div class="slds-form-element slds-align_absolute-center">
+                    <label class="slds-form-element__label" for="postalcode">{!$ObjectType.Contact.fields.MailingPostalCode.Label}</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField required="true" id="postalcode" value="{!objContact.MailingPostalCode}"/>
+                    </div>
+                </div>
+
+                <div class="slds-form-element slds-align_absolute-center">
+                    <button class="slds-button slds-button_neutral"><apex:commandButton action="{!registerUser}" value="{!$Label.site.register}" id="submit"/></button>
+                </div>
+
+        </div>
+    </div>
+    </apex:form>
+</apex:page>

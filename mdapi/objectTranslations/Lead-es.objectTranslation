@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Deal Registration</layout>
+        <sections>
+            <label><!-- Additional Contact Info --></label>
+            <section>Additional Contact Info</section>
+        </sections>
+        <sections>
+            <label><!-- Company --></label>
+            <section>Company</section>
+        </sections>
+        <sections>
+            <label><!-- Deal Registration Details --></label>
+            <section>Deal Registration Details</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>End User</layout>
+        <sections>
+            <label><!-- Additional Contact Info --></label>
+            <section>Additional Contact Info</section>
+        </sections>
+        <sections>
+            <label><!-- Company --></label>
+            <section>Company</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Marketo Sales Insignt --></label>
+            <section>Marketo Sales Insignt</section>
+        </sections>
+        <sections>
+            <label><!-- Partner --></label>
+            <section>Partner</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Partner</layout>
+        <sections>
+            <label><!-- Additional Contact Info --></label>
+            <section>Additional Contact Info</section>
+        </sections>
+        <sections>
+            <label><!-- Company --></label>
+            <section>Company</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Marketo Sales Insight --></label>
+            <section>Marketo Sales Insight</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <workflowTasks>
+        <name>Deal_Registration_is_pending_your_review</name>
+        <subject><!-- Deal Registration is pending your review --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Email_Sent_Deal_Reg_Notification</name>
+        <subject><!-- Email Sent: Deal Reg Notification --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

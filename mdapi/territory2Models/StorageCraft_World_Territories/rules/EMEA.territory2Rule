@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Territory2Rule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <name>EMEA</name>
+    <objectType>Account</objectType>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>AT,Austria,DE,Germany,DZ,Algeria,AO,Angola,BW,Botswana,BF,Burkina Faso,EG,Egypt,GQ,Equatorial Guinea,ER,Eritrea,ET,Ethiopia,GM,Gambia,GH,Ghana,GN,Guinea,GW,Guinea-Bissau,CI,Ivory Coast,KE,Kenya,LS,Lesotho,LR,Liberia,LY,Libya,MW,Malawi,ML,Mali,YT,Mayotte,MA,Morocco,MZ,Mozambique,NA,Namibia,NG,Nigeria,RE,Réunion,SH,Saint Helena,SN,Senegal,SC,Seychelles,SL,Sierra Leone,SO,Somalia,ZA,South Africa,SS,South Sudan,SD,Sudan,SZ,Swaziland,TZ,Tanzania,TN,Tunisia,UG,Uganda,EH,Western Sahara,ZM,Zambia,ZW,Zimbabwe,AQ,Antarctica,BV,Bouvet Island,TF,French Southern Territories,HM,Heard and McDonald Islands,GS,South Georgia and the South Sandwich Islands,BH,Bahrain,IQ,Iraq,IL,Israel,JO,Jordan,KW,Kuwait,LB,Lebanon,OM,Oman,PS,Palestine,State of,QA,Qatar,SA,Saudi Arabia,SY,Syria,AE,United Arab Emirates,YE,Yemen,AX,Åland Islands,AL,Albania,AD,Andorra,BY,Belarus,BA,Bosnia and Herzegovina,BG,Bulgaria,HR,Croatia,CZ,Czech Republic,DK,Denmark</value>
+    </ruleItems>
+    <ruleItems>
+        <field>Account.BillingCountry</field>
+        <operation>equals</operation>
+        <value>EE,Estonia,FO,Faroe Islands,FI,Fiji,EU,Finland,GI,Gibraltar,GG,Guernsey,HU,Hungary,IS,Iceland,IM,Isle of Man,JE,Jersey,XK,Kosovo,LV,Latvia,LI,Liechtenstein,LT,Lithuania,MK,Macedonia,MT,Malta,MD,Moldova,MC,Monaco,ME,Montenegro,RO,Romania,RU,Russia,SM,San Marino,RS,Serbia,SK,Slovakia,SI,Slovenia,SJ,Svalbard and Jan Mayen Islands,SE,Sweden,UA,Ukraine,VA,Vatican,PL,Poland,BJ,Benin,BI,Burundi,CM,Cameroon,CV,Cape Verde,CF,Central African Republic,TD,Chad,KM,Comoros,CG,Congo,CD,Congo,Democratic Republic of,CI,Côte d&apos;Ivoire,DJ,Djibouti,GA,Gabon,MG,Madagascar,MR,Mauritania,MU,Mauritius,NE,Niger,RW,Rwanda,ST,Sao Tome and Principe,TG,Togo,FR,France,ES,Spain,IT,Italy,CH,Switzerland,BE,Belgium,LU,Luxembourg,NL,Netherlands,IE,Ireland,UK,United Kingdom,TR,Turkey,CY,Cyprus,GR,Greece,PT,Portugal,NO,Norway</value>
+    </ruleItems>
+</Territory2Rule>

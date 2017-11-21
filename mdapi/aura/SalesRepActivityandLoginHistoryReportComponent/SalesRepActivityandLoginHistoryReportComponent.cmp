@@ -1,0 +1,184 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="SalesActivityandLoginhistoryreport">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="reportResponse" type="Object"/> 
+    <aura:attribute name="period" type="String"/>
+    <aura:attribute name="details" type="Object"/>
+    <aura:handler event="c:SalesActivityandLoginhistoryAppEvent" action="{!c.showModal}" />
+    
+  <div class="slds-page-header slds-page-header--object-home">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__body">
+          <p class="slds-text-title--caps slds-line-height--reset">Sales Rep Activity</p>
+          <h1 class="slds-page-header__title slds-p-right--x-small">
+            Sales Activity and Login History Report
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom--xx-small">
+      <div class="slds-button-group" role="group">
+         <lightning:select name="selectperiod" label="Select Period" aura:id="periodId" onchange="{!c.changeperiod}">
+			<option value="TODAY">Today</option>
+             <option value="YESTERDAY">Yesterday</option>
+			<option value="LAST_N_DAYS:2">Last 2 Days</option>
+			<option value="LAST_N_DAYS:3">Last 3 Days</option>
+            <option value="LAST_N_DAYS:4">Last 4 Days</option>
+            <option value="LAST_N_DAYS:7">Last 7 Days</option>
+	      </lightning:select>
+          
+      </div>
+        <div class="slds-button-group" role="group">
+       <lightning:button variant="brand" label="Export to CSV" onclick="{!c.export}"/> 
+        </div>
+      </div> 
+  </div>
+</div>
+    <lightning:spinner aura:id="mySpinner" alternativeText="Loading.."/>
+    <div class="c-container">
+
+    	<lightning:layout horizontalAlign="spread">
+            <lightning:layoutItem padding="horizontal-medium">
+            
+                <div class="slds-scrollable--x">
+                <table class="slds-table slds-table--bordered slds-is-resizable slds-table--compact slds-table--striped slds-table--col-bordered">
+                    
+                        <thead>
+                            <th>
+                            </th>
+                            <aura:if isTrue="{!v.reportResponse.noactivityFields>0}">
+                            <th scope="col" colspan="{!v.reportResponse.noactivityFields}">Activity Type</th>
+                            </aura:if>
+                            <th scope="col" colspan="{!v.reportResponse.nooflogfields}">Login History</th>
+
+                        </thead>
+                        <thead>
+                            <aura:iteration var="cell" indexVar="counter" items="{!v.reportResponse.reportFields}">
+                            <th scope="col">{!cell}</th>
+                            </aura:iteration>
+                        </thead>
+                        <tbody>
+                            <aura:iteration var="row" items="{!v.reportResponse.fieldDataList}">
+                               <c:SalesRepactivityloginhistoryreportrowComponent rows="{!row}" period="{!v.period}"/>
+                            </aura:iteration>
+                        </tbody>
+
+                    
+                </table>
+            </div>   
+            
+        
+            </lightning:layoutItem>
+        </lightning:layout>
+
+    </div>
+    <div class="slds"  id="modelid">
+        
+   <div aria-hidden="true" role="dialog" class="slds-modal slds-fade-in-open" aura:id="modaldialog" style="top: 80px;right: 20px;bottom: 20px;left: 20px;">
+   <div class="slds-modal__content" >
+     <div class="slds-modal__header">
+         <h2 id="header43" class="slds-text-heading--medium">Details</h2>
+     </div>
+       
+       <div style="overflow-y: scroll;max-height: 350px;">
+          <table class="slds-table--bordered slds-max-medium-table--stacked">
+              <aura:if isTrue="{!or(v.details.Events.length>0,v.details.listofTasks.length>0)}">
+              <thead>
+                <tr class="slds-text-heading--label">
+                  <th class="slds-is-sortable" scope="col">
+                    <span class="slds-truncate">Date</span>
+                  </th>
+                  <th scope="col">
+                    <span class="slds-truncate">Subject</span>
+                  </th>
+                  <th scope="col">
+                    <span class="slds-truncate">Description</span>
+                  </th>
+                
+                </tr>
+              </thead>
+              </aura:if>
+              <tbody>
+              <aura:iteration items="{!v.details.Events}" var="evt">
+                <tr class="slds-hint-parent">
+                    <th data-label="evt-ActivityDate" role="row"><a href="{!'/'+evt.Id}" class="slds-truncate" target="_blank">{!evt.ActivityDate}</a></th>
+                    <td data-label="evt-Subject"><a href="{!'/'+evt.Id}" class="slds-truncate" target="_blank">{!evt.Subject}</a></td>
+                  <td data-label="evt-Description">
+                    <span class="slds-truncate">{!evt.Description}</span>
+                  </td>
+                 
+                </tr>
+                </aura:iteration>
+               <aura:iteration items="{!v.details.listofTasks}" var="tsk">
+                <tr class="slds-hint-parent">
+                    <th data-label="evt-ActivityDate" role="row"><a href="{!'/'+tsk.Id}" class="slds-truncate" target="_blank">{!tsk.ActivityDate}</a></th>
+                    <td data-label="evt-Subject"><a href="{!'/'+tsk.Id}" class="slds-truncate" target="_blank">{!tsk.Subject}</a></td>
+                  <td data-label="evt-Description">
+                    <span class="slds-truncate">{!tsk.Description}</span>
+                  </td>
+                 
+                </tr>
+                </aura:iteration>
+                <aura:iteration items="{!v.details.listofEvents}" var="evt">
+                <tr class="slds-hint-parent">
+                  <th data-label="evt-ActivityDate" role="row"><a href="#" class="slds-truncate">{!evt.ActivityDate}</a></th>
+                  <td data-label="evt-Subject"><a href="#" class="slds-truncate">{!evt.Subject}</a></td>
+                  <td data-label="evt-Description">
+                    <span class="slds-truncate">{!evt.Description}</span>
+                  </td>
+                 
+                </tr>
+                </aura:iteration>
+              </tbody>
+          </table>
+          <table class="slds-table--bordered slds-max-medium-table--stacked">
+              <aura:if isTrue="{!v.details.listofloginHistories.length>0}">
+              <thead>
+                <tr class="slds-text-heading--label">
+                  
+                  <th scope="col">
+                    <span class="slds-truncate">LoginTime (GMT)</span>
+                  </th>
+                  <th scope="col">
+                    <span class="slds-truncate">Status</span>
+                  </th>
+                  <th scope="col">
+                    <span class="slds-truncate">Platform</span>
+                  </th>
+                    <th scope="col">
+                    <span class="slds-truncate">LoginUrl</span>
+                  </th> 
+                </tr>
+              </thead>
+              </aura:if>
+              <tbody>
+                  <aura:iteration items="{!v.details.listofloginHistories}" var="lg">
+                <tr class="slds-hint-parent">
+                  
+                  <td data-label="log-LoginTime">{!lg.LoginTime}</td>
+                  <th data-label="log-Status" role="row">{!lg.Status}</th>
+                  <th data-label="log-Platform" role="row">{!lg.Platform}</th>
+                  <th data-label="log-LoginUrl" role="row">{!lg.LoginUrl}</th>
+                    
+                </tr>
+                </aura:iteration>
+              </tbody>
+            </table>
+        </div>
+      </div>
+         <div class="slds-modal__footer">
+        <div class="slds-x-small-buttons--horizontal">
+          <button class="slds-button slds-button--neutral" onclick="{!c.hideModal}">Cancel</button>
+        </div>
+   </div>
+    </div>
+   
+  
+  <!--Other markups-->
+  
+  <div class="slds-backdrop slds-backdrop--hide" aura:id="backdrop">
+      
+  </div>
+ </div>              
+</aura:component>

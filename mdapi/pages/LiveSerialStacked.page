@@ -1,0 +1,79 @@
+<apex:page standardController="Case" extensions="LiveSerialInfoExt">
+    <!-- easy way to make the standard controller query the serial number -->
+    <apex:form id="form">
+        <table style="width:100%;">
+          <tbody>
+                <tr>
+                    <td><b><apex:outputLabel style="strong" value="Customer Time ({!Case.TZ_UTC_Offset__c}): "/></b><br />
+                    <apex:outputText styleClass="relativeTime" value="{!NOW()}"/>
+                </td>
+                </tr>
+            <tr><br>&nbsp;</br></tr>
+                <tr>
+                    <td><apex:outputText value="Created: {!Case.CreatedDate}"/></td>
+                </tr>                  
+                <tr>
+                    <td><apex:outputText value="Modified: {!Case.LastModifiedDate}"/></td>
+                </tr>                  
+                <tr>
+                    <td><apex:outputText value="Closed: {!Case.ClosedDate}"/><br></br></td>
+                </tr>
+          </tbody>
+        </table>
+
+        <apex:outputText rendered="false" value="{!Case.Serial_Number_Details__c}"/>
+        
+        <apex:outputPanel rendered="{!ISBLANK(Case.Serial_Number__c)}">
+            <table><tr><td><b>Serial Number Field is Blank - No License to evaluate</b></td></tr></table>  
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!NOT(ISBLANK(Case.Serial_Number__c))}">
+        <table>
+                <tr>
+                    <th><apex:outputText value="SN / Account / Machine"/></th>
+                </tr><tr>                  
+                    <td><apex:outputText value="{!Case.Serial_Number__c}"/><br></br></td>
+                </tr><tr>
+                    <th><apex:outputText value="CURRENT CPP DATA"/></th>
+                </tr><tr>                  
+                    <td><apex:outputText value="{!liveDetails}" escape="false"/><br></br></td>
+                </tr>                    
+                <tr>
+                    <th><apex:outputText value="DETAILS IN CASE"/></th>
+                </tr><tr>                                      
+                    <td><apex:outputText value="{!storedDetails}" escape="false"/></td>
+                </tr>
+                <tr>
+                    <td style="word-wrap:break-word">
+                        <b><apex:outputText rendered="{!IF(liveDetails = storedDetails, false, true)}" value="{!$Label.Case_Update_Lic}"/></b>
+                    </td>
+                </tr>
+           
+        </table>
+        </apex:outputPanel>
+        
+        <script>
+    // TODO: get offset value
+    var custOffset = '{!Case.TZ_UTC_Offset__c}';
+    console.log(custOffset);
+    var setTime = function(){
+        // get current time
+        var now = new Date();
+        // Get users offset
+        var usrOffset = now.getTimezoneOffset();
+        // Compare users offset to customers offset
+        var diffOffset = usrOffset - (-1*custOffset*60);
+        // adjust users time to match adjusted offset
+        var utc = new Date(now.getTime()+(diffOffset*60000));
+        // Change value of the fields
+        var fields = document.getElementsByClassName('relativeTime')[0];
+        fields.innerHTML = utc.toLocaleString();
+    }
+    // Execute at init
+    setTime();
+    // Execute setTime every 60 seconds to keep clock accurate
+    setInterval(setTime,60000);
+    
+    </script>
+                
+    </apex:form>
+</apex:page>

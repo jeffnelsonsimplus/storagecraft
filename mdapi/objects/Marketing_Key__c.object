@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Trade Show, Serial, Disaster Recovery, and other keys given to Marketing.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Activation_Key__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Key to activate a Trade Show or Serial key
+Set on creation</description>
+        <externalId>true</externalId>
+        <label>Activation Key</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Allocated_On__c</fullName>
+        <description>Date when key was allocated.  Set on creation</description>
+        <externalId>false</externalId>
+        <label>Allocated On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Claimed_On__c</fullName>
+        <description>Date when key was claimed
+Set by trigger when Claimed is changedt to true</description>
+        <externalId>false</externalId>
+        <label>Claimed On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Claimed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Has the key been claimed?
+Set by Webpage</description>
+        <externalId>false</externalId>
+        <label>Claimed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <description>Company of claimer
+Set by Webpage</description>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Related Contact</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Marketing Keys</relationshipLabel>
+        <relationshipName>Marketing_Keys</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>2 letter Country Code</description>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>8</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>A brief description of why the key was created.</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>Claimant&apos;s Email</description>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Event__c</fullName>
+        <description>Event related to receiving the key</description>
+        <externalId>false</externalId>
+        <label>Event</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <description>First name of the claimant</description>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <description>Last name of claimant</description>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lead related to the key</description>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Marketing Keys</relationshipLabel>
+        <relationshipName>Marketing_Keys</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Postal_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Postal Code</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Key__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Product Key</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Disaster</fullName>
+                    <default>false</default>
+                    <label>Disaster</label>
+                </value>
+                <value>
+                    <fullName>IM Serial</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>IM Serial</label>
+                </value>
+                <value>
+                    <fullName>IT Key</fullName>
+                    <default>false</default>
+                    <label>IT Key</label>
+                </value>
+                <value>
+                    <fullName>Trade Show</fullName>
+                    <default>false</default>
+                    <label>Trade Show</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Marketing Key</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Activation_Key__c</columns>
+        <columns>Type__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Claimed__c</columns>
+        <columns>Claimed_On__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Company__c</columns>
+        <columns>Event__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Also_Reseller_Trade_Show_Keys</fullName>
+        <columns>NAME</columns>
+        <columns>Activation_Key__c</columns>
+        <columns>Claimed__c</columns>
+        <columns>Claimed_On__c</columns>
+        <columns>Email__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Event__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Description__c</field>
+            <operation>contains</operation>
+            <value>Also Reseller</value>
+        </filters>
+        <label>Also Reseller - Trade Show Keys</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Disaster_Keys_All</fullName>
+        <columns>NAME</columns>
+        <columns>Activation_Key__c</columns>
+        <columns>Claimed__c</columns>
+        <columns>Claimed_On__c</columns>
+        <columns>Event__c</columns>
+        <columns>Email__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Disaster</value>
+        </filters>
+        <label>Disaster Keys - All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Disaster_Keys_Claimed</fullName>
+        <columns>NAME</columns>
+        <columns>Activation_Key__c</columns>
+        <columns>Claimed__c</columns>
+        <columns>Claimed_On__c</columns>
+        <columns>Event__c</columns>
+        <columns>Email__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Disaster</value>
+        </filters>
+        <filters>
+            <field>Claimed__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Disaster Keys - Claimed</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Disaster_Keys_Not_Claimed</fullName>
+        <columns>NAME</columns>
+        <columns>Activation_Key__c</columns>
+        <columns>Claimed__c</columns>
+        <columns>Claimed_On__c</columns>
+        <columns>Event__c</columns>
+        <columns>Email__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Disaster</value>
+        </filters>
+        <filters>
+            <field>Claimed__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Disaster Keys - Not Claimed</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Trade_Show_Keys</fullName>
+        <columns>NAME</columns>
+        <columns>Activation_Key__c</columns>
+        <columns>Claimed__c</columns>
+        <columns>Claimed_On__c</columns>
+        <columns>Email__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Event__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Trade Show</value>
+        </filters>
+        <label>Trade Show Keys - All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>MK-{000000}</displayFormat>
+        <label>Marketing Key Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Marketing Keys</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Activation_Key__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Claimed__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>First_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Last_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Email__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Activation_Key__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Claimed__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>First_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Last_Name__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Activation_Key__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Claimed__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>First_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Last_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Email__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Activation_Key__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Claimed__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>First_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Last_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Email__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

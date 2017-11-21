@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>For Office 365</label>
+                <name>For_Office_365</name>
+            </dataCategory>
+            <dataCategory>
+                <label>For G Suite</label>
+                <name>For_G_Suite</name>
+            </dataCategory>
+            <label>Cloud Backup</label>
+            <name>Cloud_Backup</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Cloud Services</label>
+            <name>Cloud_Services</name>
+        </dataCategory>
+        <dataCategory>
+            <label>File Backup and Recovery</label>
+            <name>File_Backup_and_Recovery</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Granular Recovery for Exchange</label>
+            <name>Granular_Recovery_for_Exchange</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Advanced Verification</label>
+                <name>Advanced_Verification</name>
+            </dataCategory>
+            <dataCategory>
+                <label>HeadStart Restore</label>
+                <name>HeadStart_Restore</name>
+            </dataCategory>
+            <dataCategory>
+                <label>iFTP</label>
+                <name>iFTP</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Network Replication</label>
+                <name>Network_Replication</name>
+            </dataCategory>
+            <dataCategory>
+                <label>ShadowStream</label>
+                <name>ShadowStream</name>
+            </dataCategory>
+            <label>ImageManager</label>
+            <name>ImageManager</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Jarvis</label>
+            <name>Jarvis</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Oneblox</label>
+            <name>Oneblox</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Builder / Windows RE</label>
+                <name>Builder_Windows_RE</name>
+            </dataCategory>
+            <dataCategory>
+                <label>CrossPlatform RE</label>
+                <name>CrossPlatform_RE</name>
+            </dataCategory>
+            <dataCategory>
+                <label>ShadowProtect IT Edition</label>
+                <name>ShadowProtect_IT_Edition</name>
+            </dataCategory>
+            <label>Recovery Environments</label>
+            <name>Recovery_Environments</name>
+        </dataCategory>
+        <dataCategory>
+            <label>ShadowControl</label>
+            <name>ShadowControl</name>
+        </dataCategory>
+        <dataCategory>
+            <label>ShadowProtect (Linux)</label>
+            <name>ShadowProtect_Linux</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>ShadowProtect 5</label>
+                <name>ShadowProtect_5</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Socket Licensing Service</label>
+                <name>Socket_Licensing_Service</name>
+            </dataCategory>
+            <dataCategory>
+                <label>VirtualBoot</label>
+                <name>VirtualBoot</name>
+            </dataCategory>
+            <label>ShadowProtect (Windows)</label>
+            <name>ShadowProtect_Windows</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Main site / Downloads</label>
+                <name>Main_site_Downloads</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Partner Portal</label>
+                <name>Partner_Portal</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>Autotask</label>
+                    <name>Autotask</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>ConnectWise</label>
+                    <name>ConnectWise</name>
+                </dataCategory>
+                <label>PSA Integration</label>
+                <name>PSA_Integration</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Support Community</label>
+                <name>Support_Community</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Webstore</label>
+                <name>Webstore</name>
+            </dataCategory>
+            <label>StorageCraft Websites</label>
+            <name>StorageCraft_Websites</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>Categories based on families of products</description>
+    <label>Products</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

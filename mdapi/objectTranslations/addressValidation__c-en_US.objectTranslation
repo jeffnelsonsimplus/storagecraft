@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Address Validation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Address Validation</value>
+    </caseValues>
+    <fields>
+        <help><!-- If checked, can bypass address validation on an Account object. --></help>
+        <label><!-- Can bypass address validation on Account --></label>
+        <name>canBypassAddressValidationOnAccount__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, can bypass address validation on a Contact object. --></help>
+        <label><!-- Can bypass address validation on Contact --></label>
+        <name>canBypassAddressValidationOnContact__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, can bypass address validation on a Lead object. --></help>
+        <label><!-- Can bypass address validation on Lead --></label>
+        <name>canBypassAddressValidationOnLead__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

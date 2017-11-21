@@ -1,0 +1,2619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Mass Update And Mass Edit --></label>
+        <name>Mass_Update_And_Mass_Edit</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- AU Connection Name --></label>
+        <name>AU_Connection_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case Cancel --></label>
+        <name>Case_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case Click Here --></label>
+        <name>Case_Click_Here</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case Deactivate Too Many --></label>
+        <name>Case_Deactivate_Too_Many</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case Deactivate Too Many 2 --></label>
+        <name>Case_Deactivate_Too_Many_2</name>
+    </customLabels>
+    <customLabels>
+        <label>Richiedi aiuto</label>
+        <name>Case_Details</name>
+    </customLabels>
+    <customLabels>
+        <label>Upload dei file diagnostici</label>
+        <name>Case_File</name>
+    </customLabels>
+    <customLabels>
+        <label>Per richiedere aiuto, seleziona la tua nazione di provenienza</label>
+        <name>Case_Form_Country</name>
+    </customLabels>
+    <customLabels>
+        <label>Lingua</label>
+        <name>Case_Form_Language</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case MSP Deactivate --></label>
+        <name>Case_MSP_Deactivate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case Max Deactivate --></label>
+        <name>Case_Max_Deactivate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case None To Deactivate --></label>
+        <name>Case_None_To_Deactivate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case OK --></label>
+        <name>Case_OK</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case Success Deactivate --></label>
+        <name>Case_Success_Deactivate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case Too Many Deactivation --></label>
+        <name>Case_Too_Many_Deactivation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case Understand Terms --></label>
+        <name>Case_Understand_Terms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Case Update Lic --></label>
+        <name>Case_Update_Lic</name>
+    </customLabels>
+    <customLabels>
+        <label>Invece di attendere una risposta, voglio disattivare subito la mia licenza manualmente.*</label>
+        <name>Case_Want_Deactivate</name>
+    </customLabels>
+    <customLabels>
+        <label>Detttagli di contatto</label>
+        <name>Contact_Details</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Status Orphan --></label>
+        <name>Contact_Status_Orphan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR: conflicting Transaction Types --></label>
+        <name>ERROR_CONFLICTING_TRANSACTION_TYPES</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR: invalid Country --></label>
+        <name>ERROR_INVALID_COUNTRY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR: invalid Country ISO code --></label>
+        <name>ERROR_INVALID_COUNTRY_ISO</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR: invalid ZIP/Postal code format --></label>
+        <name>ERROR_INVALID_POSTAL_CODE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR: invalid State/Province --></label>
+        <name>ERROR_INVALID_STATE_PROVINCE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR: invalid telephone number format --></label>
+        <name>ERROR_INVALID_TELEPHONE_NUMBER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR: no country specified --></label>
+        <name>ERROR_NO_COUNTRY</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR: no ZIP/Postal code specified --></label>
+        <name>ERROR_NO_POSTAL_CODE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ERROR: no telephone number specified --></label>
+        <name>ERROR_NO_TELEPHONE_NUMBER</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Enterprise Url --></label>
+        <name>Enterprise_Url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Exablox Connection Name --></label>
+        <name>Exablox_Connection_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Failed to Merge --></label>
+        <name>Failed_to_Merge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lead Product Interested Value --></label>
+        <name>Lead_Product_Interested_Value</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lead Region Value --></label>
+        <name>Lead_Region_Value</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Merged --></label>
+        <name>Merged</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Not Delete Orphan Account --></label>
+        <name>Not_Delete_Orphan_Account</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Partner Url --></label>
+        <name>Partner_Url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Scribe EndPoint Url --></label>
+        <name>Scribe_EndPoint_Url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Scribe Notification ID --></label>
+        <name>Scribe_Notification_ID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Scribe OrganizationID --></label>
+        <name>Scribe_OrganizationID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Scribe Outbound Message ID --></label>
+        <name>Scribe_Outbound_Message_ID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- US --></label>
+        <name>US</name>
+    </customLabels>
+    <customLabels>
+        <label>Si prega di caricare file con dimensione inferiore a 10 MB per allegato. Rivedere il nostro articolo della Knowledge Base che contiene le istruzioni per</label>
+        <name>WF_Attachment</name>
+    </customLabels>
+    <customLabels>
+        <label>La vostra query è stata inviata correttamente. Il numero della pratica è</label>
+        <name>WF_CaseSuccess</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WF Email Required --></label>
+        <name>WF_Email_Required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WF-Error --></label>
+        <name>WF_Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WF-Info --></label>
+        <name>WF_Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WF-InvalidEmail --></label>
+        <name>WF_InvalidEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WF-MustEnterValue --></label>
+        <name>WF_MustEnterValue</name>
+    </customLabels>
+    <customLabels>
+        <label>richiesta di Aiuto</label>
+        <name>WF_RequestHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WF-ReviewErrors --></label>
+        <name>WF_ReviewErrors</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WF-SaveInProgress --></label>
+        <name>WF_SaveInProgress</name>
+    </customLabels>
+    <customLabels>
+        <label>Inviare la richiesta</label>
+        <name>WF_Submit</name>
+    </customLabels>
+    <customLabels>
+        <label>Operazione effettuata correttamente</label>
+        <name>WF_Success</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WF-UploadDiag --></label>
+        <name>WF_UploadDiag</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WF-Wait --></label>
+        <name>WF_Wait</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Categories on this post --></label>
+        <name>acblex__Categories</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Categories filtered --></label>
+        <name>acblex__CategoriesFilteredName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Draft --></label>
+        <name>acblex__Draft</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No items text --></label>
+        <name>acblex__NoItemsText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tags on this post --></label>
+        <name>acblex__Tags</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tags filtered --></label>
+        <name>acblex__TagsFilteredName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add article --></label>
+        <name>acblex__btnAddArticle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel --></label>
+        <name>acblex__btnCancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Next --></label>
+        <name>acblex__btnNext</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Previous --></label>
+        <name>acblex__btnPrev</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save article --></label>
+        <name>acblex__btnSaveArticle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Article name --></label>
+        <name>acblex__fieldArticleName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Body --></label>
+        <name>acblex__fieldBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Categories --></label>
+        <name>acblex__fieldCategories</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Short body --></label>
+        <name>acblex__fieldShortBody</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tags --></label>
+        <name>acblex__fieldTags</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- All blog categories --></label>
+        <name>acblex__hBlogCategories</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New article --></label>
+        <name>acblex__hNewArticle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Write a comment --></label>
+        <name>acblex__hWriteComment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error message --></label>
+        <name>acblex__msgError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add Comment Button Label --></label>
+        <name>bedrock__AddComment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- All --></label>
+        <name>bedrock__All</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel Button Label --></label>
+        <name>bedrock__Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Idea category field label --></label>
+        <name>bedrock__CategoryLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Category Filter Title --></label>
+        <name>bedrock__CategoryTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Close button label --></label>
+        <name>bedrock__Close</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Commented by me filter option label --></label>
+        <name>bedrock__CommentedByMe</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Comments --></label>
+        <name>bedrock__Comments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Comments Tab Label --></label>
+        <name>bedrock__CommentsTabLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Idea description field label --></label>
+        <name>bedrock__DescriptionLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ideas count label --></label>
+        <name>bedrock__IdeasCountLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Login require message --></label>
+        <name>bedrock__LoginRequireMsg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Merged --></label>
+        <name>bedrock__Merged</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Merged list tab label --></label>
+        <name>bedrock__MergedTabLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- More comments button label --></label>
+        <name>bedrock__MoreComments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My ideas filter option label --></label>
+        <name>bedrock__MyIdeas</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Newest First sorting label --></label>
+        <name>bedrock__NewestFirst</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Next Pagination Button Label --></label>
+        <name>bedrock__NextPagination</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Comments Message --></label>
+        <name>bedrock__NoCommentsMsg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Items Message --></label>
+        <name>bedrock__NoItemsMsg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Oldest First sorting option label --></label>
+        <name>bedrock__OldestFirst</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post comment form open button label --></label>
+        <name>bedrock__OpenPostComment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post Idea form open button label --></label>
+        <name>bedrock__OpenPostIdea</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Popular sorting option label --></label>
+        <name>bedrock__PopularSorting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post button label --></label>
+        <name>bedrock__Post</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Post an Idea window title --></label>
+        <name>bedrock__PostIdeaTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Previous button label in pagination --></label>
+        <name>bedrock__PreviousPagination</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recent option in sorting select --></label>
+        <name>bedrock__RecentSorting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required fields remark --></label>
+        <name>bedrock__RequiredFields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Saving message --></label>
+        <name>bedrock__Saving</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Show filter title --></label>
+        <name>bedrock__ShowTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Similar Ideas Title --></label>
+        <name>bedrock__SimilarIdeas</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Status filter title --></label>
+        <name>bedrock__StatusTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Submitted Submitted --></label>
+        <name>bedrock__Submitted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Idea title field label --></label>
+        <name>bedrock__TitleLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Trending option in sorting select --></label>
+        <name>bedrock__TrendingSorting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Votes list tab label --></label>
+        <name>bedrock__VotesTabLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Submitted by User --></label>
+        <name>bedrock__by</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- click to open in new window --></label>
+        <name>bedrock__click_to_open_in_new_window</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Default Idea Item Layout Name --></label>
+        <name>bedrock__defaultLayoutName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Notification message for forms fields --></label>
+        <name>bedrock__fieldIsRequiredMsg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error message for idea creation form --></label>
+        <name>bedrock__fillRequiredFieldsMsg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Title above ideas search result list component --></label>
+        <name>bedrock__ideasGlobalSearchListTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- for openCreateDialog method in Idea main cmp js controller --></label>
+        <name>bedrock__msgAuthorizationRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Muls Idea Item Layout Name --></label>
+        <name>bedrock__mulsLayoutName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Pagination pages of --></label>
+        <name>bedrock__of</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ideas points --></label>
+        <name>bedrock__points</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fflib_security_error_field_not_insertable --></label>
+        <name>dlrs__fflib_security_error_field_not_insertable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fflib_security_error_field_not_readable --></label>
+        <name>dlrs__fflib_security_error_field_not_readable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fflib_security_error_field_not_updateable --></label>
+        <name>dlrs__fflib_security_error_field_not_updateable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fflib_security_error_object_not_deletable --></label>
+        <name>dlrs__fflib_security_error_object_not_deletable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fflib_security_error_object_not_insertable --></label>
+        <name>dlrs__fflib_security_error_object_not_insertable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fflib_security_error_object_not_readable --></label>
+        <name>dlrs__fflib_security_error_object_not_readable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- fflib_security_error_object_not_updateable --></label>
+        <name>dlrs__fflib_security_error_object_not_updateable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AND --></label>
+        <name>mkto_si__AND</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- API Secret Key --></label>
+        <name>mkto_si__API_Secret_Key</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- API URL --></label>
+        <name>mkto_si__API_URL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- API User Id --></label>
+        <name>mkto_si__API_User_Id</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- A test email has been sent to --></label>
+        <name>mkto_si__A_test_email_has_been_sent_to_X</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Access the Marketo Opportunity Influence Analyzer --></label>
+        <name>mkto_si__Access_the_Marketo_Opportunity_Influence_Analyzer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Account --></label>
+        <name>mkto_si__Account</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Account Name Header --></label>
+        <name>mkto_si__Account_Name_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Actions --></label>
+        <name>mkto_si__Actions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add --></label>
+        <name>mkto_si__Add</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add any leads/contacts to your Watch List. --></label>
+        <name>mkto_si__Add_any_leads_or_contacts_to_your_Watch_List</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add to Marketo Campaign --></label>
+        <name>mkto_si__Add_to_Marketo_Campaign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add to Watch List --></label>
+        <name>mkto_si__Add_to_Watch_List</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- added to watch list --></label>
+        <name>mkto_si__Added_to_watch_list</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- All Tests Passed: Your Marketo Sales Insight is properly configured! --></label>
+        <name>mkto_si__All_Tests_Passed_Your_Marketo_Sales_Insight_is_properly_configured</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Always use HTTPS for the API URL and your remote site settings. --></label>
+        <name>mkto_si__Always_use_HTTPS_for_the_API_URL_and_your_remote_site_settings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anon Web Activity --></label>
+        <name>mkto_si__Anon_Web_Activity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Anonymous Web Activity --></label>
+        <name>mkto_si__Anonymous_Web_Activity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Application title --></label>
+        <name>mkto_si__Application_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Authentication failed --></label>
+        <name>mkto_si__Authentication_failed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Authentication failed. Check your Marketo Sales Insight config --></label>
+        <name>mkto_si__Authentication_failed_Check_your_Marketo_Sales_Insight_config</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Available Contact Fields --></label>
+        <name>mkto_si__Available_Contact_Fields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Available Lead Fields --></label>
+        <name>mkto_si__Available_Lead_Fields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Back --></label>
+        <name>mkto_si__Back</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Best Bet --></label>
+        <name>mkto_si__Best_Bet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Best Bets --></label>
+        <name>mkto_si__Best_Bets</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Best Bets Debug Mode --></label>
+        <name>mkto_si__Best_Bets_Debug_Mode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Best Bets View Name cannot be empty --></label>
+        <name>mkto_si__Best_Bets_View_Name_cannot_be_empty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Best Quality --></label>
+        <name>mkto_si__Best_Quality</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Campaign --></label>
+        <name>mkto_si__Campaign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Campaign Name --></label>
+        <name>mkto_si__Campaign_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel --></label>
+        <name>mkto_si__Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel Fast --></label>
+        <name>mkto_si__Cancel_Fast</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cause --></label>
+        <name>mkto_si__Cause</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Change --></label>
+        <name>mkto_si__Change</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Changed ScoreName from oldValue to newValue --></label>
+        <name>mkto_si__Changed_ScoreName_from_oldValue_to_newValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Choose Campaign --></label>
+        <name>mkto_si__Choose_Campaign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Choose Territory --></label>
+        <name>mkto_si__Choose_Territory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Choose a campaign --></label>
+        <name>mkto_si__Choose_a_campaign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Choose your territory --></label>
+        <name>mkto_si__Choose_your_territory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Choose your territory to view anonymous web activity --></label>
+        <name>mkto_si__Choose_your_territory_to_view_anonymous_web_activity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click to sort --></label>
+        <name>mkto_si__Click_to_sort</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Clicked --></label>
+        <name>mkto_si__Clicked</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Clicked link in email --></label>
+        <name>mkto_si__Clicked_link_in_email</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Close --></label>
+        <name>mkto_si__Close</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Company --></label>
+        <name>mkto_si__Company</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketo Sales Insight Config page when contacting support. --></label>
+        <name>mkto_si__Config_page_when_contacting_support</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Configuration error. Check your Marketo Sales Insight config --></label>
+        <name>mkto_si__Configuration_error_Check_your_Marketo_Sales_Insight_config</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Configure your Marketo API settings and Sales Insight options --></label>
+        <name>mkto_si__Configure_your_Marketo_API_settings_and_Sales_Insight_options</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact Status Field --></label>
+        <name>mkto_si__Contact_Status_Field</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact does not have an email address --></label>
+        <name>mkto_si__Contact_does_not_have_an_email_address</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Create New View --></label>
+        <name>mkto_si__Create_New_View</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom Views --></label>
+        <name>mkto_si__Custom_Views</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Date --></label>
+        <name>mkto_si__Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Default Hide --></label>
+        <name>mkto_si__Default_Hide</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delete --></label>
+        <name>mkto_si__Delete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delivered by Marketo campaign --></label>
+        <name>mkto_si__Delivered_by_Marketo_campaign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Description --></label>
+        <name>mkto_si__Description</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Diagnostics Test Failed! --></label>
+        <name>mkto_si__Diagnostics_Test_Failed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Diagnostics Test Passed: Your Sales Insight installation is properly configured! --></label>
+        <name>mkto_si__Diagnostics_Test_Passed_Your_Sales_Insight_installation_is_properly_configured</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Did you add a remote site for the Marketo API? --></label>
+        <name>mkto_si__Did_you_add_a_remote_site_for_the_Marketo_API</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Did you click the &quot;Enable Marketo API&quot; checkbox? --></label>
+        <name>mkto_si__Did_you_click_the_Enable_Marketo_API_checkbox</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Did you deploy the package? --></label>
+        <name>mkto_si__Did_you_deploy_the_package</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Do your configuration settings match those in Marketo? --></label>
+        <name>mkto_si__Do_your_configuration_settings_match_those_in_Marketo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Don&apos;t show again --></label>
+        <name>mkto_si__Dont_show_again</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Edit --></label>
+        <name>mkto_si__Edit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Edit_View --></label>
+        <name>mkto_si__Edit_View</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Edit the view --></label>
+        <name>mkto_si__Edit_the_view</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Either contacts or leads should be selected as view content --></label>
+        <name>mkto_si__Either_contacts_or_leads_should_be_selected_as_view_content</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email --></label>
+        <name>mkto_si__Email</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email Activity --></label>
+        <name>mkto_si__Email_Activity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email Subscription --></label>
+        <name>mkto_si__Email_Subscription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email Tab --></label>
+        <name>mkto_si__Email_Tab</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email Template Folders --></label>
+        <name>mkto_si__Email_Template_Folders</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email templates are not currently available --></label>
+        <name>mkto_si__Email_templates_are_not_currently_available</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Enable Marketo API --></label>
+        <name>mkto_si__Enable_Marketo_API</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Account Analyzer Permissions --></label>
+        <name>mkto_si__Error_Account_Analyzer_Permissions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Field --></label>
+        <name>mkto_si__Field</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Field Name --></label>
+        <name>mkto_si__Field_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Field Type --></label>
+        <name>mkto_si__Field_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- contains --></label>
+        <name>mkto_si__Filter_Item_Contains</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- does not contain --></label>
+        <name>mkto_si__Filter_Item_Does_Not_Contain</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- equals --></label>
+        <name>mkto_si__Filter_Item_Equals</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- greater than --></label>
+        <name>mkto_si__Filter_Item_Greater_Than</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- greater or equal --></label>
+        <name>mkto_si__Filter_Item_Greater_or_Equal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- is --></label>
+        <name>mkto_si__Filter_Item_Is</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- less or equal --></label>
+        <name>mkto_si__Filter_Item_Less_Or_Equal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- less than --></label>
+        <name>mkto_si__Filter_Item_Less_Than</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- not equal to --></label>
+        <name>mkto_si__Filter_Item_Not_Equals_To</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- starts with --></label>
+        <name>mkto_si__Filter_Item_Starts_With</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Filter by Owner --></label>
+        <name>mkto_si__Filter_by_Owner</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Flames --></label>
+        <name>mkto_si__Flames</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Go! --></label>
+        <name>mkto_si__Go</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Go Back --></label>
+        <name>mkto_si__Go_Back</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Go to list --></label>
+        <name>mkto_si__Go_to_list</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Good Quality --></label>
+        <name>mkto_si__Good_Quality</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Grouped Web Activity --></label>
+        <name>mkto_si__Grouped_Web_Activity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Help --></label>
+        <name>mkto_si__Help</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Help for this Page --></label>
+        <name>mkto_si__Help_for_this_Page</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Help for this Page (New Window) --></label>
+        <name>mkto_si__Help_for_this_Page_New_Window</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Hide Action --></label>
+        <name>mkto_si__Hide_Action</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Hide Best Bet for --></label>
+        <name>mkto_si__Hide_Best_Bet_for</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Hot --></label>
+        <name>mkto_si__Hot</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- in past x days --></label>
+        <name>mkto_si__In_Past_x_days</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Interesting Moments 2 Weeks Message --></label>
+        <name>mkto_si__In_past_two_weeks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info --></label>
+        <name>mkto_si__Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Information synchronizing with Marketo; try again in a few minutes --></label>
+        <name>mkto_si__Information_synchronizing_with_Marketo_try_again_in_a_few_minutes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- This information took too long to retrieve; try again in a few minutes --></label>
+        <name>mkto_si__Information_took_too_long_to_retrieve_try_again_in_a_few_minutes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Interesting Moment Header --></label>
+        <name>mkto_si__Interesting_Moment_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Interesting Moments --></label>
+        <name>mkto_si__Interesting_Moments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Interesting Moments Tab --></label>
+        <name>mkto_si__Interesting_Moments_Tab</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid lookup value --></label>
+        <name>mkto_si__Invalid_lookup_value</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid template id --></label>
+        <name>mkto_si__Invalid_template_id</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid view --></label>
+        <name>mkto_si__Invalid_view</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Last Interesting Moment Header --></label>
+        <name>mkto_si__Last_Interesting_Moment_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Last Visit --></label>
+        <name>mkto_si__Last_Visit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lead Feed --></label>
+        <name>mkto_si__Lead_Feed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Interesting Moments 2 Weeks Message --></label>
+        <name>mkto_si__Lead_Feed_Empty_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Subscribe to Lead Feed --></label>
+        <name>mkto_si__Lead_Feed_Subscribe</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lead Name Header --></label>
+        <name>mkto_si__Lead_Name_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Learn how --></label>
+        <name>mkto_si__Learn_how</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Loading Marketo --></label>
+        <name>mkto_si__Loading_Marketo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Loading Marketo Sales Insight... --></label>
+        <name>mkto_si__Loading_Marketo_Sales_Insight</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketo API Settings --></label>
+        <name>mkto_si__Marketo_API_Settings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketo Host --></label>
+        <name>mkto_si__Marketo_Host</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- 16x16 Marketo logo --></label>
+        <name>mkto_si__Marketo_Logo_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketo Opportunity Analysis --></label>
+        <name>mkto_si__Marketo_Opportunity_Analysis</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketo Sales Insight Config --></label>
+        <name>mkto_si__Marketo_Sales_Insight_Config</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketo Sales Insight Settings --></label>
+        <name>mkto_si__Marketo_Sales_Insight_Settings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketo Sales Insight is not configured --></label>
+        <name>mkto_si__Marketo_Sales_Insight_is_not_configured</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketo Sales Insight is not enabled --></label>
+        <name>mkto_si__Marketo_Sales_Insight_is_not_enabled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Marketo Settings --></label>
+        <name>mkto_si__Marketo_Settings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Max Pages --></label>
+        <name>mkto_si__Max_Pages</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Maximum Pages cannot be greater than 20 --></label>
+        <name>mkto_si__Maximum_Pages_cannot_be_greater_than_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Maximum pages reached --></label>
+        <name>mkto_si__Maximum_pages_reached</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Medium Quality --></label>
+        <name>mkto_si__Medium_Quality</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Migrating existing configuration, please wait... --></label>
+        <name>mkto_si__Migrating_existing_configuration_please_wait</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone --></label>
+        <name>mkto_si__Milestone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mobile Phone Options --></label>
+        <name>mkto_si__Mobile_Phone_Options</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Best Bets --></label>
+        <name>mkto_si__My_Best_Bets</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Best Bets Hidden --></label>
+        <name>mkto_si__My_Best_Bets_Hidden</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Email --></label>
+        <name>mkto_si__My_Email</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Team&apos;s Best Bets --></label>
+        <name>mkto_si__My_Team_Best_Bets</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Watch List --></label>
+        <name>mkto_si__My_Watch_List</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Name --></label>
+        <name>mkto_si__Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Next Page --></label>
+        <name>mkto_si__Next_Page</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Interesting Moments 2 Weeks Message --></label>
+        <name>mkto_si__No_Interesting_Moments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Interesting Moments for Message --></label>
+        <name>mkto_si__No_Interesting_Moments_for_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Template --></label>
+        <name>mkto_si__No_Template</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No anonymous web visitors for --></label>
+        <name>mkto_si__No_anonymous_web_visitors_for</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No best bets for --></label>
+        <name>mkto_si__No_best_bets_for</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No email activity for --></label>
+        <name>mkto_si__No_email_activity_for</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No leads added to watch list --></label>
+        <name>mkto_si__No_leads_added_to_watch_list</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No more than 1,000 leads can be added --></label>
+        <name>mkto_si__No_more_than_1000_leads_can_be_added</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No scores for --></label>
+        <name>mkto_si__No_scores_for_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No web activity for --></label>
+        <name>mkto_si__No_web_activity_for</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Not Found --></label>
+        <name>mkto_si__Not_Found</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Notice --></label>
+        <name>mkto_si__Notice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- One or more recipients are synchronizing with Marketo; --></label>
+        <name>mkto_si__One_or_more_recipients_are_synchronizing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- One or more recipients has a missing or invalid email address --></label>
+        <name>mkto_si__One_or_more_recipients_has_a_missing_or_invalid_email_address</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- One or more tokens in the email were not recognized --></label>
+        <name>mkto_si__One_or_more_tokens_in_the_email_were_not_recognized</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Opened --></label>
+        <name>mkto_si__Opened</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Opened at least once --></label>
+        <name>mkto_si__Opened_at_least_once</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Operator --></label>
+        <name>mkto_si__Operator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Opportunity Influence Analyzer --></label>
+        <name>mkto_si__Opportunity_Influence_Analyzer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Opportunity Stage (default) --></label>
+        <name>mkto_si__Opportunity_Stage_default</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- - - - -  Account - - - -  --></label>
+        <name>mkto_si__Option_Account</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- All Contacts --></label>
+        <name>mkto_si__Option_All_Contacts</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- All Leads --></label>
+        <name>mkto_si__Option_All_Leads</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Contacts --></label>
+        <name>mkto_si__Option_My_Contacts</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Leads --></label>
+        <name>mkto_si__Option_My_Leads</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Team&apos;s Contacts --></label>
+        <name>mkto_si__Option_My_Teams_Contacts</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Team&apos;s Leads --></label>
+        <name>mkto_si__Option_My_Teams_Leads</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- - - None- -  --></label>
+        <name>mkto_si__Option_None</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Owner Name Header --></label>
+        <name>mkto_si__Owner_Name_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Page Views --></label>
+        <name>mkto_si__Page_Views</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Please choose at least one contactType to add to the Marketo campaign. --></label>
+        <name>mkto_si__Please_choose_at_least_one_contactType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Please include a screenshot of this page when contacting support. --></label>
+        <name>mkto_si__Please_include_a_screenshot_of_this_page_when_contacting_support</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Please include screenshots of this page --></label>
+        <name>mkto_si__Please_include_screenshots_of_this_page</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Previous Page --></label>
+        <name>mkto_si__Previous_Page</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Priority_Header --></label>
+        <name>mkto_si__Priority_Detail_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Priority Score Header --></label>
+        <name>mkto_si__Priority_Score_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RCA Enabled --></label>
+        <name>mkto_si__RCA_Enabled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RSS Feed Enabled --></label>
+        <name>mkto_si__RSS_Feed_Enabled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Raw Value --></label>
+        <name>mkto_si__Raw_Value</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Remove --></label>
+        <name>mkto_si__Remove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Remove from Watch List --></label>
+        <name>mkto_si__Remove_from_Watch_List</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Requires Marketo RCA subscription --></label>
+        <name>mkto_si__Requires_Marketo_RCA_subscription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Research --></label>
+        <name>mkto_si__Research</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Status Reset Configuration --></label>
+        <name>mkto_si__Reset_Configuration</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sales Insight Options --></label>
+        <name>mkto_si__Sales_Insight_Options</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save --></label>
+        <name>mkto_si__Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save Changes --></label>
+        <name>mkto_si__Save_Changes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Score Name --></label>
+        <name>mkto_si__Score_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Score Tab --></label>
+        <name>mkto_si__Score_Tab</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Scoring --></label>
+        <name>mkto_si__Scoring</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Scoring Fields --></label>
+        <name>mkto_si__Scoring_Fields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search Jigsaw --></label>
+        <name>mkto_si__Search_Jigsaw</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search Linked In --></label>
+        <name>mkto_si__Search_Linked_In</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search / Referrer --></label>
+        <name>mkto_si__Search_or_Referrer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- - -  Select - -  --></label>
+        <name>mkto_si__Select_Option</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Selected --></label>
+        <name>mkto_si__Selected</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Send Email To --></label>
+        <name>mkto_si__Send_Email_To</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Send Marketo Email --></label>
+        <name>mkto_si__Send_Marketo_Email</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Send Marketo Email success - Campaign ID --></label>
+        <name>mkto_si__Send_Marketo_Email_success_Campaign_ID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Show Only --></label>
+        <name>mkto_si__Show_Only</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Show records with negative score --></label>
+        <name>mkto_si__Show_records_with_negative_score</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Skip welcome message --></label>
+        <name>mkto_si__Skip_Welcome_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Stars --></label>
+        <name>mkto_si__Stars</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Status Header --></label>
+        <name>mkto_si__Status_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Status Message --></label>
+        <name>mkto_si__Status_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Step 1. Enter View Information --></label>
+        <name>mkto_si__Step_1_Enter_View_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Step 2. Filter by Additional Fields (Optional) --></label>
+        <name>mkto_si__Step_2_Filter_by_Additional_Fields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Step 4. Select Additional Fields to Display (Optional) --></label>
+        <name>mkto_si__Step_4_Select_Additional_Fields_to_Display</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Stream --></label>
+        <name>mkto_si__Stream</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Subject --></label>
+        <name>mkto_si__Subject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Subscribe --></label>
+        <name>mkto_si__Subscribe</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Subscribe to email alerts for this kind of Interesting Moment --></label>
+        <name>mkto_si__Subscribe_to_email_alerts_for_this_kind_of_Interesting_Moment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Super Hot! --></label>
+        <name>mkto_si__Super_Hot</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Template --></label>
+        <name>mkto_si__Template</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Template Description --></label>
+        <name>mkto_si__Template_Description</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Test Failed --></label>
+        <name>mkto_si__Test_Failed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- That email template does not exist; choose a different template --></label>
+        <name>mkto_si__That_email_template_does_not_exist</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- There are no Marketo campaigns available --></label>
+        <name>mkto_si__There_are_no_Marketo_campaigns_available</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- There are no valid email recipients --></label>
+        <name>mkto_si__There_are_no_valid_email_recipients</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- There was a problem retrieving this information --></label>
+        <name>mkto_si__There_was_a_problem_retrieving_this_information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- There was a problem retrieving this information (no response from server) --></label>
+        <name>mkto_si__There_was_a_problem_retrieving_this_information_no_response_from_server</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- This custom view is not behaving, please --></label>
+        <name>mkto_si__This_custom_view_is_not_behaving</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- This lead has no contact --></label>
+        <name>mkto_si__This_lead_has_no_contact</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- This person is not yet ready in Marketo; please try again in a few minutes --></label>
+        <name>mkto_si__This_person_is_not_yet_ready_in_Marketo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- This user does not yet exist in Marketo --></label>
+        <name>mkto_si__This_user_does_not_yet_exist_in_Marketo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- This will erase all configuration settings --></label>
+        <name>mkto_si__This_will_erase_all_configuration_settings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Time Frame --></label>
+        <name>mkto_si__Time_Frame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- time(s) --></label>
+        <name>mkto_si__Time_s</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- To --></label>
+        <name>mkto_si__To_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- today --></label>
+        <name>mkto_si__Today</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Total --></label>
+        <name>mkto_si__Total</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Troubleshooting --></label>
+        <name>mkto_si__Troubleshooting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Type --></label>
+        <name>mkto_si__Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unhide Action --></label>
+        <name>mkto_si__Unhide_Action</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unhide Best Bet Action --></label>
+        <name>mkto_si__Unhide_Best_Bet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Value --></label>
+        <name>mkto_si__Value</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Value Type --></label>
+        <name>mkto_si__Value_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View --></label>
+        <name>mkto_si__View</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View Account --></label>
+        <name>mkto_si__View_Account</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View Contact --></label>
+        <name>mkto_si__View_Contact</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View email --></label>
+        <name>mkto_si__View_Email</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View in Marketo --></label>
+        <name>mkto_si__View_In_Marketo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View Name --></label>
+        <name>mkto_si__View_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View Properties --></label>
+        <name>mkto_si__View_Properties</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View Watch List --></label>
+        <name>mkto_si__View_Watch_List</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Warm --></label>
+        <name>mkto_si__Warm</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Watch --></label>
+        <name>mkto_si__Watch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Watch List --></label>
+        <name>mkto_si__Watch_List</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Watched --></label>
+        <name>mkto_si__Watched</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Web --></label>
+        <name>mkto_si__Web</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Web Activity --></label>
+        <name>mkto_si__Web_Activity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Web Activity Tab --></label>
+        <name>mkto_si__Web_Activity_Tab</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Web Page --></label>
+        <name>mkto_si__Web_Page</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- What&apos;s New --></label>
+        <name>mkto_si__What_Is_New</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Yesterday --></label>
+        <name>mkto_si__Yesterday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- You do not have sufficient permissions to perform this action --></label>
+        <name>mkto_si__You_do_not_have_sufficient_permissions_to_perform_this_action</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- You do not have sufficient permissions to send email --></label>
+        <name>mkto_si__You_do_not_have_sufficient_permissions_to_send_email</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Your Email Templates are now organized into folders --></label>
+        <name>mkto_si__Your_Email_Templates_are_now_organized_into_folders</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Your email body has HTML errors --></label>
+        <name>mkto_si__Your_email_body_has_HTML_errors</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Your email contains an invalid token --></label>
+        <name>mkto_si__Your_email_contains_an_invalid_token</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Your email could not be sent --></label>
+        <name>mkto_si__Your_email_could_not_be_sent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Your email needs a body --></label>
+        <name>mkto_si__Your_email_needs_a_body</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Your email needs a subject --></label>
+        <name>mkto_si__Your_email_needs_a_subject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- currentSObjectType not found (id: sObjectId) --></label>
+        <name>mkto_si__currentSObjectType_not_found</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- days --></label>
+        <name>mkto_si__days</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- days ago --></label>
+        <name>mkto_si__days_ago</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- edit the view link --></label>
+        <name>mkto_si__edit_the_view_link</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- for --></label>
+        <name>mkto_si__for</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- for Not Found --></label>
+        <name>mkto_si__for_Not_Found</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- hours ago --></label>
+        <name>mkto_si__hours_ago</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- is no longer hidden --></label>
+        <name>mkto_si__is_no_longer_hidden</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- just now --></label>
+        <name>mkto_si__just_now</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- 1 minute ago --></label>
+        <name>mkto_si__minutes_ago</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- months ago --></label>
+        <name>mkto_si__months_ago</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- 1 hour ago --></label>
+        <name>mkto_si__one_hour_ago</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- 1 minute ago --></label>
+        <name>mkto_si__one_minute_ago</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- past 14 days --></label>
+        <name>mkto_si__past_14_days</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- past 2 days --></label>
+        <name>mkto_si__past_2_days</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- past 3 days --></label>
+        <name>mkto_si__past_3_days</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- past 5 days --></label>
+        <name>mkto_si__past_5_days</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- past 7 days --></label>
+        <name>mkto_si__past_7_days</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- to increase pages or --></label>
+        <name>mkto_si__to_increase_pages_or</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- to view anonymous web activity --></label>
+        <name>mkto_si__to_view_anonymous_web_activity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- try again in a few minutes --></label>
+        <name>mkto_si__try_again_in_a_few_minutes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- undo --></label>
+        <name>mkto_si__undo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- use comma separated for multiple addresses --></label>
+        <name>mkto_si__use_comma_separated_for_multiple_addresses</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- was removed from your watch list --></label>
+        <name>mkto_si__was_removed_from_your_watch_list</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- weeks ago --></label>
+        <name>mkto_si__weeks_ago</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- will be hidden for --></label>
+        <name>mkto_si__will_be_hidden_for</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- About Mass Update and Mass Edit --></label>
+        <name>About_Mass_Update_and_Mass_Edit</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <fullName>Opportunity_Set_deal_reg_opp-1</fullName>
+        </flows>
+        <fullName>Opportunity_Set_deal_reg_opp</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Lead_Create_Deal_Reg-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Lead_Create_Deal_Reg-2</fullName>
+        </flows>
+        <fullName>Lead_Create_Deal_Reg</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Deal_Registration_Set_Lead_Deal_Reg_Lookup-1</fullName>
+        </flows>
+        <fullName>Deal_Registration_Set_Lead_Deal_Reg_Lookup</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Case_Capture_Last_Call-1</fullName>
+        </flows>
+        <fullName>Case_Capture_Last_Call</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-9</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-7</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-6</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-5</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-10</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-8</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-3</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_1-4</fullName>
+        </flows>
+        <fullName>Opportunity_Deal_Registration_Approved_Part_1</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sales_Case_Stage_1_Complete-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Sales_Case_Stage_1_Complete-3</fullName>
+        </flows>
+        <flows>
+            <fullName>Sales_Case_Stage_1_Complete-1</fullName>
+        </flows>
+        <fullName>Sales_Case_Stage_1_Complete</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Ramp_Start_Date-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Ramp_Start_Date-1</fullName>
+        </flows>
+        <fullName>Ramp_Start_Date</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_2-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_2-3</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_2-8</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_2-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_2-5</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_2-6</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_2-4</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_2-9</fullName>
+        </flows>
+        <flows>
+            <fullName>Opportunity_Deal_Registration_Approved_Part_2-7</fullName>
+        </flows>
+        <fullName>Opportunity_Deal_Registration_Approved_Part_2</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sales_Case_Stage_2_Complete-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Sales_Case_Stage_2_Complete-3</fullName>
+        </flows>
+        <flows>
+            <fullName>Sales_Case_Stage_2_Complete-2</fullName>
+        </flows>
+        <fullName>Sales_Case_Stage_2_Complete</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Utilized_Components-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Utilized_Components-2</fullName>
+        </flows>
+        <fullName>Utilized_Components</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>StorageCraftExperienceLevel-1</fullName>
+        </flows>
+        <flows>
+            <fullName>StorageCraftExperienceLevel-2</fullName>
+        </flows>
+        <fullName>StorageCraftExperienceLevel</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>leadUpdateLeadStatus-1</fullName>
+        </flows>
+        <fullName>leadUpdateLeadStatus</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Task_Assign_Task_Sub_Type-1</fullName>
+        </flows>
+        <fullName>Task_Assign_Task_Sub_Type</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Completed_Sales_Cases-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Completed_Sales_Cases-2</fullName>
+        </flows>
+        <fullName>Completed_Sales_Cases</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Alliance_Partner_Account_Creation-4</fullName>
+        </flows>
+        <flows>
+            <fullName>Alliance_Partner_Account_Creation-3</fullName>
+        </flows>
+        <flows>
+            <fullName>Alliance_Partner_Account_Creation-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Alliance_Partner_Account_Creation-5</fullName>
+        </flows>
+        <flows>
+            <fullName>Alliance_Partner_Account_Creation-8</fullName>
+        </flows>
+        <flows>
+            <fullName>Alliance_Partner_Account_Creation-7</fullName>
+        </flows>
+        <flows>
+            <fullName>Alliance_Partner_Account_Creation-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Alliance_Partner_Account_Creation-6</fullName>
+        </flows>
+        <fullName>Alliance_Partner_Account_Creation</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>MSP_Revenue_Greater_Than_300-2</fullName>
+        </flows>
+        <flows>
+            <fullName>MSP_Revenue_Greater_Than_300-1</fullName>
+        </flows>
+        <fullName>MSP_Revenue_Greater_Than_300</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Sales_Cases_Assigned_To_2-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Sales_Cases_Assigned_To_2-1</fullName>
+        </flows>
+        <fullName>Sales_Cases_Assigned_To_2</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Partner_Onboarding_New_Lead_from_Opportunities_in_Pipeline-3</fullName>
+        </flows>
+        <flows>
+            <fullName>Partner_Onboarding_New_Lead_from_Opportunities_in_Pipeline-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Partner_Onboarding_New_Lead_from_Opportunities_in_Pipeline-1</fullName>
+        </flows>
+        <fullName>Partner_Onboarding_New_Lead_from_Opportunities_in_Pipeline</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Ramp_End_Date-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Ramp_End_Date-1</fullName>
+        </flows>
+        <fullName>Ramp_End_Date</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Generate_NFR_Keys-1</fullName>
+        </flows>
+        <fullName>Generate_NFR_Keys</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Capture_First_Owner-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Capture_First_Owner-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Capture_First_Owner-3</fullName>
+        </flows>
+        <fullName>Capture_First_Owner</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <name>No_Override</name>
+            </choices>
+            <choices>
+                <name>Yes_Override</name>
+            </choices>
+            <fullName>Partner_Level_Override-1</fullName>
+            <screens>
+                <fields>
+                    <name>Override_Level</name>
+                </fields>
+                <fields>
+                    <name>OverrideInstructions</name>
+                    <validationRule/>
+                </fields>
+                <fields>
+                    <name>Override</name>
+                </fields>
+                <name>Select_Override</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>OverrideResults</name>
+                </fields>
+                <name>Results</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>NoChangesMade</name>
+                </fields>
+                <name>No_Change_Made</name>
+            </screens>
+        </flows>
+        <fullName>Partner_Level_Override</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Case_Escalation-10</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-6</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-11</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-9</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-4</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-7</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-5</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-3</fullName>
+        </flows>
+        <flows>
+            <fullName>Case_Escalation-8</fullName>
+        </flows>
+        <fullName>Case_Escalation</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Guarantee_Claim-1</fullName>
+        </flows>
+        <fullName>Guarantee_Claim</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Send_Survey-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Send_Survey-2</fullName>
+        </flows>
+        <fullName>Send_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Account_Terminated-3</fullName>
+        </flows>
+        <flows>
+            <fullName>Account_Terminated-2</fullName>
+        </flows>
+        <flows>
+            <fullName>Account_Terminated-1</fullName>
+        </flows>
+        <flows>
+            <fullName>Account_Terminated-5</fullName>
+        </flows>
+        <flows>
+            <fullName>Account_Terminated-4</fullName>
+        </flows>
+        <fullName>Account_Terminated</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Follow Up --></label>
+        <name>Follow_Up</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Case --></label>
+        <name>Request_Help</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Account Academy Certificates --></description>
+        <label><!-- Account Academy Certificates --></label>
+        <name>Account_Academy_Certificates</name>
+        <sections>
+            <label><!-- Academy Certificates --></label>
+            <name>Academy Certificates</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Agreements --></description>
+        <label><!-- Accounts with Agreements --></label>
+        <name>Accounts_Agreements</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts Assigned to Territories --></description>
+        <label><!-- Accounts Assigned to Territories --></label>
+        <name>Accounts_Assigned_to_Territories</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Territories --></label>
+            <name>Territories</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts not Assigned to Territories --></description>
+        <label><!-- Accounts not Assigned to Territories --></label>
+        <name>Accounts_not_assigned_to_territories</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Academy Certificates --></description>
+        <label><!-- Accounts with Academy Certificates --></label>
+        <name>Accounts_with_Academy_Certificates</name>
+        <sections>
+            <label><!-- Academy Certificates --></label>
+            <name>Academy Certificates</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Cases --></description>
+        <label><!-- Accounts with Cases --></label>
+        <name>Accounts_with_Cases</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Contacts --></description>
+        <label><!-- Accounts with Contacts --></label>
+        <name>Accounts_with_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Territories --></description>
+        <label><!-- Accounts with Territories --></label>
+        <name>Accounts_with_Territories</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Territories --></label>
+            <name>Territories</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with campaign members --></description>
+        <label><!-- Accounts with campaign members --></label>
+        <name>Accounts_with_campaign_members</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Campaign History --></label>
+            <name>Campaign History</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Assets --></description>
+        <label><!-- Assets --></label>
+        <name>Assets</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Assets with Shipping --></description>
+        <label><!-- Assets with Shipping --></label>
+        <name>Assets_with_Shipping</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Camp to Lead --></description>
+        <label><!-- Camp to Lead --></label>
+        <name>Camp_to_Lead</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <name>Campaigns</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Camp to contact test --></description>
+        <label><!-- Camp to contact test --></label>
+        <name>Camp_to_contact_test</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <name>Campaigns</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Campaign Contact Activity --></description>
+        <label><!-- Campaign Contact Activity --></label>
+        <name>Campaign_Contact_Activity</name>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <name>Campaigns</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Campaign Influence --></description>
+        <label><!-- Campaign Influence --></label>
+        <name>Campaign_Influence</name>
+        <sections>
+            <label><!-- Campaign History --></label>
+            <name>Campaign History</name>
+        </sections>
+        <sections>
+            <label><!-- Campaign Members --></label>
+            <name>Campaign Members</name>
+        </sections>
+        <sections>
+            <label><!-- Contact Roles --></label>
+            <name>Contact Roles</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Campaign Member Activity Report --></description>
+        <label><!-- Campaign Member Activity Report --></label>
+        <name>Campaign_Member_Activity_Report</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Campaigns and Leads --></description>
+        <label><!-- Campaigns and Leads --></label>
+        <name>CampaignsAndLeads</name>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <name>Campaigns</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Campaigns&amp;Contacts&amp;Accounts --></description>
+        <label><!-- Campaigns&amp;Contacts&amp;Accounts --></label>
+        <name>Campaigns_Contacts_Accounts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <name>Campaigns</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases with Article Types --></description>
+        <label><!-- Cases with Article Types --></label>
+        <name>Cases_with_Article_Types</name>
+        <sections>
+            <label><!-- Articles --></label>
+            <name>Articles</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts --></description>
+        <label><!-- Contacts --></label>
+        <name>Contacts</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts with Academy Certificates --></description>
+        <label><!-- Contacts with Academy Certificates --></label>
+        <name>Contacts_with_Academy_Certificates</name>
+        <sections>
+            <label><!-- Academy Certificates --></label>
+            <name>Academy Certificates</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts with Activities --></description>
+        <label><!-- Contacts with Activities --></label>
+        <name>Contacts_with_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- ContactsandCampaigns --></description>
+        <label><!-- ContactsandCampaigns --></label>
+        <name>ContactsandCampaigns</name>
+        <sections>
+            <label><!-- Campaign History --></label>
+            <name>Campaign History</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- D&amp;B Companies with Leads --></description>
+        <label><!-- D&amp;B Companies with Leads --></label>
+        <name>D_B_Companies_w_Leads</name>
+        <sections>
+            <label><!-- D&amp;B Companies --></label>
+            <name>D&amp;B Companies</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Knowledge Article Details --></description>
+        <label><!-- Knowledge Article Details --></label>
+        <name>Knowledge_Article_Details</name>
+        <sections>
+            <label><!-- Knowledge Article Versions --></label>
+            <name>Knowledge Article Versions</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads and Contacts --></description>
+        <label><!-- Leads and Contacts --></label>
+        <name>LeadsAndContacts</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads to Contacts --></description>
+        <label><!-- Leads to Contacts --></label>
+        <name>Leads_to_Contacts</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads with Activities --></description>
+        <label><!-- Leads with Activities --></label>
+        <name>Leads_with_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities and Accounts --></description>
+        <label><!-- Opportunities and Accounts --></label>
+        <name>Opportunities_and_Accounts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Accounts and D&amp;B Companies --></description>
+        <label><!-- Opportunities with Accounts and D&amp;B Companies --></label>
+        <name>Opportunities_with_Accounts_and_D_B_Companies</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- D&amp;B Companies --></label>
+            <name>D&amp;B Companies</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Activities --></description>
+        <label><!-- Opportunities with Activities --></label>
+        <name>Opportunities_with_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities_with_Original_Opportunities --></description>
+        <label><!-- Opportunities_with_Original_Opportunities --></label>
+        <name>Opportunities_with_Original_Opportunities</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Partners --></description>
+        <label><!-- Opportunities with Partners --></label>
+        <name>Opportunities_with_Partners</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Quotes --></description>
+        <label><!-- Opportunities with Quotes --></label>
+        <name>Opportunities_with_Quotes</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Returned Opportunities --></description>
+        <label><!-- Opportunities with Returned Opportunities --></label>
+        <name>Opportunities_with_Returned_Opportunities</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Submitting partner Details --></description>
+        <label><!-- Opportunities with Submitting partner Details --></label>
+        <name>Opportunities_with_Submitting_partner_Details</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Quotes --></description>
+        <label><!-- Quotes --></label>
+        <name>Quotes</name>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Reports with Dashboard --></description>
+        <label><!-- Reports with Dashboard --></label>
+        <name>Reports_with_Dashboard</name>
+        <sections>
+            <label><!-- Dashboard Components --></label>
+            <name>Dashboard Components</name>
+        </sections>
+        <sections>
+            <label><!-- Reports --></label>
+            <name>Reports</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Territories without Assigned Accounts --></description>
+        <label><!-- Territories without Assigned Accounts --></label>
+        <name>Territories_without_Assigned_Accounts</name>
+        <sections>
+            <label><!-- Territories --></label>
+            <name>Territories</name>
+        </sections>
+        <sections>
+            <label><!-- Territory Models --></label>
+            <name>Territory Models</name>
+        </sections>
+        <sections>
+            <label><!-- Territory-Assigned Records --></label>
+            <name>Territory-Assigned Records</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Voting Poll Results --></description>
+        <label><!-- Voting Poll Results --></label>
+        <name>Voting_Poll_Results</name>
+        <sections>
+            <label><!-- AC Polls --></label>
+            <name>AC Polls</name>
+        </sections>
+        <sections>
+            <label><!-- Voting Results --></label>
+            <name>Voting Results</name>
+        </sections>
+    </reportTypes>
+    <scontrols>
+        <label><!-- About Mass Update And Mass Edit --></label>
+        <name>About_Mass_Update_And_Mass_Edit</name>
+    </scontrols>
+</Translations>

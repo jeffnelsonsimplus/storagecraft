@@ -1,0 +1,93 @@
+<apex:page standardController="Case" showHeader="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+<head>
+        <apex:includeScript value="{!URLFOR($Resource.CaseSubmissionCSS, 'js/jquery.min.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.CaseSubmissionCSS, 'js/bootstrap.min.js')}"/>
+        <apex:includeScript value="/support/console/40.0/integration.js"/>
+</head>
+<style>
+.claimactivate {
+display:none !important;
+}
+</style>
+<script type="text/javascript">
+  function OpenArticle() {
+    var url = '/articles/Informational/100k-StorageCraft-Recovery-Guarantee?popup=false&caseId={!case.Id}';
+    if(sforce.console.isInConsole()){ 
+        sforce.console.openPrimaryTab(null, url, true, '100k StorageCraft Recovery Guarantee Information');
+    } else { 
+        window.open(url,'100k StorageCraft Recovery Guarantee Information','width=700,height=700,left=100,top=100,menubar=no,titlebar=no');     
+    }
+  }
+  function OpenNewCase(){
+    window.open('/apex/RequestHelp','requesthelp','width=700,height=700,left=100,top=100,menubar=no,titlebar=no');
+  }
+</script>
+
+  <apex:slds />
+  <body class="slds-scope">
+  
+  <apex:pageBlock mode="detail">
+      <apex:pageBlockSection title="100k Recovery Guarantee Claim Requirements" id="Requirements" columns="1">
+          <a href="#" onClick="OpenArticle();">Click here to view Recovery Guarantee details and instructions</a>
+          <apex:outputText style="color:{!IF(case.priority <> 'Emergency','red;','black;')}" value="Case Priority (Emergency) = {!case.priority}"/>
+          <apex:outputText style="color:{!IF(case.Partner_Level_Text__c <> 'Platinum','red;','black;')}" value="Partner Level (Platinum) = {!case.Partner_Level_Text__c}"/>
+          <apex:form id="newcaseform">
+          <apex:commandButton value="New Case" id="newcasebutton" onclick="OpenNewCase();"/>
+          </apex:form>
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="100k Recovery Guarantee Claim Status" columns="1" rendered="{!case.Claim_Stage__c <> 'None'}">
+        <apex:outputField label="Case Stage: " value="{!case.Claim_Stage__c}"/>
+        <apex:outputField label="Claim Timer: " value="{!case.Claim_Timer__c}" rendered="{!case.Claim_Timer__c <> ' Hr  Mins'}"/>
+        <apex:outputField label="Case Created: " value="{!case.CreatedDate}"/>
+        <apex:outputField label="Claim Started at: " value="{!case.Claim_Start__c}"/>
+        <apex:outputField label="Claim Stopped at: " value="{!case.Claim_Stop__c}"/>
+      </apex:pageBlockSection>
+  </apex:pageBlock>
+  
+  <apex:form id="theForm">
+      <apex:actionRegion >
+    <apex:pageBlock title="100k Recovery Guarantee Claim" mode="edit" id="FilingClaim" rendered="{!ISBLANK(case.Claim_Start__c)}">
+      <apex:pageBlockButtons >
+        <apex:commandButton action="{!quicksave}" value="Start Claim" disabled="{!(case.Certified_Engineer_Confirmed__c == False || case.Master_Engineer_Confirmed__c == False || case.Cloud_VM_Snapshots__c == False || case.priority <> 'Emergency')}"/>
+      </apex:pageBlockButtons>
+      <apex:pageBlockSection title="Required Claim Fields" columns="1">
+        <apex:inputField label="Date of most recent Cloud VM snapshot" value="{!case.Cloud_VM_SnapDate__c}" required="true" style="width:150px">
+        <apex:actionSupport event="onchange" rerender="FilingClaim"/></apex:inputField>
+        <apex:inputCheckbox label="Certified Engineer Confirmed on Account" value="{!case.Certified_Engineer_Confirmed__c}" required="true">
+        <apex:actionSupport event="onchange" rerender="FilingClaim"/></apex:inputCheckbox>
+        <apex:inputCheckbox label="Master Engineer Confirmed on Account" value="{!case.Master_Engineer_Confirmed__c}" required="true">
+        <apex:actionSupport event="onchange" rerender="FilingClaim"/></apex:inputCheckbox>
+        <apex:inputCheckbox label="Cloud VM Snapshots in past 30 days confirmed?" value="{!case.Cloud_VM_Snapshots__c}" required="true">
+        <apex:actionSupport event="onchange" rerender="FilingClaim"/></apex:inputCheckbox>
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Optional (But Still Recommended)" columns="1">
+        <apex:inputField value="{!case.Cloud_Account_Name__c}" style="width:300px"/>
+        <apex:inputField label="GUIDs of Cloud Machines (Name Optional)" value="{!case.Cloud_Machine_GUIDs__c}" style="width:300px;height:200px;"/>
+        <apex:inputField label="Important Notes about the claim" value="{!case.Claim_Notes__c}" style="width:300px;height:200px;"/>
+        <apex:inputCheckbox styleClass="form-control claimactivate" label="" value="{!case.Claim_Timer_Active__c}" required="false"/>              
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:actionRegion>      
+    <apex:actionRegion >
+    <apex:pageBlock title="100k Recovery Guarantee Claim IN PROGRESS" mode="edit" id="ClaimActive" rendered="{!case.Claim_Start__c <> '' && ISBLANK(case.Claim_Stop__c)}">
+      <apex:pageBlockButtons >
+        <apex:commandButton action="{!quicksave}" value="{!IF(case.Claim_Timer_Active__c,'Update Case','Stop Claim')}"/>
+      </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Claim In Progress" columns="1">
+        <apex:outputText style="align:center;" value="Claim can only be deactivated by an Admin, Support Management, Escalations or Product Management"></apex:outputText>
+        <apex:inputCheckbox id="Claim_Timer_Deactivate" label="Uncheck this box to Complete the Claim" value="{!case.Claim_Timer_Active__c}" rendered="{!($Profile.Name = 'Support - Manager' || $Profile.Name = 'Support - Escalation Team' || $Profile.Name = 'System Administrator' || $Profile.Name = 'Product Manager')}">
+        <apex:actionSupport event="onchange" rerender="ClaimActive"/></apex:inputCheckbox>
+        <apex:inputField value="{!case.Cloud_Account_Name__c}" style="width:300px"/>
+        <apex:inputField label="GUID(s) of Cloud Machines (Names Optional)" value="{!case.Cloud_Machine_GUIDs__c}" style="width:300px;height:200px;"/>
+        <apex:inputField label="NOC Employee Name" value="{!case.Claim_NOC_Member__c}" style="width:300px"/>
+        <apex:inputField label="Important Notes about the claim" value="{!case.Claim_Notes__c}" style="width:300px;height:200px;"/>      
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:actionRegion>
+ <script>
+    $('.claimactivate').prop('checked', true);
+ </script>    
+  </apex:form>
+  </body>
+</apex:page>
